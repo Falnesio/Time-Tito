@@ -7,3 +7,5 @@
 
 ------------------
 ## Regras:
+
+ 1. Sempre comente sobre o que está alterando ao salvar modificações a arquivos.
