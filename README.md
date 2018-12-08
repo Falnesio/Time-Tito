@@ -9,3 +9,5 @@
 ## Regras:
 
  1. Sempre comente sobre o que está alterando ao salvar modificações a arquivos.
+ 2. Quando for estudar juntos, abrir uma sessão no repl.it para colaborar na criação de programas
+ https://repl.it/site/blog/multi
