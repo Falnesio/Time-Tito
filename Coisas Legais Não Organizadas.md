@@ -3,3 +3,13 @@ http://www.boasideias.ro.gov.br/votacao/categorias/populacao/ideia/4006522182611
 
 2. SLQ - Soluções Quantitativas - Depoimento da Regina Barzilay, pesquisadora do MIT e sobrevivente do câncer
 https://www.facebook.com/slqsolucoesquantitativas/posts/2355410574487412?__tn__=K-R
+
+3. Apresentações Bootcamp da Google em Portugués
+https://www.youtube.com/user/paraseunegocio/videos
+
+4. Machine learning foi capaz de distinguir cérebro feminino do masculino com 93% de precisão, com base na estrutura da matéria cinzenta(N=1.300).
+https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.24462
+
+5. Pizza de Dados
+O primeiro podcast Brasileiro sobre ciência de dados by Leticia Portella, Jessica Temporal, Gustavo Coelho
+https://open.spotify.com/show/5k0Ei0MSg5BuiHshr43aSg?si=zTcEZgXPSviXFwaKiDfGUA
