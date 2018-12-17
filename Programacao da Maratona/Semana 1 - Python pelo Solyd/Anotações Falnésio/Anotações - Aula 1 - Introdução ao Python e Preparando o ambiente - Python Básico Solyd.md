@@ -1,4 +1,4 @@
-# Anotações - Aula 1 - Introdução ao Python e Preparando o ambiente - Python Básico Solyd.md
+﻿# Anotações - Aula 1 - Introdução ao Python e Preparando o ambiente - Python Básico Solyd.md
 
  * Serão 17 aulas com exercícios.
  * Aprender o básico, APIs, integração web
@@ -25,4 +25,3 @@
  * finalmente o Hello world!
 
 # #fim
-
