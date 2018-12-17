@@ -5,7 +5,20 @@
 ###### e a pasta que contém os arquivos que serão incluídos no site pelo index.md
 - [ ] _includes
 
-###### o formato no arquivo index.md é o seguinte
+###### tem como escrever posts de blog na seguinte pasta
+- [ ] _posts
+
+> O nome do post tem que seguir o seguinte formato _ano-mes-dia-título.md_
+> O post tem o seguinte formato:
+>
+
+```
+---
+title: "Título"
+date: data (ano-mes-dia)
+---
+
+ Seu Post 
 
 ```
 ---
