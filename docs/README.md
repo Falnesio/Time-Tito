@@ -1,12 +1,12 @@
 ###### Para criar o site primeiro criamos os seguintes arquivos
-- [ ] _config.yml
-- [ ] index.md
+- [x] _config.yml
+- [x] index.md
 
 ###### e a pasta que contém os arquivos que serão incluídos no site pelo index.md
-- [ ] _includes
+- [x] _includes
 
 ###### tem como escrever posts de blog na seguinte pasta
-- [ ] _posts
+- [x] _posts
 
 > O nome do post tem que seguir o seguinte formato _ano-mes-dia-título.md_
 > O post tem o seguinte formato:
