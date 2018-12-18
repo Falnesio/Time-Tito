@@ -5,7 +5,7 @@
 
 * Coisas programadas no Python
 
-´´´
+```
 print ("Hello, World!")
 print("Segundo print")
 
@@ -74,7 +74,7 @@ print (resultado)
 resultado = resultado + 1
 print(resultado)
 
-´´´
+```
 
 # #fim
 
