@@ -6,6 +6,10 @@ Anotações - Aula 2 - Entrada, saída, variáveis e operações matemáticas - 
 
 Ex.1
 
+EXERCICIO: Faça um formulario que pergunte
+o nome, cpf, endereco, idade, altura e telefone
+e imprima isso em um relatorio organizado
+
 @author: Fal
 """
 
