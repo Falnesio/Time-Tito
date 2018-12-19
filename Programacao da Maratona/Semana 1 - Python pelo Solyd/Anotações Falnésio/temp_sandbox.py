@@ -5,14 +5,13 @@ Created on Tue Dec 18 23:29:46 2018
 @author: Fal
 """
 
-frase = "Oi, tudo bem?"
-lista_nomes = ["João", "Maria", "Diego", "Fal"]
+i = 0
+while i < 10:
+    print("i ainda é menor que 10", i)
+    i += 1
+print("fin", i)
 
-print(frase)
-print(frase[0])
-print(type(frase))
-print(type(lista_nomes))
-print(lista_nomes[2])
-print(frase[0:13:2])
-print(lista_nomes[-1:-4: -1])
+i += 10
+
+print(i)
 
