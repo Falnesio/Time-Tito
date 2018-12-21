@@ -13,3 +13,6 @@ https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.24462
 5. Pizza de Dados
 O primeiro podcast Brasileiro sobre ciência de dados by Leticia Portella, Jessica Temporal, Gustavo Coelho
 https://open.spotify.com/show/5k0Ei0MSg5BuiHshr43aSg?si=zTcEZgXPSviXFwaKiDfGUA
+
+ 6. We provide a novel Sequential Monte Carlo algorithm to integrate the posterior distribution of a Bayesian variable selection problem. The code used for the numerical work in Sequential Monte Carlo on large binary sampling spaces is contained in the package ibs.
+ https://code.google.com/archive/p/smcdss/
