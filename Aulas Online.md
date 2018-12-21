@@ -16,3 +16,6 @@ https://aws.amazon.com/pt/certification/
 
 --------------
 #Estatística
+
+1. That’s why R-bloggers and DataCamp have worked together to bring you a learning path for R. Each section points you to relevant resources and tools to get you started and keep you engaged to continue learning. It’s a mix of materials ranging from documentation, online courses, books, and more.
+https://www.r-bloggers.com/how-to-learn-r-2/
