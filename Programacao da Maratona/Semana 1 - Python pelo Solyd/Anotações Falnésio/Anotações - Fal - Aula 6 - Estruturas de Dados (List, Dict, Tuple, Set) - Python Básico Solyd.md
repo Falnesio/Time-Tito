@@ -11,7 +11,7 @@ lista_nomes = ["Fernando", "Susana"]
 
 2. tuple
 ```
-tupla = ()
+tuple = ()
 # Tupla ou tuple (mesmo número finito de dados ordenados e não modificáveis)
 tupla_nomes = ("Fernando", "Susana")
 	# aceita modificações completas tipo tuplas_nomes = ("Jose", "Maria") 
