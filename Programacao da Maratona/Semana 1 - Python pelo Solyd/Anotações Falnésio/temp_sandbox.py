@@ -30,16 +30,19 @@ x = []
 '''
 criar múltiplos dicionários
 '''
-names = []
-for i in range(30,35):
-    names.append(str(i))
-    print(type(i))
-for i in names:
-    print(type(i))
-#names=["lloyd", "alice", "tyler"]
-keys=["homework", "quizzes", "tests"]
-steven={ name.capitalize():{key:[] for key in range(5)} for name in names}
-print(steven)  
+def dicks (length, lista): 
+    names = []
+    for i in range(length):
+        names.append(str(i))
+        print(type(i))
+    for i in names:
+        print(type(i))
+    #names=["lloyd", "alice", "tyler"]
+    keys= lista
+    steven={ name.capitalize():{key:[] for key in range(5)} for name in names}
+    print(steven)  
+
+print(dicks(7, ["apple", "banana"]))
 
 
 '''
