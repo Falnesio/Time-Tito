@@ -19,40 +19,11 @@ print(dicionario_cadastro.keys())
 conjunto = {"Fal", "Marcela"}
 
 
-x = "Maria"
-if x in conjunto:
-    print("found")
-else:
-    print("not found")
-    
-    
-x = []
-'''
-criar múltiplos dicionários
-'''
-def dicks (length, lista): 
-    names = []
-    for i in range(length):
-        names.append(str(i))
-        print(type(i))
-    for i in names:
-        print(type(i))
-    #names=["lloyd", "alice", "tyler"]
-    keys= lista
-    steven={ name.capitalize():{key:[] for key in keys} for name in names}
-    print(steven)  
+def dicks (lista_nomes, lista_categorias): 
+    names = lista_nomes
+    keys= lista_categorias
+    matrix={ name.capitalize():{key:[] for key in keys} for name in names}
+    return matrix  
 
-print(dicks(7, ["apple", "banana"]))
-
-
-'''
-for i in range(58):
-    x.append(dicionario_cadastro)
-j = 0
-for i in x:
-    i["indice"] = j
-    print(i)
-    j += 1
-    
-print(x)
-'''
+relatório = dicks (["Bob", "Luana", "João", "Tany", "Matias"], ["Empregos", "Escolaridade", "Cor", "Idade", "Sexo"])
+print(relatório)
