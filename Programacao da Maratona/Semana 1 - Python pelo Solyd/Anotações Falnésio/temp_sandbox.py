@@ -39,7 +39,7 @@ def dicks (length, lista):
         print(type(i))
     #names=["lloyd", "alice", "tyler"]
     keys= lista
-    steven={ name.capitalize():{key:[] for key in range(5)} for name in names}
+    steven={ name.capitalize():{key:[] for key in keys} for name in names}
     print(steven)  
 
 print(dicks(7, ["apple", "banana"]))
