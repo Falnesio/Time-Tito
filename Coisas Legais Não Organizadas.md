@@ -19,3 +19,6 @@ https://open.spotify.com/show/5k0Ei0MSg5BuiHshr43aSg?si=zTcEZgXPSviXFwaKiDfGUA
 
  7. A EADGURU é a melhor plataforma EAD para criar e vender cursos e treinamentos online totalmente completa, comece agora, é grátis!
  https://ead.guru
+
+ 8. This site features a curated selection of data visualization tools meant to bridge the gap between programmers/statisticians and the general public by only highlighting free/freemium, responsive and relatively simple-to-learn technologies for displaying both basic and complex, multivariate datasets. It leans heavily toward open-source software and plugins, rather than enterprise, expensive B.I. solutions.
+ https://dataviz.tools/
