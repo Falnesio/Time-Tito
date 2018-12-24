@@ -1,6 +1,7 @@
 '''
 criar múltiplos dicionários
 '''
+'''
 def dicks (length, lista): 
     names = []
     for i in range(length):
@@ -15,10 +16,10 @@ def dicks (length, lista):
 a = dicks(10, ["idade", "raça"])
 print(a)
 
-
-```
+'''
+'''
 criar múltiplos dicionários pré-definidos
-```
+'''
 def dicks (lista_nomes, lista_categorias): 
     names = lista_nomes
     keys= lista_categorias
@@ -27,3 +28,5 @@ def dicks (lista_nomes, lista_categorias):
 
 relatório = dicks (["Bob", "Luana", "João", "Tany", "Matias"], ["Empregos", "Escolaridade", "Cor", "Idade", "Sexo"])
 print(relatório)
+
+print(dicks(["joão","paulo", "maria", "fatima"], ["cor", "idade"]))
