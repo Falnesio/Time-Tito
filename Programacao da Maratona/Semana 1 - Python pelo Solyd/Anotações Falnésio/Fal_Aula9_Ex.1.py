@@ -15,8 +15,9 @@ e poderá depositar, sacar e consultar saldo
 """
 
 import sys
+import re
 loja = sys.argv
-F  = open("temp_sandbox.py", "w")
+F  = open("clientes.py", "r+")
 print (F)
 
 clientes = []
@@ -66,27 +67,27 @@ def novo():
         cpf = int(input())
         pessoa = cliente(pessoa, cpf, idade)
         clientes.append(pessoa)
-        clientela = str(clientes)
+        clientela = str(clientes) 
         print(clientela)
-    F.writelines(clientela)
-  
+        F.write(clientela)
 
       
 def cli():
-    for 2 in F
     a = input("Escreva 'todos' ou o número do cliente específico: ")
     if a == "todos":
-        print(clientes)
+        print(F.read())
     else:
-        print(clientes[a])
+        from clientes import fregues
+        d = fregues
+        print(d)
+        
     
 
     
 if loja[2] == "novo":
     novo()
 elif loja[2] == "cli":
-    a = input("Qual cliente quer buscar?\n")
-    cli(a)
+    cli()
 elif loja[2] == "a":
     print("deu certo")
 
