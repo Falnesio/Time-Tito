@@ -18,7 +18,7 @@ import sys
 import re
 loja = sys.argv
 F  = open("clientes.py", "r+")
-print (F)
+print ("Arquivo dos clientes",F,"\n")
 
 clientes = []
 contas = []
@@ -82,13 +82,14 @@ def cli():
         print(d)
         
     
-
-    
-if loja[2] == "novo":
-    novo()
-elif loja[2] == "cli":
-    cli()
-elif loja[2] == "a":
-    print("deu certo")
+try:
+    if loja[2] == "novo":
+        novo()
+    elif loja[2] == "cli":
+        cli()
+    elif loja[2] == "a":
+        print("deu certo")
+except:
+    print("Programa pronto pra receber comando...")
 
 
