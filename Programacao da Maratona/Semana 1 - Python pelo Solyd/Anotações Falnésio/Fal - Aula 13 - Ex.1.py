@@ -11,7 +11,6 @@ EXERCÍCIO:
 import requests
 import json
 filmes = open("filmes.json", "w+")
-filmesr = open("filmes.txt", "r")
 
 
 
@@ -26,6 +25,19 @@ def requi(titulo,pagina):
         return False
         print("Existem", filme['totalResults'], "mídias associadas.")
 
+def filme_especifico(titulo):
+    titulo = titulo.replace(" ", "+")
+    req = requests.get('http://www.omdbapi.com/?t=' + titulo + '&apikey=7bb6880e')
+    movie = json.loads(req.text)
+    if movie['Response'] == 'True':
+        for i in movie.keys():
+            print(i,":",movie[i])
+        arquivo_movie = open(titulo.replace(" ", "_")+"_filmesp_"+ ".json", "w")
+        with arquivo_movie as f:
+            json.dump(movie, f)
+    else:
+        return False
+
 
 
 lista_de_midia = []
@@ -36,12 +48,12 @@ def main():
     sair = False
     while not sair:
         filmes = open("filmes.json", "w")
-        #lista_de_midia = []
         op = input("Escreva o nome de um filme ou SAIR para fechar:\n")
 
         if op == "SAIR":
             sair = True
         else:
+            op_filmes = open(op.replace(" ", "_") + ".json", "w")
             for i in range(1,100,1):
                 i = str(i)
                 filme = requi(op,i)
@@ -54,13 +66,30 @@ def main():
         printar_detalhes(lista_de_midia)
         with filmes as f:
             json.dump(lista_de_midia, f)
+        with op_filmes as f:
+            json.dump(lista_de_midia, f)
+        lista_de_midia.clear()
         print("done")
         print(" ")
         ver_mais = input("Quer ver detalhes (s) ou (n)?\n")
         if ver_mais == 's':
             with open('filmes.json') as f:
                 dict = json.load(f)
-                print(dict)
+            filme_exato = input("Algum filme em particular da lista (s) ou (n)?\n")
+            if filme_exato == 's':
+                try:
+                    qual_filme = input("Escreva exatamente como na lista:\n")
+                    filme_especifico(qual_filme)
+                except:
+                    print("Escreveu Errado")
+            else:
+                for i in dict:
+                    for key in i.keys():
+                        print(key, ":", i[key])
+                    print("----------")
+                    print(" ")
+        else:
+            print("")
         print("")
 
 
