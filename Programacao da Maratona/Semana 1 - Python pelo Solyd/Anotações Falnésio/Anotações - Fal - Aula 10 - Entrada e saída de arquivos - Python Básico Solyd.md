@@ -22,6 +22,10 @@ open("arquivo.txt, "a")
 # para arquivos binários tme que haver rb ou wb pra descrever o que quer
 #fazer com o arquivo
 open("arquivo.txt, "b")
+
+
+#escrever
+file.write("")
 ```
 
 # #fim
