@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Programacao da Maratona" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/snapshots" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/libraries" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/include" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/bin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/lib64" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/lib/python3.7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/lib/python3.7/site-packages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/lib64/python3.7/site-packages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/venv/lib64/python3.7" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="R Skeletons" level="application" />
