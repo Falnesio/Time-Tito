@@ -14,17 +14,22 @@ import re
 import json
 import time
 
-## Dados gerais
-# dados dolar
-cotacao = requests.get('https://www.google.com/search?q=usd+brl')
-dolar = re.findall(r"1 Dólar americano =..........", cotacao.text)
-# dados clima
-weather = requests.get('https://api.hgbrasil.com/weather/?format=json&woeid=455865')
-clima_cidade = json.loads(weather.text)
-results = clima_cidade['results']
+
+def cambio():
+    cotacao = requests.get('https://www.google.com/search?q=usd+brl')
+    dolar = re.findall(r"1 Dólar americano =..........", cotacao.text)
+    print ("Cotação:")
+    print(dolar, time.ctime())
+    print("")
+
 
 
 def climas():
+    print("Clima:")
+    weather = requests.get('https://api.hgbrasil.com/weather/?format=json&woeid=455865')
+    clima_cidade = json.loads(weather.text)
+    results = clima_cidade['results']
+    print(results)
     print(results['city'],":",results['description'])
     print(results['date'],results['time'])
     print('temperatura atual',results['temp'])
@@ -37,9 +42,6 @@ def climas():
     print('--------------------------')
 
 while True:
-    print ("Cotação:")
-    print(dolar, time.ctime())
-    print("")
-    print("Clima:")
+    cambio()
     climas()
     time.sleep(5)

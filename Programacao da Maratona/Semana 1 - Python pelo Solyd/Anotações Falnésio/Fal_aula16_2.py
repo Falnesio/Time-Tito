@@ -42,9 +42,9 @@ import urllib.parse
 
 # requisição da pesquisa (query)
 while True:
-    pesquisa = input("sua pesquisa:\n")
-    pesquisa_codificada = urllib.parse.quote(pesquisa, safe='')
-    requisicao = cliente.request('https://api.twitter.com/1.1/search/tweets.json?q='+pesquisa_codificada)
+    tweet = input("Novo Tweet:\n")
+    tweet_codificado = urllib.parse.quote(tweet, safe='')
+    requisicao = cliente.request('https://api.twitter.com/1.1/statuses/update.json?status='+tweet_codificado, method='POST')
 
     '''
     # requisição vem como tuple, 0 e 1
@@ -65,27 +65,7 @@ while True:
     # para imprimir bonito
     import pprint
 
-
-    # puxar o texto principal dos tweets
-    try:
-        for i in range(len(req_obj['statuses'])):
-            pprint.pprint(req_obj['statuses'][i]['user']['screen_name'])
-            print("--"+"-"*len(req_obj['statuses'][i]['user']['screen_name']))
-            pprint.pprint(req_obj['statuses'][i]['text'])
-            print("")
-    except:
-        print("fim dos resultados")
-        print("")
-
-
-    # ou
-
-    '''
-    for tweet in req_obj['statuses']:
-        pprint.pprint(tweet['user']['screen_name'])
-        pprint.pprint(tweet['text'])
-        print("")
-    '''
+    pprint.pprint(req_obj)
 
 
 
