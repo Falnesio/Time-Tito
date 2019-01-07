@@ -94,20 +94,20 @@ if questao == 14:
         print("Multa R$", (numero14 - 50) * 4)
     else:
         print("Sem multa")
-        print("Peso:", numero14,"kilos")
+        print("Peso:", numero14, "kilos")
 # 15
 if questao == 15:
     print("Impostos")
     a15 = float(input("Digite o quanto ganha por hora: "))
     b15 = float(input("Digite quantas horas trabalha no mês: "))
-    salario15 =  a15 * b15
+    salario15 = a15 * b15
     salario_bruto15 = salario15
     print("+ Salário Bruto : R$", salario15)
     if salario15 <= 1999.18:
         print("- IR : Isento")
     elif salario15 <= 2967.98:
         print("- IR (7.5%) : R$", salario15 * 0.075)
-        salario_bruto15 -=  salario15 * 0.075
+        salario_bruto15 -= salario15 * 0.075
     elif salario15 <= 3938.60:
         print("- IR (15%) : R$", salario15 * 0.15)
         salario_bruto15 -= salario15 * 0.15
@@ -140,7 +140,7 @@ if questao == 16:
         latas16 = (litros_de_tinta16 - (litros_de_tinta16 % 18)) / 18 + 1
     else:
         latas16 = litros_de_tinta16 / 18
-    print("Terá que comprar",latas16,"latas e gastar R$",latas16 * 80)
+    print("Terá que comprar", latas16, "latas e gastar R$", latas16 * 80)
 # 17
 if questao == 17:
     print("Comprar tinta")
@@ -150,13 +150,13 @@ if questao == 17:
         latas16 = (litros_de_tinta16 - (litros_de_tinta16 % 18)) / 18 + 1
     else:
         latas16 = litros_de_tinta16 / 18
-    print("Terá que comprar",latas16,"latas de 18 litros e gastar R$",latas16 * 80)
+    print("Terá que comprar", latas16, "latas de 18 litros e gastar R$", latas16 * 80)
     print("ou")
     if litros_de_tinta16 % 3.6 != 0:
         latas16 = (litros_de_tinta16 - (litros_de_tinta16 % 3.6)) / 3.6 + 1
     else:
         latas16 = litros_de_tinta16 / 3.6
-    print("Terá que comprar",latas16,"galões de 3.6 litros e gastar R$",latas16 * 25)
+    print("Terá que comprar", latas16, "galões de 3.6 litros e gastar R$", latas16 * 25)
     print("ou")
     if litros_de_tinta16 % 18 != 0:
         if litros_de_tinta16 % 18 <= 10.8:
@@ -171,12 +171,13 @@ if questao == 17:
     else:
         latas16 = litros_de_tinta16 / 18
         galoes16 = 0
-    print("Terá que comprar",latas16,"latas de 18 litros e", galoes16, " galões de 3,6 litros, gastando R$",latas16 * 80 + galoes16 * 25)
+    print("Terá que comprar", latas16, "latas de 18 litros e", galoes16,
+          " galões de 3,6 litros, gastando R$", latas16 * 80 + galoes16 * 25)
 # 18
 if questao == 18:
     print("Demora para Download")
     a18 = float(input("Digite o tamanho do arquivo em MB: "))
     b18 = float(input("Digite a velocidade da internet em MBps: "))
     segundos = a18 / b18
-    print("Irá demorar", segundos / 60, "minutos para baixar", a18,"MB com", b18,"MBps.")
-#fim
+    print("Irá demorar", segundos / 60, "minutos para baixar", a18, "MB com", b18, "MBps.")
+# fim
