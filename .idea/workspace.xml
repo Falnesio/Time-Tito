@@ -4,14 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula15.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Time-Tito.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Time-Tito.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="add fim do curso solyd, biblioteca twitter etc. &#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;">
+      <change afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_bib_twitter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_main_twitter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula14.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula14.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/filmes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16_2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +17,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula14.coverage" NAME="Fal_aula14 Coverage Results" MODIFIED="1546549180243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
-    <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula16.coverage" NAME="Fal_aula16 Coverage Results" MODIFIED="1546796040805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
+    <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula16.coverage" NAME="Fal_aula16 Coverage Results" MODIFIED="1546827057128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal___Aula_13___Ex_1.coverage" NAME="Fal - Aula 13 - Ex.1 Coverage Results" MODIFIED="1546397108990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula13.coverage" NAME="Fal_aula13 Coverage Results" MODIFIED="1546151355210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula16_2.coverage" NAME="Fal_aula16_2 Coverage Results" MODIFIED="1546796006605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal___Aula_12.coverage" NAME="Fal - Aula 12 Coverage Results" MODIFIED="1546123258759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
+    <SUITE FILE_PATH="coverage/Time_Tito$Fal_main_twitter.coverage" NAME="Fal_main_twitter Coverage Results" MODIFIED="1546828752103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Time-Tito" />
@@ -35,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+            <state relative-caret-position="200">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="e#973#986#0" expanded="true" />
               </folding>
@@ -45,10 +42,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_bib_twitter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+              <folding>
+                <element signature="e#89#102#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_main_twitter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="207">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="e#973#986#0" expanded="true" />
               </folding>
@@ -112,8 +130,10 @@
         <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Anotações - Fal - Aula 14 - Expressões regulares, procurando por e-mails - Python Básico Solyd.md" />
         <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula15.py" />
         <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula14.py" />
+        <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_main_twitter.py" />
         <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16.py" />
         <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16_2.py" />
+        <option value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_bib_twitter.py" />
       </list>
     </option>
   </component>
@@ -130,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,7 +180,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Fal_aula16">
+  <component name="RunManager" selected="Python.Fal_main_twitter">
     <configuration name="Fal - Aula 13 - Ex.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Time-Tito" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,28 +220,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal - Aula 13 - Ex.1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Fal_aula13" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Time-Tito" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula13.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -296,13 +294,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Fal_main_twitter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Time-Tito" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_main_twitter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Fal_main_twitter" />
         <item itemvalue="Python.Fal_aula16" />
         <item itemvalue="Python.Fal_aula16_2" />
         <item itemvalue="Python.Fal_aula14" />
         <item itemvalue="Python.Fal - Aula 13 - Ex.1" />
-        <item itemvalue="Python.Fal_aula13" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +343,8 @@
       <workItem from="1546481213553" duration="9729000" />
       <workItem from="1546543804630" duration="4096000" />
       <workItem from="1546708376774" duration="70000" />
-      <workItem from="1546777346374" duration="12528000" />
+      <workItem from="1546777346374" duration="13492000" />
+      <workItem from="1546824796395" duration="4570000" />
     </task>
     <task id="LOCAL-00001" summary="commit using pycharm">
       <created>1546117818715</created>
@@ -395,11 +416,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546546440174</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add conteudo &#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;">
+      <created>1546796072095</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1546796072096</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74044000" />
+    <option name="totallyTimeSpent" value="79578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,22 +666,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16.py">
+    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+        <state relative-caret-position="207">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="e#973#986#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16_2.py">
+    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_aula16.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="200">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="e#973#986#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_main_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal_bib_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#89#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
