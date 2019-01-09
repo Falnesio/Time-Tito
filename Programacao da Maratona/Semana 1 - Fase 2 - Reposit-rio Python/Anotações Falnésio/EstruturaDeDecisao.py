@@ -196,7 +196,7 @@ if questao == 15:
         print("Não é Triângulo!")
     elif a15[0] == a15[1] == a15[2]:
         print("Triângulo Equilátero")
-    elif a15[0] == a15[1] or a15[1] == a15[2] or a15[0] ==  a15[2]:
+    elif a15[0] == a15[1] or a15[1] == a15[2] or a15[0] == a15[2]:
         print("Triângulo Isósceles")
     elif a15[0] + a15[1] == a15[2]:
         print("É uma reta!")
@@ -240,33 +240,33 @@ if questao == 18:
         print("Data inválida!")
         exit()
     if a18[2] % 4 != 0:
-        calendario18 = { 1: 31,
-                         2: 28,
-                         3: 31,
-                         4: 30,
-                         5: 31,
-                         6: 30,
-                         7: 31,
-                         8: 31,
-                         9: 30,
-                         10: 31,
-                         11: 30,
-                         12: 31
-                         }
+        calendario18 = {1: 31,
+                        2: 28,
+                        3: 31,
+                        4: 30,
+                        5: 31,
+                        6: 30,
+                        7: 31,
+                        8: 31,
+                        9: 30,
+                        10: 31,
+                        11: 30,
+                        12: 31
+                        }
     else:
-        calendario18 = { 1: 31,
-                         2: 29,
-                         3: 31,
-                         4: 30,
-                         5: 31,
-                         6: 30,
-                         7: 31,
-                         8: 31,
-                         9: 30,
-                         10: 31,
-                         11: 30,
-                         12: 31
-                         }
+        calendario18 = {1: 31,
+                        2: 29,
+                        3: 31,
+                        4: 30,
+                        5: 31,
+                        6: 30,
+                        7: 31,
+                        8: 31,
+                        9: 30,
+                        10: 31,
+                        11: 30,
+                        12: 31
+                        }
     if a18[0] <= calendario18[a18[1]]:
         print("Data Válida!")
 # 19
@@ -337,8 +337,8 @@ if questao == 21:
     nota_1 = faz21(a21, 1)
     a21 = altera_a21(a21, 1, nota_1)
     nota_1 = vira_str(nota_1)
-    print("Para sacar a quantia de", inicio21,"reais, o programa fornece"
-          ,nota_100 ,"de 100,", nota_50,"de 50,", nota_10,"de 5 e", nota_1,"de 1.")
+    print("Para sacar a quantia de", inicio21, "reais, o programa fornece"
+          , nota_100, "de 100,", nota_50,"de 50,", nota_10, "de 5 e", nota_1, "de 1.")
 # 22
 if questao == 22:
     print("Impar ou Par")
@@ -432,4 +432,78 @@ if questao == 26:
     print("Alcool: R$", preco_a26)
     print("Gasolina: R$", preco_b26)
 # 27
+if questao == 27:
+    print("Fruetiera")
+    dic27 = {'Morango':
+                 {'pouco': 2.5,
+                  'muito': 2.2},
+             'Maçã':
+                 {'pouco': 1.8,
+                  'muito': 1.5}}
+    a27 = float(input("Quantos kilos de maçã quer? "))
+    b27 = float(input("Quantos kilos de morango quer? "))
+    preco27 = 0
+    '''
+    def pagar27(fruta, quantidade):
+        desconto27 = False
+        if quantidade > 5:
+            if quantidade > 8:
+                preco = quantidade * dic27[fruta]['muito'] * 0.9
+                desconto27 = True
+            else:
+                preco = quantidade * dic27[fruta]['muito']
+        else:
+            preco = quantidade * dic27[fruta]['pouco']
+        if preco > 25 and desconto27 is False:
+            preco = preco * 0.9
+        return preco
+    '''
+    def pagar27(fruta, quantidade):
+        if quantidade > 5:
+            preco = quantidade * dic27[fruta]['muito']
+        else:
+            preco = quantidade * dic27[fruta]['pouco']
+        return preco
 
+    preco27 += pagar27('Maçã', a27)
+    preco27 += pagar27('Morango', b27)
+    if preco27 > 25 or (a27 + b27) > 8:
+        preco27 *= 0.9
+    print("Sua compra custa R$", preco27)
+# 28
+if questao == 28:
+    print("Hipermercado")
+    carnes28 = ('File Duplo', 'Alcatra', 'Picanha')
+    dic28 = {'File Duplo':
+                 {'pouco': 4.9,
+                  'muito': 5.8},
+             'Alcatra':
+                 {'pouco': 5.9,
+                  'muito': 6.8},
+             'Picanha':
+                 {'pouco': 6.9,
+                  'muito': 7.8}}
+    a28 = int(input("Digite o número da carne de escolha:\n [0] File Duplo, [1] Alcatra, [2] Picanha\n"))
+    a28 = carnes28[a28]
+    b28 = float(input("Quantos kilos quer? "))
+    c28 = input("A compra é pelo cartão da loja? (s) sim ou (n) não\n")
+
+    def pagar28(carne, quantidade):
+        if quantidade > 5:
+            preco = quantidade * dic28[carne]['muito']
+        else:
+            preco = quantidade * dic28[carne]['pouco']
+        return preco
+
+    preco28 = pagar28(a28, b28)
+
+    print("Você comprou", b28,"kg(s) de", a28)
+    print("Sua compra custa R$", preco28)
+    if c28 == 's':
+        preco28 *= 0.95
+        print("Ganha desconto de 5% por\n"
+              "comprar no cartão da loja")
+        print("Você pagará R$", preco28)
+    else:
+        print("Compra não feita no cartão da loja,\n"
+              "portanto sem desconto de 5%")
