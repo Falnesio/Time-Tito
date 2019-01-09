@@ -13,3 +13,4 @@ The models and results in this book raise a number of questions relevant to the 
 
 Think Complexity is a free book, available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
 ###### http://greenteapress.com/wp/think-complexity-2e/
+###### <a href="https://github.com/AllenDowney/ThinkComplexity2">Github  Repo</a>
