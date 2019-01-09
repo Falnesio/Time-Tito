@@ -9,3 +9,4 @@ Python in the browser: For beginners, one of the challenges of getting started i
 More Python goodies: We’ve added a chapter to cover some powerful Python features that didn’t make it into the first edition, including list comprehensions and additional data structures.
 Think Python 2e is a Free Book. It is available under the Creative Commons Attribution-NonCommercial 3.0 Unported License, which means that you are free to copy, distribute, and modify it, as long as you attribute the work and don’t use it for commercial purposes.
 ###### http://greenteapress.com/wp/think-python-2e/
+###### <a href="https://github.com/AllenDowney/ThinkPython2">Github Repo</a>
