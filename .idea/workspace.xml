@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaDeDecisao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaDeDecisao.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaDeDecisao.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +21,7 @@
     <SUITE FILE_PATH="coverage/Time_Tito$Fal___Aula_13___Ex_1.coverage" NAME="Fal - Aula 13 - Ex.1 Coverage Results" MODIFIED="1546397108990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula13.coverage" NAME="Fal_aula13 Coverage Results" MODIFIED="1546151355210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_aula16_2.coverage" NAME="Fal_aula16_2 Coverage Results" MODIFIED="1546796006605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
-    <SUITE FILE_PATH="coverage/Time_Tito$EstruturaDeDecisao.coverage" NAME="EstruturaDeDecisao Coverage Results" MODIFIED="1546927774610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio" />
+    <SUITE FILE_PATH="coverage/Time_Tito$EstruturaDeDecisao.coverage" NAME="EstruturaDeDecisao Coverage Results" MODIFIED="1547054833619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal___Aula_12.coverage" NAME="Fal - Aula 12 Coverage Results" MODIFIED="1546123258759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_main_twitter.coverage" NAME="Fal_main_twitter Coverage Results" MODIFIED="1546865122959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
   </component>
@@ -33,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaSequencial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="132" selection-end-column="52" />
+            <state relative-caret-position="3111">
+              <caret line="183" selection-start-line="183" selection-end-line="183" />
             </state>
           </provider>
         </entry>
@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaDeDecisao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="183" column="20" lean-forward="true" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+            <state relative-caret-position="268">
+              <caret line="433" column="4" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -75,6 +75,7 @@
       <find>mm</find>
       <find>km</find>
       <find>5h</find>
+      <find>posi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,7 +115,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
+    <option name="x" value="669" />
+    <option name="y" value="17" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -126,6 +128,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,11 +160,17 @@
               <item name="Programacao da Maratona" type="462c0819:PsiDirectoryNode" />
               <item name="Semana 1 - Python pelo Solyd" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
+              <item name="Programacao da Maratona" type="462c0819:PsiDirectoryNode" />
+              <item name="Semana 1 - Python pelo Solyd" type="462c0819:PsiDirectoryNode" />
+              <item name="Anotações Falnésio" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,7 +337,10 @@
       <workItem from="1546777346374" duration="13492000" />
       <workItem from="1546824796395" duration="5769000" />
       <workItem from="1546864566919" duration="12940000" />
-      <workItem from="1546896804696" duration="13575000" />
+      <workItem from="1546896804696" duration="13682000" />
+      <workItem from="1546956339841" duration="15399000" />
+      <workItem from="1547015365792" duration="161000" />
+      <workItem from="1547047779248" duration="4528000" />
     </task>
     <task id="LOCAL-00001" summary="commit using pycharm">
       <created>1546117818715</created>
@@ -428,11 +440,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546879566823</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="criar EstruturaDeDecisao&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;">
+      <created>1546928211116</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1546928211116</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107292000" />
+    <option name="totallyTimeSpent" value="127487000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,16 +463,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="0" />
-    <editor active="true" />
+    <frame x="669" y="17" width="697" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" weight="0.85714287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.20873787" visible="true" weight="0.85714287" />
       <window_info id="Structure" order="1" sideWeight="0.79126215" side_tool="true" weight="0.19667171" />
       <window_info id="Repositories" order="2" weight="0.3286908" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32405892" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40863788" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26744187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,7 +482,7 @@
       <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32890365" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969743" weight="0.3255814" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5030257" side_tool="true" weight="0.32569557" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4969743" weight="0.26022914" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4969743" weight="0.2591362" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -575,7 +593,8 @@
     <MESSAGE value="add fim do curso solyd, biblioteca twitter etc. &#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
     <MESSAGE value="add conteudo&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
     <MESSAGE value="limpar conteudo&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="limpar conteudo&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
+    <MESSAGE value="criar EstruturaDeDecisao&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="criar EstruturaDeDecisao&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Fal - Aula 12.py">
@@ -710,17 +729,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio/Anotações - Fal - Aula 11 - Tratamento de Erros - Python Básico Solyd.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-518" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaSequencial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="132" selection-end-column="52" />
+        <state relative-caret-position="3111">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaDeDecisao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="183" column="20" lean-forward="true" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+        <state relative-caret-position="268">
+          <caret line="433" column="4" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="4" />
         </state>
       </provider>
     </entry>
