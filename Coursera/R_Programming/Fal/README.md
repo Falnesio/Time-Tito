@@ -146,4 +146,30 @@ attr(,"levels")
 ```
 Sabendo que podemos forçar atributos a listas (ex. dim(lista) <- c(2,5))
 podemos também atribuir qualquer ordenação de "levels" que quisermos após
-termos criados 
+a criação do vetor de fatores como o "f" criado anteriormente.
+```
+> f
+[1] yes yes no  yes no 
+Levels: yes no           # ou seja "yes" = 1 e "no" = 2
+> levels(f) <- c("no", "yes")
+> f
+[1] no  no  yes no  yes
+Levels: no yes          # ou seja "no" = 1 e "yes" = 2
+> levels(f) <- c("yes", "no")
+> f
+[1] yes yes no  yes no 
+Levels: yes no          # ou seja "yes" = 1 e "no" = 2
+```
+Assim podemos alterar até quais rótulos utilizamos
+```
+> levels(f) <- c("não", "sim")
+> f
+[1] não não sim não sim
+Levels: não sim
+> levels(f) <- c("batata", "manjericão")
+> f
+[1] batata     batata     manjericão
+[4] batata     manjericão              # como vimos acima o [4] só significa que
+Levels: batata manjericão              # é a continuação da lista começando pelo
+                                       # 4º item.
+```
