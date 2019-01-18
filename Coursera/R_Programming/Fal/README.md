@@ -132,3 +132,18 @@ attr(,"levels")
 [1] "no"  "yes"  # mostra os rótulos em ordem do inteiro atribuído, 
                  # ou seja "no" = 1, "yes" = 2
 ```
+É possível escolher quais rótulos são associados a cada inteiro
+```
+> f <- factor(c("yes", "yes", "no", "yes", "no"),
+              levels = c("yes", "no"))
+> f
+[1] yes yes no  yes no 
+Levels: yes no
+> unclass(f)
+[1] 1 1 2 1 2
+attr(,"levels")
+[1] "yes" "no" 
+```
+Sabendo que podemos forçar atributos a listas (ex. dim(lista) <- c(2,5))
+podemos também atribuir qualquer ordenação de "levels" que quisermos após
+termos criados 
