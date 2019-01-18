@@ -173,3 +173,23 @@ Levels: não sim
 Levels: batata manjericão              # é a continuação da lista começando pelo
                                        # 4º item.
 ```
+
+# Valores Inexistentes
+NaN significa que valor numérico não existe
+NA significa que não existe determinada coisa em geral
+```
+x <- (c(1, 2, NA, 10, 3))
+# para testar se algo existe ou não podemos usar as funções
+is.na(x)
+# e
+is.nan(x)
+```
+NaN necessáriamente é Na, todavia Na não é necessáriamente um número não existente,
+portanto Na não necessáriamente é NaN.
+```
+x <- (c(1, 2, NAN, 10, 3))
+# para testar se algo existe ou não podemos usar as funções
+is.na(x)
+# e
+is.nan(x)
+```
