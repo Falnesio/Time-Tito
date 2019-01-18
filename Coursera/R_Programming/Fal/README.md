@@ -56,5 +56,64 @@ y <- c("a", FALSE) # tudo vira caractere
 
 ##### coerção explícita, as.algo()
 ```
+> x <- 0:6
+> class(x)
+[1] "integer"
+> as.numeric(x)
+[1] 0 1 2 3 4 5 6
+> as.logical(x)
+[1] FALSE TRUE TRUE TRUE TRUE TRUE TRUE
+> as.character(x)
+[1]  "0" "1" "2" "3" "4" "5" "6"
+
+> x <- c("a", "b", "c")
+> as.numeric(x)
+[1] 
+NA NA NA
+Warning message:
+NAs introduced by coercion
+> as.logical(x)
+[1] NA NA NA
+> as.complex(x)
+[1] NA NA NA
+Warning message:
+NAs introduced by coercion 
 ```
+
+##### Criando uma lista 
+```
+x <-list(1, "a", 4 + 9i)
+```
+##### Matrizes
+```
+m <- matrix(nrow = 2, ncol = 3) # cria matriz vazia
+m <- matrix(1:6, nrow = 2, ncol = 3) # cria matriz onde a11 = 1, a12 = 2, a21 = 3 etc.
+dim(m) #imprime dimensões da matriz
+attributes(m) # mostra atributos da matriz
+
+# ao pegar uma lista, é possível torna-lá uma matriz:
+lista <- 1:10
+lista
+numero_de_linhas <- 5
+numero_de_colunas <- 2
+dim(lista) <- c(numero_de_linhas, numero_de_colunas) # forçar uma dimensão na lista
+lista
+
+# é possível criar uma matriz de duas (ou mais) listas
+x <- 1:3
+y < 20:22
+z <- 115:117
+cbind(y,z,x) # cola as listas lado a lado como colunas na ordem definida
+      y   z x
+[1,] 20 115 1
+[2,] 21 116 2
+[3,] 22 117 3
+
+rbind(y,z,x) # cola as listas de cima pra baixo em linhas
+  [,1] [,2] [,3]
+y   20   21   22
+z  115  116  117
+x    1    2    3
+```
+
 
