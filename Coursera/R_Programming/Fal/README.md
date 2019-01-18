@@ -115,5 +115,20 @@ y   20   21   22
 z  115  116  117
 x    1    2    3
 ```
-
-
+##### Factor, é um vetor de inteiros em que cada número tem um rótulo (ordenado ou não)
+são importantes para funções como lm() e glm() para regressões
+```
+> f <- factor(c("yes", "yes", "no", "yes", "no"))
+> f
+[1] yes yes no  yes no 
+Levels: no yes
+> table(f)        # mostra a frequência de cada categoria
+f
+ no yes 
+  2   3 
+ > unclass(f)    # mostra os inteiros associados aos rótulos em ordem de acordo
+ [1] 2 2 1 2 1   # com a lista concatenada original
+attr(,"levels")
+[1] "no"  "yes"  # mostra os rótulos em ordem do inteiro atribuído, 
+                 # ou seja "no" = 1, "yes" = 2
+```
