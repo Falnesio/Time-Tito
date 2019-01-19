@@ -50,7 +50,7 @@ x <- c(2+0i, 4+3i) # vetor complexo
 
 #coerção existe quando mais de uma classe está concatenada 
 y <- c(1.7, "a") # tudo vira caractere
-y <- c(TRUE, 2) # tudo vira numérico, no caso 1 e 2
+y <- c(TRUE, 2, FALSE) # tudo vira numérico: nesse caso 1, 2 e 0
 y <- c("a", FALSE) # tudo vira caractere
 ```
 
