@@ -23,7 +23,7 @@ x #prints de 1 a 20
 1. lógico (T/F)
 
 ##### O mais básico de todos é o **vetor**
-vetores contêm apenas objetos da mesma classe (exceto listas)
+vetores contêm apenas objetos da mesma classe (exceto quando se trata de listas)
 ```
 x <- vector() #cria um vetor vazio
 x <- 1L #é um número inteiro 
