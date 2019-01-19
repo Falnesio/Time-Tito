@@ -6,6 +6,8 @@
 
 ## R Programming
 
+### Básico
+
 ```
 x <- 5
 x #prints 5
@@ -266,6 +268,18 @@ nomes das **linhas** e a **segunda** com os nomes das **colunas**.
 Loja da Solange                   1           3               5
 Loja da Fátima                    2           4               6
 ```
+### Lendo e Escrevendo Dados em Tabela
+
+`read.table()` e  `read.csv()` são utilizados para a leitura de dados em tabela dentro
+de arquivos.
+`readLines()` é usado para ler linhas dentro de arquivos de texto (ou qualquer outro 
+tipo de arquivo) e devolve no R como caracteres.
+`source()` faz a leitura de arquivos escritos na linguagem R.
+`dget()` faz a leitura de arquivos com código R *parsed* em arquivos de texto.
+`load()` faz a leitura de arquivos com código binário.
+
+
+
 
 
 
