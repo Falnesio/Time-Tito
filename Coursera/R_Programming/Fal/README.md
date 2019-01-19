@@ -193,3 +193,5 @@ is.na(x)
 # e
 is.nan(x)
 ```
+
+##### Data Frame
