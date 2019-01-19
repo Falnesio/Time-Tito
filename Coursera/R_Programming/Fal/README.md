@@ -174,7 +174,7 @@ Levels: batata manjericão              # é a continuação da lista começando
                                        # 4º item.
 ```
 
-# Valores Inexistentes
+##### Valores Inexistentes
 NaN significa que valor numérico não existe
 NA significa que não existe determinada coisa em geral
 ```
@@ -195,3 +195,26 @@ is.nan(x)
 ```
 
 ##### Data Frame
+É uma traiz que aceita diferentes tipos de valores, ou seja
+é uma tabela.
+Cada linha na tabela pode ter um nome `row.names()` (o default são números começando 
+pelo número 1), o que é bom para rotular diferentes observações na tabela. 
+Tabelas podem ser criadas chamando `read.table()`, ou `read.csv()` 
+para abrir um arquivo. 
+
+Tabelas podem ser tranformadas em matrizes com `data.matrix()`, poreḿ sofreram coerção
+e serão transformados no mesmo tipo de objeto.
+
+Criando um Data Frame:
+```
+> x <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+> x
+  foo   bar
+1   1  TRUE
+2   2  TRUE
+3   3 FALSE
+4   4 FALSE
+```
+`nrow(x)` pergunta sobre x o número de linhas
+`ncol(x)` pergunta sobre x o número de colunas
+
