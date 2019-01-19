@@ -54,7 +54,7 @@ y <- c(TRUE, 2, FALSE) # tudo vira numérico: nesse caso 1, 2 e 0
 y <- c("a", FALSE) # tudo vira caractere
 ```
 
-##### coerção explícita, as.algo()
+##### coerção explícita, as.alguma_coisa()
 ```
 > x <- 0:6
 > class(x)
