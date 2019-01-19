@@ -23,11 +23,11 @@ x #prints de 1 a 20
 1. lógico (T/F)
 
 ##### O mais básico de todos é o **vetor**
-vetores contêm apenas objetos da mesma classe (exceto listas)
+vetores contêm apenas objetos da mesma classe (exceto quando se trata de listas)
 ```
 x <- vector() #cria um vetor vazio
 x <- 1L #é um número inteiro 
-1 / 0 #gera Inf que é infinito, na verade um número real grande
+1 / 0 #gera Inf que é infinito, na verdade um número real grande
 0 / 0 # gera NaN = Not a Number, não um número
 ```
 
@@ -50,11 +50,11 @@ x <- c(2+0i, 4+3i) # vetor complexo
 
 #coerção existe quando mais de uma classe está concatenada 
 y <- c(1.7, "a") # tudo vira caractere
-y <- c(TRUE, 2) # tudo vira numérico, no caso 1 e 2
+y <- c(TRUE, 2, FALSE) # tudo vira numérico: nesse caso 1, 2 e 0
 y <- c("a", FALSE) # tudo vira caractere
 ```
 
-##### coerção explícita, as.algo()
+##### coerção explícita, as.alguma_coisa()
 ```
 > x <- 0:6
 > class(x)
@@ -174,7 +174,7 @@ Levels: batata manjericão              # é a continuação da lista começando
                                        # 4º item.
 ```
 
-# Valores Inexistentes
+##### Valores Inexistentes
 NaN significa que valor numérico não existe
 NA significa que não existe determinada coisa em geral
 ```
@@ -195,3 +195,78 @@ is.nan(x)
 ```
 
 ##### Data Frame
+É uma traiz que aceita diferentes tipos de valores, ou seja
+é uma tabela.
+Cada linha na tabela pode ter um nome `row.names()` (o default são números começando 
+pelo número 1), o que é bom para rotular diferentes observações na tabela. 
+Tabelas podem ser criadas chamando `read.table()`, ou `read.csv()` 
+para abrir um arquivo. 
+
+Tabelas podem ser tranformadas em matrizes com `data.matrix()`, poreḿ sofreram coerção
+e serão transformados no mesmo tipo de objeto.
+
+Criando um Data Frame:
+```
+> x <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+> x
+  foo   bar
+1   1  TRUE
+2   2  TRUE
+3   3 FALSE
+4   4 FALSE
+```
+`nrow(x)` pergunta sobre x o número de linhas
+`ncol(x)` pergunta sobre x o número de colunas
+
+##### Nomes
+Todos os objetos em R podem ter um nome, um rótulo utilizando `names()`.
+```
+> x <- 1:3
+> names(x) # dar erro pois nada foi atribuído
+NULL
+> names(x) <- c("João", "Maria", "José")
+> x
+ João Maria  José 
+    1     2     3 
+```
+Vale lembrar que o exemplo acima não atribui os valores 1, 2 e 3 a João, Maria e
+José, e sim que passamos a chamar 1, 2 e 3 de João, Maria e José. 
+```
+> names(x)
+[1] "João"  "Maria" "José"
+```
+listas e matrizes podem ter nomes
+###### listas
+```
+> z <- list(a = 1, b = 2, c =3)
+> z
+$a
+[1] 1
+
+$b
+[1] 2
+
+$c
+[1] 3
+
+> names(z)
+[1] "a" "b" "c"
+```
+###### matrizes
+No exemplo primeiro criamos uma matriz, para ter algo a trabalhar
+```
+> m <- matrix(1:6, nrow = 2, ncol = 3)
+```
+Daí criamos os nomes. Fazemos uma lista com duas concatenações: a **primeira** com os
+nomes das **linhas** e a **segunda** com os nomes das **colunas**.
+```
+> dimnames(m) <- list(c("Loja da Solange","Loja da Fátima"),c("Preço do Computador","Preço da TV", "Preço do Laptop"))
+> m
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange                   1           3               5
+Loja da Fátima                    2           4               6
+```
+
+
+
+
