@@ -27,7 +27,7 @@ vetores contêm apenas objetos da mesma classe (exceto quando se trata de listas
 ```
 x <- vector() #cria um vetor vazio
 x <- 1L #é um número inteiro 
-1 / 0 #gera Inf que é infinito, na verade um número real grande
+1 / 0 #gera Inf que é infinito, na verdade um número real grande
 0 / 0 # gera NaN = Not a Number, não um número
 ```
 
