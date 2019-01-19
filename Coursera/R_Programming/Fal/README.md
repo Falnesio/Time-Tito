@@ -218,3 +218,55 @@ Criando um Data Frame:
 `nrow(x)` pergunta sobre x o número de linhas
 `ncol(x)` pergunta sobre x o número de colunas
 
+##### Nomes
+Todos os objetos em R podem ter um nome, um rótulo utilizando `names()`.
+```
+> x <- 1:3
+> names(x) # dar erro pois nada foi atribuído
+NULL
+> names(x) <- c("João", "Maria", "José")
+> x
+ João Maria  José 
+    1     2     3 
+```
+Vale lembrar que o exemplo acima não atribui os valores 1, 2 e 3 a João, Maria e
+José, e sim que passamos a chamar 1, 2 e 3 de João, Maria e José. 
+```
+> names(x)
+[1] "João"  "Maria" "José"
+```
+listas e matrizes podem ter nomes
+###### listas
+```
+> z <- list(a = 1, b = 2, c =3)
+> z
+$a
+[1] 1
+
+$b
+[1] 2
+
+$c
+[1] 3
+
+> names(z)
+[1] "a" "b" "c"
+```
+###### matrizes
+No exemplo primeiro criamos uma matriz, para ter algo a trabalhar
+```
+> m <- matrix(1:6, nrow = 2, ncol = 3)
+```
+Daí criamos os nomes. Fazemos uma lista com duas concatenações: a **primeira** com os
+nomes das **linhas** e a **segunda** com os nomes das **colunas**.
+```
+> dimnames(m) <- list(c("Loja da Solange","Loja da Fátima"),c("Preço do Computador","Preço da TV", "Preço do Laptop"))
+> m
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange                   1           3               5
+Loja da Fátima                    2           4               6
+```
+
+
+
+
