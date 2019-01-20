@@ -6,6 +6,9 @@
 
 ## R Programming
 
+### Semana 1
+### Básico
+
 ```
 x <- 5
 x #prints 5
@@ -266,7 +269,142 @@ nomes das **linhas** e a **segunda** com os nomes das **colunas**.
 Loja da Solange                   1           3               5
 Loja da Fátima                    2           4               6
 ```
+#### Lendo e Escrevendo Dados em Tabela
 
+**chave:**
 
+Para leitura
+> para escrever
+------
+`read.table()` e  `read.csv()` são utilizados para a leitura de dados em tabela dentro
+de arquivos.
+> `write.table()`
 
+`readLines()` é usado para ler linhas dentro de arquivos de texto (ou qualquer outro 
+tipo de arquivo) e devolve no R como caracteres.
+>`writeLines`
 
+`source()` faz a leitura de arquivos escritos na linguagem R.
+>`dump`
+
+`dget()` faz a leitura de arquivos com código R *parsed* em arquivos de texto.
+>`dput()`
+
+`load()` faz a leitura de arquivos com código binário.
+>`save()`
+
+`unserialized()` faz a leitura de um único objeto R em escrito em binário.
+>`serialize`
+------
+
+##### read.table()
+###### é muito importante ler o help(read.table) !!!
+Antes de começar, é importante saber se o RAM do computador comporta o tamanho do
+detaset.
+
+Conheça a sua maquina, o que ela é capaz e o que está rodando nela atualmente.
+
+A função mais utilizada para chamar arquivos. Normalmente utiliza-se dessa função apenas 
+com o argumento *file*. (ex.`read.table("aquivo.csv")` ou `read.table("\Documents and Settings\SeuNome\My Documents\arquivo.csv")`)
+
+Os **argumentos** são as coisas que colocamos dentro de funções.
+Na função **read.table()** elas são
+
+read.table(*file*,*header* ,*sep* ,*colClasses* ,*nrows* ,*comment.char* ,*skip* ,*stringAsFactors*)
+
+**file** é o nome do arquivo, ou algo que conecta a ele.
+> geralmente é um arquivo junto ao seu *path* (ex. C:\Documents and Settings\SeuNome\My Documents\arquivo.csv)
+
+**header** é um indicação à função dizendo que há uma linha de *header*.
+> header seria a lista de nomes para cada coluna no topo da tabela 
+
+**sep** indica como as colunas são separadas (ex. `sep=':'` significa colunas separadas por `:` )
+> o caractere utilizado para separar as colunas é chamado de *separador*
+
+**colClasses** um vetor de caractere indicando a classe de cada coluna no dataset (*conjunto de dados*).
+> é opcional colocar isso como vetor dentro da função
+> se o arquivo for muito grande, ajuda muito colocar isso pra ficar mais rápido a leitura.
+> caso for aplicado o tipo de apenas uma coluna, supõe-se que as outras são iguais
+
+> truque para agilizar esse passo: 
+> `initial <- read.table("datatable.txt")
+classes <- sapply(initial, class) # saaĺy() passa pelo "initial" e roda class(), retornando o valor e aplicando a "classes" 
+tabAll <- read.table("datatable.txt,colClasses = classes)`
+
+**nrows** o número de linhas no dataset
+> facilita velocidade do cálculo de RAM necessário
+
+**comment.char** indica o caractere utilizado para comentários
+> é bom fazer `comment.char=""` se não existe comentários no arquivo
+
+**skip** o numero de linhas para pular do início do dataset
+
+**stringAsFactors** as variáveis em caracteres devem ser considerados **factor**s?
+> o default é isso ser ativado caso não seja explicitado na função
+
+Quando feito a leitura, R pula linhas com # (pois significa comentários),
+vai ver quantas linhas existem e quanta memória precisa pra ler o arquivo e
+identifica que tipo de variável existe em cada coluna.
+
+**read.csv()** é identico ao **read.table()**, porém o *separador* é a vírgula.
+> bom pra ler arquivos no formato .csv
+
+##### Calculando Memória RAM Necessária
+Caso nrows = 1500000 e ncol = 120 com dados do tipo numérico (8 bytes) temos:
+1.500.000 x 120 x 8 = 1440000000 bytes
+= 14.400.000.000 / 2²º
+= 1.373,29 MB / 1000
+= 1,34 GB
+com 2 GB de RAM, você tá puxando demais e pode haver 
+A regra de dedo é ter o dobro de RAM
+
+##### dumping e dputing
+dump() e dput()
+###### vantagens:
+1. formato textual
+1. editável diretamente (bom se arquivo estiver corrumpido)
+1. metadados são salvos (ex. o tipo dos dados)
+1. mais fácil para controle de versão (tipo usando git)
+1. aderem à filosofia Unix
+
+###### desvantagens:
+1. abrir o arquivo no notepad para ler sem R é difícil por ser textual
+1. tomam muito espaço e geralmente precisam de serem comprimidos
+
+###### exemplo:
+dput() para um objeto R
+```
+> df <- data.frame(a = 1, b = "a")
+> df
+  a b
+1 1 a
+> dput(df)
+structure(list(a = 1, b = structure(1L, .Label = "a", class = "factor")), class = "data.frame", row.names = c(NA, 
+-1L))
+> dput(df, file = "simple_dataframe.R")
+> novo_df <- dget("simple_dataframe.R")
+> novo_df
+  a b
+1 1 a
+```
+dump() para múltiplos objetos R
+```
+> # pegando o último x e o df lá de cima
+> x
+ João Maria  José 
+    1     2     3 
+> df
+  a b
+1 1 a
+> dump(c("df", "x"), file = "simple_data.R")
+> # vamos usar rm() para deletar df e x para ver se source() funciona mesmo
+> rm(df, x) 
+> source("simple_data.R")
+> df
+  a b
+1 1 a
+> x
+ João Maria  José 
+    1     2     3 
+> # funcionou!
+```
