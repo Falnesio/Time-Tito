@@ -510,5 +510,23 @@ $b
 
 $c
 [1] 3
+
+l <- list(ab = 1, b = 2, c = 3)
+l$a
+#[1] 1
+l[["a"]]
+#NULL
+l[["a", exact = FALSE]]
+#[1] 1
+
+# existe um ordenamento lexicográfico  
+> x <- c("a", "b", "c", "c", "d", "a")
+> x[x > "a"]  
+[1] "b" "c" "c" "d"
+> u <- x > "a"
+> u
+[1] FALSE TRUE TRUE TRUE TRUE FALSE
+> x[u] # é identico a x[x > "a"] 
+[1] "b" "c" "c" "d"
 ```
 
