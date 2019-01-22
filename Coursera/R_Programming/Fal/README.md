@@ -43,9 +43,11 @@ Objetos em R tem atributos
 1. metadados e demais atributos
 ```
 attributes() #acessar atributos de um objeto
+str(coloca_função_aqui) # acessar cacaterísticas de uma função
+# toda função vem com parễnteses 
 ```
 
-##### c(), concatenar, gerar vários objetos unidos
+##### c(), a função concatenar, gerar vários objetos unidos
 ```
 x <- c(0.5, 0.6) #vetor numérico
 x <- 9:28 #vetor de inteiros
@@ -281,7 +283,7 @@ de arquivos.
 > `write.table()`
 
 `readLines()` é usado para ler linhas dentro de arquivos de texto (ou qualquer outro 
-tipo de arquivo) e devolve no R como caracteres.
+tipo de arquivo) e devolve no R como caracteres. ex. 10 primeiras linhas `readLines("foo.txt", 10)`
 >`writeLines`
 
 `source()` faz a leitura de arquivos escritos na linguagem R.
@@ -408,3 +410,105 @@ dump() para múltiplos objetos R
     1     2     3 
 > # funcionou!
 ```
+
+##### Connexões: outra forma de interagir com outros arquivos e a internet
+É uma ferramenta para fazer pesquisas mais sofisticadas dentro de algum arquivo etc.
+Ela nos ajuda a navegar sem precisar de acessar tudo de uma só vez.
+
+`file()` abre uma conexão com um arquivo
+
+`gzfile()` abre conexão com arquivo comprimido em gzip
+
+`bzfile()` abre conexão com arquivo comprimido em bzip2
+
+`ùrl` abre conexão com uma página web
+
+file()
+```
+> str(file)
+function (description = "", open = "", blocking = TRUE, 
+    encoding = getOption("encoding"), raw = FALSE, 
+    method = getOption("url.method", "default")) 
+```
+*description* é o nome do arquivo
+
+*open* é um codigo indicando:
+ * "r" = apenas ler
+ * "w" = apenas escrever
+ * "a" = acrescentar
+ * "rb", "wb", "ab" mesmo que acima porém em modo binário (Windows)
+
+exemplo:
+```
+# não é sempre necessário usar a interface de connexão
+
+con <- file("foo.txt", "r")
+data <- read.csv(con)
+close(con)
+
+# é o mesmo que
+
+data <- read.csv("foo.txt")
+```
+bom para arquivos que estão zippados
+```
+> con <- gzfiles("palavras.gz")
+> x <-readLines(con, 10)
+> x
+ [1] "1080"     "10-point" "10th"     "11-point"
+ [5] "12-point" "16-point" "18-point" "1st"
+ [9] "2"        "20-point"
+```
+bom para puxar páginas web
+```
+## Isso pode demorar
+con <- url("http://www.jhsph.edu", "r")
+x <- readLines(con)
+> head(x)
+[1] "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">"
+[2] ""
+[3] "<html>"
+[4] "<head>"
+[5] "\t<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8
+```
+
+##### Subsetting, ou sub conjunt(ando)
+Extrair subconjuntos no R
+
+`[` sempre retorna um objeto da mesma classe que o original. Pode ser usado para
+puxar mais de um elemento (com a excessão de ...).
+
+`[[` é usado para extrair elementos de uma lista ou dataframe. Extrai apenas um 
+elemento e a classe não necessariamente será a mesma (lista ou dataframe).
+
+`$` usado para extrair elementos (de uma lista ou dataframe) pelo nome. Resultados
+são iguais à utilização do `[[`.
+
+```
+
+> z
+$a
+[1] 1
+
+$b
+[1] 2
+
+$c
+[1] 3
+
+> z[1]
+$a
+[1] 1
+
+> z[[1]]
+[1] 1
+> z$a
+[1] 1
+> z[2:3]
+$b
+[1] 2
+
+$c
+[1] 3
+```
+
