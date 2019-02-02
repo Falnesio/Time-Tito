@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Time-Tito](README.md)
-* [README](think-complexity/README.md)
-  * [README](think-complexity/fal.md)
+* [README](Think-Complexity/README.md)
+  * [README](Think-Complexity/fal.md)
 * [README](programacao-da-maratona/README.md)
   * [Cada membro cria uma pasta com a resolução do estudo da primeira semana](programacao-da-maratona/semana-1-python-pelo-solyd/README.md)
     * [Anotações Falnésio](programacao-da-maratona/semana-1-python-pelo-solyd/anotacoes-falnesio/README.md)
