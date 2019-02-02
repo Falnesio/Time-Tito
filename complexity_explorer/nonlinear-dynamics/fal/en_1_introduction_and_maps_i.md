@@ -1,9 +1,13 @@
 # Anotações para Nonlinear Dynamics: Mathematical and Computational Approaches
 <<<<<<< HEAD:complexity_explorer/nonlinear-dynamics/fal/en_1_introduction_and_maps_i.md
 <<<<<<< HEAD:complexity_explorer/nonlinear-dynamics/fal/en_1_introduction_and_maps_i.md
+<<<<<<< HEAD:complexity_explorer/nonlinear-dynamics/fal/en_1_introduction_and_maps_i.md
 
 [Sumário](./)
 
+=======
+[Summário](README.md)
+>>>>>>> parent of 53d0c4e... corrir ortografia:Complexity_Explorer/Nonlinear Dynamics/Fal/en_1_Introduction_and_Maps_I.md
 =======
 [Summário](README.md)
 >>>>>>> parent of 53d0c4e... corrir ortografia:Complexity_Explorer/Nonlinear Dynamics/Fal/en_1_Introduction_and_Maps_I.md
