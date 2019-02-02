@@ -4,11 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Think-Python/Fal/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Think-Python/Fal/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py" afterDir="false" />
-    </list>
+    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +34,8 @@
         <entry file="file://$PROJECT_DIR$/Think-Python/Fal/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
-                <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+              <first_editor relative-caret-position="391">
+                <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
               </first_editor>
               <second_editor />
             </state>
@@ -49,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="2">
+              <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
               <folding>
                 <element signature="e#255#268#0" expanded="true" />
               </folding>
@@ -128,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -140,31 +136,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
-              <item name="Think-Python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
-              <item name="Think-Python" type="462c0819:PsiDirectoryNode" />
-              <item name="Fal" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="TODO_SCOPE" value="All Places" />
@@ -348,6 +320,7 @@
       <workItem from="1547320886471" duration="9959000" />
       <workItem from="1547409151454" duration="4657000" />
       <workItem from="1547495721489" duration="7030000" />
+      <workItem from="1549041615157" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="commit using pycharm">
       <created>1546117818715</created>
@@ -479,7 +452,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160221000" />
+    <option name="totallyTimeSpent" value="160826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,8 +464,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="1" />
-    <editor active="true" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" weight="0.85714287" />
       <window_info id="Structure" order="1" sideWeight="0.79126215" side_tool="true" weight="0.19667171" />
@@ -817,8 +789,8 @@
     <entry file="file://$PROJECT_DIR$/Think-Python/Fal/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <first_editor relative-caret-position="391">
+            <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
           </first_editor>
           <second_editor />
         </state>
@@ -826,8 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+        <state relative-caret-position="2">
+          <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
           <folding>
             <element signature="e#255#268#0" expanded="true" />
           </folding>
