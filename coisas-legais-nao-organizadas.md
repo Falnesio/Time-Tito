@@ -1,2 +1,0 @@
-# Coisas Legais Não Organizadas
-
