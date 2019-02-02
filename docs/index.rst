@@ -1,1 +1,1 @@
-toctree::
+.. toctree::
