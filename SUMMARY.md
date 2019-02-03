@@ -4,7 +4,7 @@
 
 	    - [Fal](complexity-explorer/nonlinear-dynamics/fal/README.md)
 
-		- [Anotações para Nonlinear Dynamics: Mathematical and Computational Approaches](complexity-explorer/nonlinear-dynamics/fal/en-1-introduction-and-maps-I.md)
+		- [Notes for Nonlinear Dynamics: Mathematical and Computational Approaches](complexity-explorer/nonlinear-dynamics/fal/en-1-introduction-and-maps-I.md)
 		- [Anotações para Nonlinear Dynamics: Mathematical and Computational Approaches](complexity-explorer/nonlinear-dynamics/fal/pt-1-introduction-and-maps-I.md)
 - [Coursera](coursera/README.md)
 
