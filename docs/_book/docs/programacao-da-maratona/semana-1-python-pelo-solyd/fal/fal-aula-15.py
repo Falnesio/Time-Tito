@@ -1,1 +1,0 @@
-# Resolução do exercício proposto no final da aula 14
