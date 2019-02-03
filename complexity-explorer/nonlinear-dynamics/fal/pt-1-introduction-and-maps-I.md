@@ -4,6 +4,8 @@
 
 ## 1 Introduction and Maps I
 
+> 1. Introdução e Mapas I
+
 ### 1.1 Introduction to nonlinear dynamics
 
 > 1.1 Introdução a dinâmicas não lineares
@@ -19,6 +21,4 @@ Nossos estudos básicos sobre o comportamento da natureza é baseado no pressupo
 Lorenz, no artigo de 1963 [Correntes Não-periódicas Determinísticas](https://journals.ametsoc.org/doi/pdf/10.1175/1520-0469%281963%29020<0130%3ADNF>2.0.CO%3B2), foi a primeira pessoa a estudar padrões de cáos e a sensibilidade da evolução de sistemas dentro do contexto desses padrões.
 
 Li e Yorke no artigo [Período Três implica Cáos](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.329.5038&rep=rep1&type=pdf), foram os primeiros a utilizar a palavra cáos para descrever esse comportamento.
-
-
 
