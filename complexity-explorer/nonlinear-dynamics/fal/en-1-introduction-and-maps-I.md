@@ -4,7 +4,7 @@
 
 ## 1 Introduction and Maps I
 
-### 1.1 Introduction to nonlinear dynamics
+### [1.1 Introduction to nonlinear dynamics](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7970)
 
 **Deterministic systems** are sensitive to inicial conditions, they are not random, cause and effect are linked, the present state affects future states.  
 **Dynamic systems** evolve with time.  
@@ -21,6 +21,48 @@ Loreenz in the 1963 paper Deterministic Nonperiodic Flow, was the first person t
 Li and Yorke in the paper Period Three Implies Chaos, were the first to use the word chaos to describe this behavior.
 
 ### 1.2 Maps and difference equations
+
+First we will be **studying maps** \(systems that operate in_ discrete time_\), and then **flows** \(_continuous_ time functions\). **Discrete time** can be understood as time being counted in _integers_ \(each time being a tick and each tick associated to a map or state\), and **continuous** time can be understood as time being counted using _real numbers_.
+
+Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
+
+> examples:  
+> **cossine map:** $$x_{n+1}=cos(x_{n})$$  
+> applying x = 48º and iterating 3 times we would reach a value close to .9998477 and not change. When this happens its called a** "Fixed Point" **on the map.
+>
+> **logistic map:** $$x_{n+1}=R_{x_i}(1-x_{n})$$  
+> simple population model that maps the unit interval to itself  
+> x = state, 0 &lt; x &lt;1  
+> n = time, $$\mathbb{N}$$  
+> R = paramater, $$\mathbb{N}| R < 4$$, for R &gt; 4, the map blows up.
+>
+> for $$x_{0}=0.2$$ and R = 2:
+>
+> | $$x_{1}$$ | $$R*x_{0}(1-x_{0})$$ |
+> | :--- | :--- |
+> |  | 2\(0.2\)\(1 - 0.2\) |
+> |  | 0.32 |
+> | $$x_{2}$$ | 2\(0.32\)\(1 - 0.32\) |
+> |  | 0.44 |
+> | $$x_{3}$$ | 0.49 |
+> | $$x_{4}$$ | 0.50 |
+> | $$x_{5}$$ | 0.50                **-&gt;**  **Fixed Point** |
+>
+>  The parameter changes fixed point, inicial conditions don't.
+
+Continuous time is measured in **differential equations:**
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
