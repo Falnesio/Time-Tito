@@ -24,7 +24,8 @@ Li and Yorke in the paper Period Three Implies Chaos, were the first to use the 
 
 First we will be **studying maps** \(systems that operate in_ discrete time_\), and then **flows** \(_continuous_ time functions\). **Discrete time** can be understood as time being counted in _integers_ \(each time being a tick and each tick associated to a map or state\), and **continuous** time can be understood as time being counted using _real numbers_.
 
-Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
+Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$  
+[Joshua's Logistic tools](http://tuvalu.santafe.edu/~joshua/?section=3), [Same tools on course site](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7985)
 
 > examples:  
 > **cossine map:** $$x_{n+1}=cos(x_{n})$$  
@@ -48,21 +49,7 @@ Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
 > | $$x_{4}$$ | 0.50 |
 > | $$x_{5}$$ | 0.50                **-&gt;**  **Fixed Point** |
 >
->  The parameter changes fixed point, inicial conditions don't.
+> The parameter changes fixed point, inicial conditions don't.
 
 Continuous time is measured in **differential equations:**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
