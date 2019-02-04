@@ -1,5 +1,0 @@
-# Summário de Anotações
-> Como forma de estudo, esatrei fazendo anotações em Inglês e para revisão farei uma tradução em Português.
-
-## 1 Introduction and Maps I
-[English](en_1_Introduction_and_Maps_I.md) [Português](pt_1_Introduction_and_Maps_I.md)

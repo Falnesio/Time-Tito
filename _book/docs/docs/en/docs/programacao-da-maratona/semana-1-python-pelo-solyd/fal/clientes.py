@@ -1,1 +1,0 @@
-[<__main__.cliente object at 0x000001DFDFCAB4A8>, <__main__.cliente object at 0x000001DFDFA03EB8>, <__main__.cliente object at 0x000001DFDFCAB828>, <__main__.cliente object at 0x000001DFDFA03908>]
