@@ -12,8 +12,8 @@
 **Chaotic systems** are _nonlinear_ and _dynamic_.  
 Complex behavior arises from simple deterministic nonlinear systems.
 
-Systems:  
-Dynamic \[ Nonlinear \[ \[Complex\], \[Chaotic\] \]
+> Systems:  
+> &gt; Dynamic \[ Nonlinear \[ \[ Complex \], \[ Chaotic \] \] \]
 
 Our basic study of behavior in nature is based on the pressumption of linear behavior, while the vast majority of natural behaviors that evolve in time are nonlinear. A large ammount of natural systems are chaotic and may not be studied utilizing only pen and paper, we need the help of computers with experimental mathmatics.
 
