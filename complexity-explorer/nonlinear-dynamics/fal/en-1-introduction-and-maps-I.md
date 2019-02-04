@@ -51,5 +51,7 @@ Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
 >
 > The parameter changes fixed point, inicial conditions don't.
 
+[Homework](/complexity-explorer/nonlinear-dynamics/fal/en-homework-1-2.md), [Worksheet](/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7.md)
+
 Continuous time is measured in **differential equations:**
 
