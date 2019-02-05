@@ -82,19 +82,12 @@ Different initial condition still lead here.
 **Unstable Fixed Point:**  
 A point which may remain stable if unperturbed. Initial conditions at the point make this point remain fixed.
 
-
-
 #### [1.4 Parameters and bifurcations](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7978)
 
-
-
-
-
-
-
-
-
-
+What happens to the attractors in the dynamics of the logistic map as the parameter r changes.  
+  
+**Periodic Orbit / Limit Cycle type of Attractor:  
+**When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
 
 
