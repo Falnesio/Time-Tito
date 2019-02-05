@@ -61,5 +61,36 @@ Continuous time is measured in **differential equations:**
 
 #### [1.3 Transients and attractor](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7975)
 
-**Orbit / Tragectory** of a dynamical system:
+**Orbit / Tragectory** of a dynamical system**: **  
+A sequence of values of the **state variables** of the system.
+
+> ex.  
+> The progression that iterates \($$x_{0}, x_{1}, x_{2}, ...$$\) in the logistic map
+
+$$x_{0}$$ is called the initial position of the state variable\(s\).  
+It can reach an asymptote called a fixed point after passing through other states which are called the **transientes**.
+
+The fixed point is a point which does not move with the dynamics of the system: $$f(x^*) = x^*$$. 
+
+**Attractor / Attracting Fixed Point: **  
+A fixed point to which the logistic map orbit converges when system is perturbed and iterations tend towards infinity.  
+Different initial condition still lead here.
+
+1. **Basin of Attraction:** A good analogy is thinking of the oceans as rain water basin attractors and land as the transiente states and the rivers are attractors.
+2. The more distante the initial conditions is to the fixed point, the bigger will be the transiente states.
+
+**Unstable Fixed Point:**  
+A point which may remain stable if unperturbed. Initial conditions at the point make this point remain fixed.
+
+
+
+
+
+
+
+
+
+
+
+
 
