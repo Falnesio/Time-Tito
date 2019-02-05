@@ -84,10 +84,16 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 #### [1.4 Parameters and bifurcations](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7978)
 
-What happens to the attractors in the dynamics of the logistic map as the parameter r changes.  
-  
-**Periodic Orbit / Limit Cycle type of Attractor:  
+What happens to the attractors in the dynamics of the logistic map as the parameter r changes.
+
+**Periodic Orbit / Limit Cycle type of Attractor:    
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
+
+**Biforcations:  
+**The changes in the amount of periods as we change the parameter **r**. Thereis a change in the topology of the attractor it is a qualitative change. The fix point does not move, it vanishes.
+
+**Chaotic Attractor / Strange Attractors:  
+**Periods that seam to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 
 
