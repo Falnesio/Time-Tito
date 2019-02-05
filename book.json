@@ -1,4 +1,17 @@
 {
-  "plugins": ["collapsible-menu", "mathjax"]
+  "plugins": ["collapsible-menu", "mathjax", "embed-pdf", "edit-link", "github", "insert-logo"],
+    "pluginsConfig": {
+            "edit-link": {
+                "base": "https://github.com/Falnesio/Time-Tito/tree/master/",
+                "label": "Editar no Gihub"
+            },
+		    "github": {
+		        "url": "https://github.com/Falnesio/Time-Tito/tree/master/"
+		    },
+		    "insert-logo": {
+		        "url": "https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png",
+		        "style": "background: none;"
+		    }
+    }
 }
 
