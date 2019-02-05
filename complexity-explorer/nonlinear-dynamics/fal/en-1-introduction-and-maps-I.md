@@ -20,7 +20,9 @@ Our basic study of behavior in nature is based on the pressumption of linear beh
 Loreenz in the 1963 paper Deterministic Nonperiodic Flow, was the first person to study the patterns of chaos and the sensitivity of the evolution of those systems within the context of those patterns.  
 Li and Yorke in the paper Period Three Implies Chaos, were the first to use the word chaos to describe this behavior.
 
-### 1.2 Maps and difference equations
+### 
+
+### [1.2 Maps and difference equations](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7971)
 
 First we will be **studying maps** \(systems that operate in_ discrete time_\), and then **flows** \(_continuous_ time functions\). **Discrete time** can be understood as time being counted in _integers_ \(each time being a tick and each tick associated to a map or state\), and **continuous** time can be understood as time being counted using _real numbers_.
 
@@ -29,7 +31,7 @@ Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
 
 > examples:  
 > **cossine map:** $$x_{n+1}=cos(x_{n})$$  
-> applying x = 48º and iterating 3 times we would reach a value close to .9998477 and not change. When this happens its called a** "Fixed Point" **on the map.
+> applying x = 48º and iterating 3 times we would reach a value close to .9998477 and not change. When this happens its called a** "Fixed Point" **or **asymptote **on the map.
 >
 > **logistic map:** $$x_{n+1}=R_{x_i}(1-x_{n})$$  
 > simple population model that maps the unit interval to itself  
@@ -54,4 +56,10 @@ Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
 [Homework](/complexity-explorer/nonlinear-dynamics/fal/en-homework-1-2.md), [Worksheet](/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7.md)
 
 Continuous time is measured in **differential equations:**
+
+#### 
+
+#### [1.3 Transients and attractor](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7975)
+
+**Orbit / Tragectory** of a dynamical system:
 
