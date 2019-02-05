@@ -28,7 +28,7 @@ while i < n:
     i += 1
     lista_x.append(x)
     lista_y.append(xn2)
-
+    print(i)
     scatter(lista_x,lista_y, s=100 ,marker='o')
 
 show()
