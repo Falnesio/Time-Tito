@@ -8,5 +8,7 @@
 
 6. r = 3.25 two states, r = 3.900000000001 appears chaotic
 
+7. r = 3.8521738 does appear to be periodic, but I do not know what a period 15 orbit is.
+
 
 
