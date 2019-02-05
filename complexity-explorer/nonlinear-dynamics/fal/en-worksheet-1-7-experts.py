@@ -26,9 +26,9 @@ while i < n:
     xn2 = x
     x = r*(r*x*(1-x))*(1-(r*x*(1-x)))*x
     i += 1
-    lista_x.append(x)
-    lista_y.append(xn2)
+    lista_x.append(xn2)
+    lista_y.append(x)
     print(i)
-    scatter(lista_x,lista_y, s=100 ,marker='o')
 
+scatter(lista_x,lista_y, s=100 ,marker='o')
 show()
