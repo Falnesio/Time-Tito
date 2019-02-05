@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Time-Tito.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Time-Tito.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,24 +27,56 @@
     <SUITE FILE_PATH="coverage/Time_Tito$Fal_main_twitter.coverage" NAME="Fal_main_twitter Coverage Results" MODIFIED="1546865122959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Python pelo Solyd/Anotações Falnésio" />
     <SUITE FILE_PATH="coverage/Time_Tito$ch4_ex3.coverage" NAME="ch4_ex3 Coverage Results" MODIFIED="1547502882583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Think-Python/Fal" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1071841901">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="9" />
+          <entry key="py" value="145" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="154" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Time-Tito" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Think-Python/Fal/README.md">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-2-2-logistics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="88" column="25" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="25" />
-              <folding>
-                <element signature="e#255#268#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="3" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -118,6 +148,7 @@
         <option value="$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.1.py" />
         <option value="$PROJECT_DIR$/Think-Python/Fal/README.md" />
         <option value="$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py" />
+        <option value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py" />
       </list>
     </option>
   </component>
@@ -133,7 +164,38 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
+              <item name="complexity-explorer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
+              <item name="complexity-explorer" type="462c0819:PsiDirectoryNode" />
+              <item name="nonlinear-dynamics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Time-Tito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Time-Tito" type="462c0819:PsiDirectoryNode" />
+              <item name="complexity-explorer" type="462c0819:PsiDirectoryNode" />
+              <item name="nonlinear-dynamics" type="462c0819:PsiDirectoryNode" />
+              <item name="fal" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="TODO_SCOPE" value="All Places" />
@@ -167,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ch4_ex3">
+  <component name="RunManager" selected="Python.en-worksheet-1-7-experts">
     <configuration name="EstruturaDeDecisao" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Time-Tito" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,28 +244,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaDeDecisao.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="EstruturaSequencial" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Time-Tito" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programacao da Maratona/Semana 1 - Fase 2 - Reposit-rio Python/Anotações Falnésio/EstruturaSequencial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -278,20 +318,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="en-worksheet-1-7-experts" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Time-Tito" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.EstruturaDeDecisao" />
-      <item itemvalue="Python.EstruturaSequencial" />
       <item itemvalue="Python.ch4_ex3" />
       <item itemvalue="Python.ch4_ex3.1" />
       <item itemvalue="Python.ch4_turtle" />
+      <item itemvalue="Python.en-worksheet-1-7-experts" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.en-worksheet-1-7-experts" />
         <item itemvalue="Python.ch4_ex3" />
         <item itemvalue="Python.ch4_turtle" />
         <item itemvalue="Python.ch4_ex3.1" />
         <item itemvalue="Python.EstruturaDeDecisao" />
-        <item itemvalue="Python.EstruturaSequencial" />
       </list>
     </recent_temporary>
   </component>
@@ -471,13 +532,13 @@
   <component name="ToolWindowManager">
     <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" weight="0.85714287" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" weight="0.85625964" />
       <window_info id="Structure" order="1" sideWeight="0.79126215" side_tool="true" weight="0.19667171" />
       <window_info id="Repositories" order="2" weight="0.3286908" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32405892" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4976452" visible="true" weight="0.26744187" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4976452" visible="true" weight="0.26644737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -488,7 +549,7 @@
       <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32890365" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969743" weight="0.3255814" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50392467" side_tool="true" weight="0.3936877" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49607536" weight="0.3936877" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49607536" weight="0.3930921" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -557,6 +618,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit using pycharm" />
@@ -756,11 +820,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Think-Python/Fal/ch4_ex3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="1320">
           <caret line="88" column="25" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="25" />
           <folding>
             <element signature="e#255#268#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-2-2-logistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
         </state>
       </provider>
     </entry>
