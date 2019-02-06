@@ -4,10 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="criar en-worksheet-1-7-experts.py&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;">
-      <change afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-homework-1-4-3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="criar en-worksheet-1-7-experts.py&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +40,14 @@
         <counts>
           <entry key="Python Console" value="9" />
           <entry key="dummy" value="15" />
-          <entry key="py" value="1079" />
+          <entry key="py" value="1082" />
           <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="46" />
-          <entry key="Python" value="1088" />
+          <entry key="Python" value="1091" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -82,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-homework-1-4-3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="16">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -701,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-homework-1-4-3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="16">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>

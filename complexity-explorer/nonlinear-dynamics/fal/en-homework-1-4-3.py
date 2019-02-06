@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 rplot = [3.828, 3.8281, 3.8282, 3.8283, 3.8284, 3.8285]
 x = 0.2
-n = 5000
+n = 2500
 mapas = []
 
 for r in rplot:
