@@ -19,5 +19,6 @@ print("Média da diferença absoluta para tragetória dos valores iniciais: ",
       sum(x1_menos_x2) / n)
 print("x1: ", x1)
 print("x2: ", x2)
+print(x2 == x1)
 plt.plot(lista_i, x1_menos_x2, c="b", marker="o", linestyle='None')
 plt.show()
