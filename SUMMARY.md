@@ -38,7 +38,7 @@
 		- [Aula 09 Python Orientado a Objeto](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md)
 		- [Aula 10 Entrada e saida de arquivos](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md)
 		- [Aula 11 Tratamento de erros](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md)
-		- [Aula 12 Requisicoes web(programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md)
+		- [Aula 12 Requisicoes web](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md)
 		- [Aula 13 API Lista de Filmes](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md)
 		- [Aula 14 Expressões regulares, procurando por e-mails](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md)
 - [Think Complexity](think-complexity/README.md)
