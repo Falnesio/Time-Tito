@@ -4,12 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="criar en-worksheet-1-7-experts.py&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;">
-      <change afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-homework-1-4-3.py" beforeDir="false" afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-1-4-3-homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-1-homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-1-homework.py" afterDir="false" />
-    </list>
+    <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="criar en-worksheet-1-7-experts.py&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +64,7 @@
     <session id="287160391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -114,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -577,7 +573,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="0" width="697" height="735" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" weight="0.42349306" />
       <window_info id="Structure" order="1" sideWeight="0.79126215" side_tool="true" weight="0.19667171" />
@@ -585,7 +580,7 @@
       <window_info id="Favorites" order="3" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32401314" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4976452" visible="true" weight="0.26644737" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4976452" weight="0.26644737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -745,8 +740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
