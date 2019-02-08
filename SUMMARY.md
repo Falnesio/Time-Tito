@@ -12,7 +12,7 @@
 
 	    - [Fal](coursera/data-scientists-toolbox/fal/README.md)
 
-			- [Certificado Fal](coursera/data-scientists-toolbox/fal/certificado-fal-data-scientist-toolbox.md)
+			- [Certificado Fal](https://github.com/Falnesio/Time-Tito/blob/master/coursera/data-scientists-toolbox/certificado-fal-data-scientist-toolbox.pdf)
 
 	- [R-Programming](coursera/r-programming/README.md)
 
