@@ -1,1 +1,0 @@
-{% pdf src="coursera/data-scientists-toolbox/fal/certificado-fal-data-scientist-toolbox.pdf", width="100%", height="850" %}{% endpdf %}

@@ -552,7 +552,7 @@ is.nan(x)</code></pre>
 </div>
 <div id="data-frame" class="section level5">
 <h5>Data Frame</h5>
-<p>É uma traiz que aceita diferentes tipos de valores, ou seja é uma tabela. Cada linha na tabela pode ter um nome <code>row.names()</code> (o default são números começando pelo número 1), o que é bom para rotular diferentes observações na tabela. Tabelas podem ser criadas chamando <code>read.table()</code>, ou <code>read.csv()</code> para abrir um arquivo.</p>
+<p>É uma matriz que aceita diferentes tipos de valores, ou seja é uma tabela. Cada linha na tabela pode ter um nome <code>row.names()</code> (o default são números começando pelo número 1), o que é bom para rotular diferentes observações na tabela. Tabelas podem ser criadas chamando <code>read.table()</code>, ou <code>read.csv()</code> para abrir um arquivo.</p>
 <p>Tabelas podem ser tranformadas em matrizes com <code>data.matrix()</code>, poreḿ sofreram coerção e serão transformados no mesmo tipo de objeto.</p>
 <p>Criando um Data Frame:</p>
 <pre><code>&gt; x &lt;- data.frame(foo = 1:4, bar = c(T, T, F, F))

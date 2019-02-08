@@ -27,6 +27,7 @@
 	- [Semana 1 Python Pelo Solyd](programacao-da-maratona/semana-1-python-pelo-solyd/README.md)
 
 	    - [Fal]()
+		- [Certificado Fal](https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf)
 		- [Aula 01 Introducao ao python e preparando o ambiente](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md)
 		- [Aula 02 Entrada saida variaveis e operacoes matematicas](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md)
 		- [Aula 03 Operadores logicos e estruturas de decisao](programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md)

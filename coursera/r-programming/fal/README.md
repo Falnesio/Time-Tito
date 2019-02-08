@@ -200,7 +200,7 @@ is.nan(x)
 ```
 
 ##### Data Frame
-É uma traiz que aceita diferentes tipos de valores, ou seja
+É uma matriz que aceita diferentes tipos de valores, ou seja
 é uma tabela.
 Cada linha na tabela pode ter um nome `row.names()` (o default são números começando 
 pelo número 1), o que é bom para rotular diferentes observações na tabela. 
@@ -271,12 +271,14 @@ nomes das **linhas** e a **segunda** com os nomes das **colunas**.
 Loja da Solange                   1           3               5
 Loja da Fátima                    2           4               6
 ```
+
 #### Lendo e Escrevendo Dados em Tabela
 
-**chave:**
 
-Para leitura
-> para escrever
+**chave:**
+>> Para leitura
+>>> para escrever
+
 ------
 `read.table()` e  `read.csv()` são utilizados para a leitura de dados em tabela dentro
 de arquivos.
@@ -297,6 +299,7 @@ tipo de arquivo) e devolve no R como caracteres. ex. 10 primeiras linhas `readLi
 
 `unserialized()` faz a leitura de um único objeto R em escrito em binário.
 >`serialize`
+
 ------
 
 ##### read.table()
@@ -304,7 +307,7 @@ tipo de arquivo) e devolve no R como caracteres. ex. 10 primeiras linhas `readLi
 Antes de começar, é importante saber se o RAM do computador comporta o tamanho do
 detaset.
 
-Conheça a sua maquina, o que ela é capaz e o que está rodando nela atualmente.
+Conheça a sua maquina, do que ela é capaz e o que está rodando nela atualmente.
 
 A função mais utilizada para chamar arquivos. Normalmente utiliza-se dessa função apenas 
 com o argumento *file*. (ex.`read.table("aquivo.csv")` ou `read.table("\Documents and Settings\SeuNome\My Documents\arquivo.csv")`)
@@ -475,6 +478,9 @@ x <- readLines(con)
 ##### Subsetting, ou sub conjunt(ando)
 Extrair subconjuntos no R
 
+
+Básico
+-------
 `[` sempre retorna um objeto da mesma classe que o original. Pode ser usado para
 puxar mais de um elemento (com a excessão de ...).
 
@@ -511,13 +517,13 @@ $b
 $c
 [1] 3
 
-l <- list(ab = 1, b = 2, c = 3)
-l$a
-#[1] 1
-l[["a"]]
-#NULL
-l[["a", exact = FALSE]]
-#[1] 1
+> l <- list(ab = 1, b = 2, c = 3)
+>l$a
+[1] 1
+>l[["a"]]
+NULL
+>l[["a", exact = FALSE]]
+[1] 1
 
 # existe um ordenamento lexicográfico  
 > x <- c("a", "b", "c", "c", "d", "a")
@@ -529,4 +535,97 @@ l[["a", exact = FALSE]]
 > x[u] # é identico a x[x > "a"] 
 [1] "b" "c" "c" "d"
 ```
+
+Listas
+-------
+Subsetting e listas
+
+Podemos usar [[]], $ ou [] para puxar informações.
+
+```
+> x <- list(foo = 1:4, bar = 0.6, baz = "oi")
+> x
+$foo
+[1] 1 2 3 4
+
+$bar
+[1] 0.6
+
+$baz
+[1] "oi"
+
+> x[1] # retorna algo do mesmo tipo que x, nesse caso uma lista
+$foo
+[1] 1 2 3 4
+
+> x["foo"] # o mesmo é verdade para nomes
+$foo
+[1] 1 2 3 4
+
+> x["bar"] # isso teronar uma lista também pois x é uma lista
+$bar
+[1] 0.6
+
+> x[[1]] # retorna uma sequência de números, não em formato de lista
+[1] 1 2 3 4
+
+> x$foo # assim como usar o $ também retorna uma sequência
+[1] 1 2 3 4
+```
+O propósito dos nomes é não precisar de lembrar da localização dos dados e sim apenas dos seus nomes para pode puxar.
+```
+> x[c(1,3)] # podemos apresentar uma concatinação para escolher multiplos dados
+$foo
+[1] 1 2 3 4
+
+$baz
+[1] "oi"
+
+```
+[[]] pode ser usado para objetos computados enquanto $ apenas aceita nomes literais. Isso significa que o nome de algo pode ser o resultado de uma computação, e isso pode ser capturado apenas pelo [[]].
+```
+> nome <- "foo" # ao atribuir "foo" a nome
+> x[[nome]]  # podemos usar [[]] para puxar nome, ou seja "foo"
+[1] 1 2 3 4
+> x$nome     # porém nome não é literalmente "foo"
+NULL         #então com $ não funciona
+> x$foo
+[1] 1 2 3 4
+```
+Podemos escolher de forma recursiva elementos dentro de elementos.
+```
+> # considere essa nova lista w
+> w <- list(a = list(10, 12, 14), b = c(3.14, 2.81))
+>
+> #podemos usar [[]] junta a c() para escolher um elemento
+>
+> w[[c(1,3)]] # escolha dentro do elemento 1 o elemento 3
+[1] 14        # ou  o elemento 3 dentro do elemento 1
+
+> w[[c(2,1)]] # escolher dentro do elemento 1 o elemento 2
+[1] 3.14
+
+> # outra forma de fazer a mesma coisa seria 
+> w[[1]][[3]]
+[1] 14
+
+> w[c(1,3)]  # não confundir com [] em conjunto com c()
+$a
+$a[[1]]
+[1] 10
+
+$a[[2]]
+[1] 12
+
+$a[[3]]
+[1] 14
+
+
+$<NA>
+NULL
+```
+
+
+
+
 
