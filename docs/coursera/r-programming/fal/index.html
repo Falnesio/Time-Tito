@@ -1226,6 +1226,109 @@ $a[[3]]
 
 $&lt;NA&gt;
 NULL
+</code></pre><h2 id="matrizes">Matrizes</h2>
+<pre><code>&gt; m # vamos puxar uma matriz conhecida
+                Pre&#xE7;o do Computador Pre&#xE7;o da TV Pre&#xE7;o do Laptop
+Loja da Solange                   1           3               5
+Loja da F&#xE1;tima                    2           4               6
+
+&gt; m[1,2] # podemos puxar colocando matriz[linha,coluna]
+[1] 3
+&gt; m[2,3]
+[1] 6
+
+&gt; # Nota que abaixo obtemos uma sequ&#xEA;ncia de objetos e n&#xE3;o matrizes
+
+&gt; m[1, ] # podemos deixar vazio para puaxar uma linha inteira
+Pre&#xE7;o do Computador         Pre&#xE7;o da TV     Pre&#xE7;o do Laptop 
+                  1                   3                   5 
+&gt; m[ ,2] # ou uma coluna inteira
+Loja da Solange  Loja da F&#xE1;tima 
+              3               4
+</code></pre><p>Quando um elemento de uma matriz &#xE9; obtido por [], voc&#xEA; obtem um vetor e n&#xE3;o uma matriz pois a classe dos elementos de uma matriz s&#xE3;o vetores.</p>
+<pre><code>&gt; m[2,3]
+[1] 6
+</code></pre><p>Para obter uma matriz &#xE9; necess&#xE1;rio aplicar
+<strong>matriz[linha,coluna, drop = FALSE]</strong>
+<em>drop = FALSE</em> preserva as dimens&#xF5;es do objeto</p>
+<pre><code>&gt; m[2,3, drop = FALSE] 
+               Pre&#xE7;o do Laptop
+Loja da F&#xE1;tima               6
+
+&gt; m[1, , drop = FALSE]
+                Pre&#xE7;o do Computador Pre&#xE7;o da TV Pre&#xE7;o do Laptop
+Loja da Solange                   1           3               5
+&gt; m[ ,2, drop = FALSE]
+                Pre&#xE7;o da TV
+Loja da Solange           3
+Loja da F&#xE1;tima            4
+</code></pre><h2 id="busca-parcial">Busca Parcial</h2>
+<p>Para quando tiver que trabalhar rapidamente buscando por elementos, tem uma forma mais f&#xE1;cil de buscar pelos elementos com nomes sem precisar de escrever todo o nome.</p>
+<pre><code>&gt; y &lt;- list(tamandua = 1:5) #considere essa lista
+&gt; y$t           # podemos buscar por algo iniciando com t
+[1] 1 2 3 4 5
+&gt; y$ta          # ou ta
+[1] 1 2 3 4 5
+&gt; y$dua         # as partes do meio ou fim do nome n&#xE3;o funcionam
+NULL
+&gt; y[[&quot;t&quot;]]                # assim busca nomes exatos 
+NULL
+&gt; y[[&quot;t&quot;, exact = FALSE]] # assim &#xE9; id&#xEA;ntico a $
+[1] 1 2 3 4 5
+</code></pre><h2 id="remover-dados-inexistentes">Remover dados inexistentes</h2>
+<pre><code>&gt; #suponha as listas abaixo, cheia de valores inexistentes
+&gt; problema &lt;- c(1, 2, NA, 4, NA, 5)
+&gt; outro_problema &lt;- c(&quot;a&quot;, &quot;b&quot;, NA, &quot;d&quot;, NA, &quot;f&quot;)
+
+&gt; ruim &lt;- is.na(problema)  #busca por elementos NA na lista
+&gt; ruim
+[1] FALSE FALSE  TRUE FALSE  TRUE FALSE
+
+&gt; problema[!ruim] # exclama&#xE7;&#xE3;o exclui tudo que ruim considera verdadeiro
+[1] 1 2 4 5
+
+&gt; problema  # isso n&#xE3;o modifica problema, mas podemos atribuir 
+[1]  1  2 NA  4 NA  5  # aquele resultado a problema ou a outra 
+                       # vari&#xE1;vel para guardar o resultado que
+                       # queremos. Ou podemos apenas sempre
+                       # utilizar em conjunto quando &#xE9; necess&#xE1;rio                        # saber qual &#xE9; qual
+
+# podemos criar um subconjunto de valores n&#xE3;o NA, mostrando quais posi&#xE7;&#xF5;es de um ou mais conjuntos cont&#xE9;m ou n&#xE3;o valores NA                   
+&gt; bom &lt;- complete.cases(problema, outro_problema)
+&gt; bom
+[1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+&gt; problema[bom]
+[1] 1 2 4 5
+&gt; outro_problema[bom]
+[1] &quot;a&quot; &quot;b&quot; &quot;d&quot; &quot;f&quot;
+</code></pre><p>O mesmo pode ser feito com tabelas, mas n&#xE3;o matrizes.
+<img src="." alt="missing-value"></p>
+<pre><code>&gt; # atrapalhando um pouco m, podemos verificar isso
+&gt; m
+                Pre&#xE7;o do Computador Pre&#xE7;o da TV Pre&#xE7;o do Laptop
+Loja da Solange                   1           3               5
+Loja da F&#xE1;tima                    2           4               6
+&gt; m[2,1] &lt;- NA
+&gt; m[1,3] &lt;- NA
+&gt; m
+                Pre&#xE7;o do Computador Pre&#xE7;o da TV Pre&#xE7;o do Laptop
+Loja da Solange                   1           3              NA
+Loja da F&#xE1;tima                   NA           4               6
+&gt; bad &lt;- is.na(m)
+&gt; bad
+                Pre&#xE7;o do Computador Pre&#xE7;o da TV Pre&#xE7;o do Laptop
+Loja da Solange               FALSE       FALSE            TRUE
+Loja da F&#xE1;tima                 TRUE       FALSE           FALSE
+&gt; m[bad]
+[1] NA NA
+&gt; m[!bad]
+[1] 1 3 4 6
+&gt; m[!bad, drop=FALSE]
+[1] 1 3 4 6
+&gt; m[!bad, ,drop=FALSE]
+Error in m[!bad, , drop = FALSE] : (subscript) logical subscript too long
+&gt; m[!bad][drop=FALSE]
+[1] 1 3 4 6
 </code></pre>
                                 
                                 </section>
@@ -1269,7 +1372,7 @@ NULL
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Fal","level":"1.3.2.1","depth":3,"next":{"title":"Programacao da Maratona","level":"1.4","depth":1,"path":"programacao-da-maratona/README.md","ref":"programacao-da-maratona/README.md","articles":[{"title":"Semana 1 fase 2 Repositorio Python","level":"1.4.1","depth":2,"path":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","ref":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","articles":[{"title":"Fal: Códigos","level":"1.4.1.1","depth":3,"url":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","ref":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","articles":[]}]},{"title":"Semana 1 Python Pelo Solyd","level":"1.4.2","depth":2,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","articles":[{"title":"Fal","level":"1.4.2.1","depth":3,"ref":"","articles":[]},{"title":"Certificado Fal","level":"1.4.2.2","depth":3,"url":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","articles":[]},{"title":"Aula 01 Introducao ao python e preparando o ambiente","level":"1.4.2.3","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","articles":[]},{"title":"Aula 02 Entrada saida variaveis e operacoes matematicas","level":"1.4.2.4","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","articles":[]},{"title":"Aula 03 Operadores logicos e estruturas de decisao","level":"1.4.2.5","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","articles":[]},{"title":"Aula 04 Strings e listas","level":"1.4.2.6","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","articles":[]},{"title":"Aula 05 Estruturas de laco for e while","level":"1.4.2.7","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","articles":[]},{"title":"Aula 06 Estruturas de dados - list, dict, tuple e set","level":"1.4.2.8","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","articles":[]},{"title":"Aula 07 Metodos e funcoes","level":"1.4.2.9","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","articles":[]},{"title":"Aula 08 Passagem de argumentos","level":"1.4.2.10","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","articles":[]},{"title":"Aula 09 Python Orientado a Objeto","level":"1.4.2.11","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","articles":[]},{"title":"Aula 10 Entrada e saida de arquivos","level":"1.4.2.12","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","articles":[]},{"title":"Aula 11 Tratamento de erros","level":"1.4.2.13","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","articles":[]},{"title":"Aula 12 Requisicoes web","level":"1.4.2.14","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","articles":[]},{"title":"Aula 13 API Lista de Filmes","level":"1.4.2.15","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","articles":[]},{"title":"Aula 14 Expressões regulares, procurando por e-mails","level":"1.4.2.16","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","articles":[]}]}]},"previous":{"title":"R-Programming","level":"1.3.2","depth":2,"path":"coursera/r-programming/README.md","ref":"coursera/r-programming/README.md","articles":[{"title":"Fal","level":"1.3.2.1","depth":3,"path":"coursera/r-programming/fal/README.md","ref":"coursera/r-programming/fal/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/README.md","mtime":"2019-02-08T23:13:26.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-08T23:20:27.802Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Fal","level":"1.3.2.1","depth":3,"next":{"title":"Programacao da Maratona","level":"1.4","depth":1,"path":"programacao-da-maratona/README.md","ref":"programacao-da-maratona/README.md","articles":[{"title":"Semana 1 fase 2 Repositorio Python","level":"1.4.1","depth":2,"path":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","ref":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","articles":[{"title":"Fal: Códigos","level":"1.4.1.1","depth":3,"url":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","ref":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","articles":[]}]},{"title":"Semana 1 Python Pelo Solyd","level":"1.4.2","depth":2,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","articles":[{"title":"Fal","level":"1.4.2.1","depth":3,"ref":"","articles":[]},{"title":"Certificado Fal","level":"1.4.2.2","depth":3,"url":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","articles":[]},{"title":"Aula 01 Introducao ao python e preparando o ambiente","level":"1.4.2.3","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","articles":[]},{"title":"Aula 02 Entrada saida variaveis e operacoes matematicas","level":"1.4.2.4","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","articles":[]},{"title":"Aula 03 Operadores logicos e estruturas de decisao","level":"1.4.2.5","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","articles":[]},{"title":"Aula 04 Strings e listas","level":"1.4.2.6","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","articles":[]},{"title":"Aula 05 Estruturas de laco for e while","level":"1.4.2.7","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","articles":[]},{"title":"Aula 06 Estruturas de dados - list, dict, tuple e set","level":"1.4.2.8","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","articles":[]},{"title":"Aula 07 Metodos e funcoes","level":"1.4.2.9","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","articles":[]},{"title":"Aula 08 Passagem de argumentos","level":"1.4.2.10","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","articles":[]},{"title":"Aula 09 Python Orientado a Objeto","level":"1.4.2.11","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","articles":[]},{"title":"Aula 10 Entrada e saida de arquivos","level":"1.4.2.12","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","articles":[]},{"title":"Aula 11 Tratamento de erros","level":"1.4.2.13","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","articles":[]},{"title":"Aula 12 Requisicoes web","level":"1.4.2.14","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","articles":[]},{"title":"Aula 13 API Lista de Filmes","level":"1.4.2.15","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","articles":[]},{"title":"Aula 14 Expressões regulares, procurando por e-mails","level":"1.4.2.16","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","articles":[]}]}]},"previous":{"title":"R-Programming","level":"1.3.2","depth":2,"path":"coursera/r-programming/README.md","ref":"coursera/r-programming/README.md","articles":[{"title":"Fal","level":"1.3.2.1","depth":3,"path":"coursera/r-programming/fal/README.md","ref":"coursera/r-programming/fal/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/README.md","mtime":"2019-02-09T19:30:00.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-09T19:30:40.860Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

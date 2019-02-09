@@ -625,7 +625,122 @@ $<NA>
 NULL
 ```
 
+Matrizes
+---------
+```
+> m # vamos puxar uma matriz conhecida
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange                   1           3               5
+Loja da Fátima                    2           4               6
 
+> m[1,2] # podemos puxar colocando matriz[linha,coluna]
+[1] 3
+> m[2,3]
+[1] 6
 
+> # Nota que abaixo obtemos uma sequência de objetos e não matrizes
 
+> m[1, ] # podemos deixar vazio para puaxar uma linha inteira
+Preço do Computador         Preço da TV     Preço do Laptop 
+                  1                   3                   5 
+> m[ ,2] # ou uma coluna inteira
+Loja da Solange  Loja da Fátima 
+              3               4 
+```
+Quando um elemento de uma matriz é obtido por [], você obtem um vetor e não uma matriz pois a classe dos elementos de uma matriz são vetores.
+```
+> m[2,3]
+[1] 6
+```
+Para obter uma matriz é necessário aplicar
+**matriz[linha,coluna, drop = FALSE]**
+*drop = FALSE* preserva as dimensões do objeto
+```
+> m[2,3, drop = FALSE] 
+               Preço do Laptop
+Loja da Fátima               6
+
+> m[1, , drop = FALSE]
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange                   1           3               5
+> m[ ,2, drop = FALSE]
+                Preço da TV
+Loja da Solange           3
+Loja da Fátima            4
+```
+Busca Parcial
+-------------
+Para quando tiver que trabalhar rapidamente buscando por elementos, tem uma forma mais fácil de buscar pelos elementos com nomes sem precisar de escrever todo o nome.
+```
+> y <- list(tamandua = 1:5) #considere essa lista
+> y$t           # podemos buscar por algo iniciando com t
+[1] 1 2 3 4 5
+> y$ta          # ou ta
+[1] 1 2 3 4 5
+> y$dua         # as partes do meio ou fim do nome não funcionam
+NULL
+> y[["t"]]                # assim busca nomes exatos 
+NULL
+> y[["t", exact = FALSE]] # assim é idêntico a $
+[1] 1 2 3 4 5
+```
+Remover dados inexistentes
+-------
+```
+> #suponha as listas abaixo, cheia de valores inexistentes
+> problema <- c(1, 2, NA, 4, NA, 5)
+> outro_problema <- c("a", "b", NA, "d", NA, "f")
+
+> ruim <- is.na(problema)  #busca por elementos NA na lista
+> ruim
+[1] FALSE FALSE  TRUE FALSE  TRUE FALSE
+
+> problema[!ruim] # exclamação exclui tudo que ruim considera verdadeiro
+[1] 1 2 4 5
+
+> problema  # isso não modifica problema, mas podemos atribuir 
+[1]  1  2 NA  4 NA  5  # aquele resultado a problema ou a outra 
+                       # variável para guardar o resultado que
+                       # queremos. Ou podemos apenas sempre
+                       # utilizar em conjunto quando é necessário                        # saber qual é qual
+
+# podemos criar um subconjunto de valores não NA, mostrando quais posições de um ou mais conjuntos contém ou não valores NA                   
+> bom <- complete.cases(problema, outro_problema)
+> bom
+[1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+> problema[bom]
+[1] 1 2 4 5
+> outro_problema[bom]
+[1] "a" "b" "d" "f"
+```
+O mesmo pode ser feito com tabelas, mas não matrizes.
+![missing-value]()
+```
+> # atrapalhando um pouco m, podemos verificar isso
+> m
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange                   1           3               5
+Loja da Fátima                    2           4               6
+> m[2,1] <- NA
+> m[1,3] <- NA
+> m
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange                   1           3              NA
+Loja da Fátima                   NA           4               6
+> bad <- is.na(m)
+> bad
+                Preço do Computador Preço da TV Preço do Laptop
+Loja da Solange               FALSE       FALSE            TRUE
+Loja da Fátima                 TRUE       FALSE           FALSE
+> m[bad]
+[1] NA NA
+> m[!bad]
+[1] 1 3 4 6
+> m[!bad, drop=FALSE]
+[1] 1 3 4 6
+> m[!bad, ,drop=FALSE]
+Error in m[!bad, , drop = FALSE] : (subscript) logical subscript too long
+> m[!bad][drop=FALSE]
+[1] 1 3 4 6
+```
 

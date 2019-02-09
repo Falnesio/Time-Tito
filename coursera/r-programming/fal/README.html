@@ -605,19 +605,38 @@ Loja da Fátima                    2           4               6</code></pre>
 </div>
 <div id="lendo-e-escrevendo-dados-em-tabela" class="section level4">
 <h4>Lendo e Escrevendo Dados em Tabela</h4>
-<p><strong>chave:</strong></p>
-<p>Para leitura &gt; para escrever —— <code>read.table()</code> e <code>read.csv()</code> são utilizados para a leitura de dados em tabela dentro de arquivos. &gt; <code>write.table()</code></p>
-<p><code>readLines()</code> é usado para ler linhas dentro de arquivos de texto (ou qualquer outro tipo de arquivo) e devolve no R como caracteres. ex. 10 primeiras linhas <code>readLines(&quot;foo.txt&quot;, 10)</code> &gt;<code>writeLines</code></p>
-<p><code>source()</code> faz a leitura de arquivos escritos na linguagem R. &gt;<code>dump</code></p>
-<p><code>dget()</code> faz a leitura de arquivos com código R <em>parsed</em> em arquivos de texto. &gt;<code>dput()</code></p>
-<p><code>load()</code> faz a leitura de arquivos com código binário. &gt;<code>save()</code></p>
-<p><code>unserialized()</code> faz a leitura de um único objeto R em escrito em binário. &gt;<code>serialize</code> ——</p>
+<p><strong>chave:</strong> &gt;&gt; Para leitura &gt;&gt;&gt; para escrever</p>
+<table style="width:10%;">
+<colgroup>
+<col width="9%"></col>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><code>read.table()</code> e <code>read.csv()</code> são utilizados para a leitura de dados em tabela dentro de arquivos. &gt; <code>write.table()</code></td>
+</tr>
+<tr class="even">
+<td><code>readLines()</code> é usado para ler linhas dentro de arquivos de texto (ou qualquer outro tipo de arquivo) e devolve no R como caracteres. ex. 10 primeiras linhas <code>readLines(&quot;foo.txt&quot;, 10)</code> &gt;<code>writeLines</code></td>
+</tr>
+<tr class="odd">
+<td><code>source()</code> faz a leitura de arquivos escritos na linguagem R. &gt;<code>dump</code></td>
+</tr>
+<tr class="even">
+<td><code>dget()</code> faz a leitura de arquivos com código R <em>parsed</em> em arquivos de texto. &gt;<code>dput()</code></td>
+</tr>
+<tr class="odd">
+<td><code>load()</code> faz a leitura de arquivos com código binário. &gt;<code>save()</code></td>
+</tr>
+<tr class="even">
+<td><code>unserialized()</code> faz a leitura de um único objeto R em escrito em binário. &gt;<code>serialize</code></td>
+</tr>
+</tbody>
+</table>
 <div id="read.table" class="section level5">
 <h5>read.table()</h5>
 <div id="e-muito-importante-ler-o-helpread.table" class="section level6">
 <h6>é muito importante ler o help(read.table) !!!</h6>
 <p>Antes de começar, é importante saber se o RAM do computador comporta o tamanho do detaset.</p>
-<p>Conheça a sua maquina, o que ela é capaz e o que está rodando nela atualmente.</p>
+<p>Conheça a sua maquina, do que ela é capaz e o que está rodando nela atualmente.</p>
 <p>A função mais utilizada para chamar arquivos. Normalmente utiliza-se dessa função apenas com o argumento <em>file</em>. (ex.<code>read.table(&quot;aquivo.csv&quot;)</code> ou <code>read.table(&quot;\Documents and Settings\SeuNome\My Documents\arquivo.csv&quot;)</code>)</p>
 <p>Os <strong>argumentos</strong> são as coisas que colocamos dentro de funções. Na função <strong>read.table()</strong> elas são</p>
 <p>read.table(<em>file</em>,<em>header</em> ,<em>sep</em> ,<em>colClasses</em> ,<em>nrows</em> ,<em>comment.char</em> ,<em>skip</em> ,<em>stringAsFactors</em>)</p>
@@ -731,6 +750,12 @@ x &lt;- readLines(con)
 <div id="subsetting-ou-sub-conjuntando" class="section level5">
 <h5>Subsetting, ou sub conjunt(ando)</h5>
 <p>Extrair subconjuntos no R</p>
+</div>
+</div>
+</div>
+</div>
+<div id="basico-1" class="section level2">
+<h2>Básico</h2>
 <p><code>[</code> sempre retorna um objeto da mesma classe que o original. Pode ser usado para puxar mais de um elemento (com a excessão de …).</p>
 <p><code>[[</code> é usado para extrair elementos de uma lista ou dataframe. Extrai apenas um elemento e a classe não necessariamente será a mesma (lista ou dataframe).</p>
 <p><code>$</code> usado para extrair elementos (de uma lista ou dataframe) pelo nome. Resultados são iguais à utilização do <code>[[</code>.</p>
@@ -760,13 +785,13 @@ $b
 $c
 [1] 3
 
-l &lt;- list(ab = 1, b = 2, c = 3)
-l$a
-#[1] 1
-l[[&quot;a&quot;]]
-#NULL
-l[[&quot;a&quot;, exact = FALSE]]
-#[1] 1
+&gt; l &lt;- list(ab = 1, b = 2, c = 3)
+&gt;l$a
+[1] 1
+&gt;l[[&quot;a&quot;]]
+NULL
+&gt;l[[&quot;a&quot;, exact = FALSE]]
+[1] 1
 
 # existe um ordenamento lexicográfico  
 &gt; x &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;c&quot;, &quot;d&quot;, &quot;a&quot;)
@@ -778,8 +803,87 @@ l[[&quot;a&quot;, exact = FALSE]]
 &gt; x[u] # é identico a x[x &gt; &quot;a&quot;] 
 [1] &quot;b&quot; &quot;c&quot; &quot;c&quot; &quot;d&quot;</code></pre>
 </div>
+<div id="listas" class="section level2">
+<h2>Listas</h2>
+<p>Subsetting e listas</p>
+<p>Podemos usar [[]], $ ou [] para puxar informações.</p>
+<pre><code>&gt; x &lt;- list(foo = 1:4, bar = 0.6, baz = &quot;oi&quot;)
+&gt; x
+$foo
+[1] 1 2 3 4
+
+$bar
+[1] 0.6
+
+$baz
+[1] &quot;oi&quot;
+
+&gt; x[1] # retorna algo do mesmo tipo que x, nesse caso uma lista
+$foo
+[1] 1 2 3 4
+
+&gt; x[&quot;foo&quot;] # o mesmo é verdade para nomes
+$foo
+[1] 1 2 3 4
+
+&gt; x[&quot;bar&quot;] # isso teronar uma lista também pois x é uma lista
+$bar
+[1] 0.6
+
+&gt; x[[1]] # retorna uma sequência de números, não em formato de lista
+[1] 1 2 3 4
+
+&gt; x$foo # assim como usar o $ também retorna uma sequência
+[1] 1 2 3 4</code></pre>
+<p>O propósito dos nomes é não precisar de lembrar da localização dos dados e sim apenas dos seus nomes para pode puxar.</p>
+<pre><code>&gt; x[c(1,3)] # podemos apresentar uma concatinação para escolher multiplos dados
+$foo
+[1] 1 2 3 4
+
+$baz
+[1] &quot;oi&quot;
+</code></pre>
+<p>[[]] pode ser usado para objetos computados enquanto $ apenas aceita nomes literais. Isso significa que o nome de algo pode ser o resultado de uma computação, e isso pode ser capturado apenas pelo [[]].</p>
+<pre><code>&gt; nome &lt;- &quot;foo&quot; # ao atribuir &quot;foo&quot; a nome
+&gt; x[[nome]]  # podemos usar [[]] para puxar nome, ou seja &quot;foo&quot;
+[1] 1 2 3 4
+&gt; x$nome     # porém nome não é literalmente &quot;foo&quot;
+NULL         #então com $ não funciona
+&gt; x$foo
+[1] 1 2 3 4</code></pre>
+<p>Podemos escolher de forma recursiva elementos dentro de elementos.</p>
+<pre><code>&gt; # considere essa nova lista w
+&gt; w &lt;- list(a = list(10, 12, 14), b = c(3.14, 2.81))
+&gt;
+&gt; #podemos usar [[]] junta a c() para escolher um elemento
+&gt;
+&gt; w[[c(1,3)]] # escolha dentro do elemento 1 o elemento 3
+[1] 14        # ou  o elemento 3 dentro do elemento 1
+
+&gt; w[[c(2,1)]] # escolher dentro do elemento 1 o elemento 2
+[1] 3.14
+
+&gt; # outra forma de fazer a mesma coisa seria 
+&gt; w[[1]][[3]]
+[1] 14
+
+&gt; w[c(1,3)]  # não confundir com [] em conjunto com c()
+$a
+$a[[1]]
+[1] 10
+
+$a[[2]]
+[1] 12
+
+$a[[3]]
+[1] 14
+
+
+$&lt;NA&gt;
+NULL</code></pre>
 </div>
-</div>
+<div id="matrizes-2" class="section level2">
+<h2>Matrizes</h2>
 </div>
 </div>
 
