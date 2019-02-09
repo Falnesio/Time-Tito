@@ -654,6 +654,7 @@ Quando um elemento de uma matriz é obtido por [], você obtem um vetor e não u
 ```
 Para obter uma matriz é necessário aplicar
 **matriz[linha,coluna, drop = FALSE]**
+
 *drop = FALSE* preserva as dimensões do objeto
 ```
 > m[2,3, drop = FALSE] 
@@ -714,7 +715,9 @@ Remover dados inexistentes
 [1] "a" "b" "d" "f"
 ```
 O mesmo pode ser feito com tabelas, mas não matrizes.
-![missing-value](https://github.com/Falnesio/Time-Tito/blob/master/coursera/r-programming/fal/missing-values-na.png)
+<div class="image">
+<img src="https://github.com/Falnesio/Time-Tito/blob/master/coursera/r-programming/fal/missing-values-na.png">
+</div>
 ```
 > # atrapalhando um pouco m, podemos verificar isso
 > m

@@ -1,5 +1,5 @@
 {
-  "plugins": ["collapsible-menu", "mathjax", "embed-pdf", "edit-link", "github", "insert-logo", "disqus"],
+  "plugins": ["collapsible-menu", "mathjax", "embed-pdf", "edit-link", "github", "insert-logo", "disqus", "image-div"],
     "pluginsConfig": {
             "edit-link": {
                 "base": "https://github.com/Falnesio/Time-Tito/tree/master/",
