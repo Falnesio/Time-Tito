@@ -714,7 +714,7 @@ Remover dados inexistentes
 [1] "a" "b" "d" "f"
 ```
 O mesmo pode ser feito com tabelas, mas não matrizes.
-![missing-value]()
+![missing-value](https://github.com/Falnesio/Time-Tito/blob/master/coursera/r-programming/fal/missing-values-na.png)
 ```
 > # atrapalhando um pouco m, podemos verificar isso
 > m
