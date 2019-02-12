@@ -15,7 +15,7 @@ dynamics are these?  Does this make sense?
 
 from pylab import *
 
-r = 3.8275#float(input("Insert r value: "))
+r = 3.6#float(input("Insert r value: "))
 x = 0.2#float(input("Insert starting x value: "))
 n = 100000#float(input("Insert number of iterations: "))
 i = 0
