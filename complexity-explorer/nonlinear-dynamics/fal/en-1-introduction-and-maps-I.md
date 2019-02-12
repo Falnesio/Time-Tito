@@ -41,15 +41,15 @@ Discrete time is measured with **difference equations:** $$x_{n+1}=f(x_{n})$$
 >
 > for $$x_{0}=0.2$$ and R = 2:
 >
-| $$x_{1}$$ | $$R*x_{0}(1-x_{0})$$ |
-| :--- | :--- |
-|  | 2\(0.2\)\(1 - 0.2\) |
-|  | 0.32 |
-| $$x_{2}$$ | 2\(0.32\)\(1 - 0.32\) |
-|  | 0.44 |
-| $$x_{3}$$ | 0.49 |
-| $$x_{4}$$ | 0.50 |
-| $$x_{5}$$ | 0.50                **-&gt;**  **Fixed Point** |
+> | $$x_{1}$$ | $$R*x_{0}(1-x_{0})$$ |
+> | :--- | :--- |
+> |  | 2\(0.2\)\(1 - 0.2\) |
+> |  | 0.32 |
+> | $$x_{2}$$ | 2\(0.32\)\(1 - 0.32\) |
+> |  | 0.44 |
+> | $$x_{3}$$ | 0.49 |
+> | $$x_{4}$$ | 0.50 |
+> | $$x_{5}$$ | 0.50                **-&gt;**  **Fixed Point** |
 >
 > The parameter changes fixed point, inicial conditions don't.
 
@@ -84,14 +84,14 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 #### [1.4 Parameters and bifurcations](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7978)
 
-What happens to the attractors in the dynamics of the logistic map as the parameter r changes.
+What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:      
+**Periodic Orbit / Limit Cycle type of Attractor:        
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:    
-**The changes in the amount of periods as we change the parameter **r**. Thereis a change in the topology of the attractor it is a qualitative change. The fix point does not move, it vanishes.
+**Biforcations:      
+**The changes in the amount of periods as we change the parameter **r**. There is a change in the topology of the attractor it is a qualitative change. The fix point does not move, it vanishes.
 
-**Chaotic Attractor / Strange Attractors:    
+**Chaotic Attractor / Strange Attractors:      
 **Periods that seam to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
