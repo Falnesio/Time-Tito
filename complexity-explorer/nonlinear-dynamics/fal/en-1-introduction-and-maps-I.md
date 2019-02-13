@@ -90,22 +90,24 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:                    
+**Periodic Orbit / Limit Cycle type of Attractor:                      
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:                  
+**Biforcations:                    
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:                  
+**Chaotic Attractor / Strange Attractors:                    
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 ## Maps II
 
 ### [2.1 Return Maps](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7986)
 
-The _**first **_**return map**, **correlation plot**, or **cobweb diagram** is used to represent **scalar data** \(a single number, nor a vector\). Instead of ploting the _time domain plot_ $$(n, x_{n})$$ we plot $$(x_{n}, x_{n+1})$$ because it brings out the correlations between successive points. It is called the _first _return map because we use $$x_{n+1}$$ and not $$x_{n+2}$$ for example.
+The _**first **_**return map**, **correlation plot**, or **cobweb diagram** is used to represent **scalar data** \(a single number, nor a vector\). Instead of ploting the _time domain plot_ $$(n, x_{n})$$ we plot $$(x_{n}, x_{n+1})$$ because it brings out the correlations between successive points. It is called the first return map because we use n+1 and not, for example, n+2 for the y axis.
+
+
 
 
 
