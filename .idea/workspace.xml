@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a6bf1d4-9718-4d18-b5d1-0d6893530939" name="Default Changelist" comment="criar en-worksheet-1-7-experts.py&#10;&#10;Signed-off-by: Fal &lt;falnesio.ghander@economia.ufjf.br&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py" beforeDir="false" afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-2-2-1-homework.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,31 +66,34 @@
     <session id="287160391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="7" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="7" />
+          <entry key="Python" value="9" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="py" value="251" />
+          <entry key="py" value="1094" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="251" />
+          <entry key="Python" value="976" />
+          <entry key="Scratch" value="118" />
         </counts>
       </usages-collector>
     </session>
@@ -102,14 +103,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="283">
+              <caret line="27" selection-start-line="27" selection-end-line="37" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-2-2-1-homework.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+              <folding>
+                <element signature="e#1028#1059#0" expanded="true" />
+                <marker date="1550032202113" expanded="true" signature="1228:1462" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -189,6 +212,8 @@
         <option value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-1-homework.py" />
         <option value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/en-worksheet-1-7-experts.py" />
         <option value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+        <option value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-2-2-1-homework.py" />
       </list>
     </option>
   </component>
@@ -240,6 +265,7 @@
   <component name="PropertiesComponent">
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
   </component>
@@ -270,7 +296,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex-1-4-4-homework">
+  <component name="RunManager" selected="Python.ex-2-2-1-homework">
     <configuration name="en-homework-1-4-3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Time-Tito" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,48 +339,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex-1-2-2-logistics-homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Time-Tito" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-2-2-logistics-homework.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ex-1-4-1-homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Time-Tito" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-1-homework.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="ex-1-4-4-homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Time-Tito" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -376,20 +360,62 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ex-2-2-1-homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Time-Tito" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-2-2-1-homework.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Time-Tito" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.en-worksheet-1-7-experts" />
-      <item itemvalue="Python.ex-1-4-1-homework" />
-      <item itemvalue="Python.ex-1-2-2-logistics-homework" />
       <item itemvalue="Python.en-homework-1-4-3" />
       <item itemvalue="Python.ex-1-4-4-homework" />
+      <item itemvalue="Python.ex-2-2-1-homework" />
+      <item itemvalue="Python.scratch_1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex-2-2-1-homework" />
+        <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.ex-1-4-4-homework" />
         <item itemvalue="Python.en-homework-1-4-3" />
         <item itemvalue="Python.en-worksheet-1-7-experts" />
-        <item itemvalue="Python.ex-1-4-1-homework" />
-        <item itemvalue="Python.ex-1-2-2-logistics-homework" />
       </list>
     </recent_temporary>
   </component>
@@ -569,13 +595,13 @@
   <component name="ToolWindowManager">
     <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" visible="true" weight="0.42349306" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.20873787" weight="0.4374034" />
       <window_info id="Structure" order="1" sideWeight="0.79126215" side_tool="true" weight="0.19667171" />
       <window_info id="Repositories" order="2" weight="0.3286908" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32401314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4976452" weight="0.26644737" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4976452" weight="0.25328946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -709,9 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <marker date="1549936352767" expanded="true" signature="782:809" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,10 +761,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-1-4-4-homework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="283">
+          <caret line="27" selection-start-line="27" selection-end-line="37" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complexity-explorer/nonlinear-dynamics/fal/ex-2-2-1-homework.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="e#1028#1059#0" expanded="true" />
+            <marker date="1550032202113" expanded="true" signature="1228:1462" ph="..." />
           </folding>
         </state>
       </provider>
