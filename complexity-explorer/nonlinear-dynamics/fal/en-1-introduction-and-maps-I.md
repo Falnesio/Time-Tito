@@ -90,15 +90,15 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:                        
+**Periodic Orbit / Limit Cycle type of Attractor:                          
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:                      
+**Biforcations:                        
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:                      
+**Chaotic Attractor / Strange Attractors:                        
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 ## Maps II
@@ -113,11 +113,9 @@ This allows us to make grafical analysis of the function $$x_{n+1}=rx_{n}(1-x_{n
 
 The function defines the upside-down parabola. The increase in **r** raises the curve steepness. The line $$x_{n+1}=x_{n}$$ defines all of the possible fixed point locations by definition, and where it crosses with the parabola define the limits of fixed point location for the given function.
 
- 
+#### Reading the **Logistic Map**
 
-
-
-
+When entering an initial value to the function, we start at the x axis on said value and project it up towards the parabola to obtain the second iteration. This next value may be projected on the inclined line and then once more onto the parabola to continue the mapping of the tragectory in this fashion. 
 
 
 
