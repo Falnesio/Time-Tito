@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Fal · GitBook</title>
+        <title>Practical R Exercises in swirl · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../../../programacao-da-maratona/" />
     
-    <link rel="prev" href="../" />
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -205,9 +207,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../">
+        <li class="chapter " data-level="1.3.1" data-path="../../data-scientists-toolbox/">
             
-                <a href="../">
+                <a href="../../data-scientists-toolbox/">
             
                     
                     Data Scientist's Toolbox
@@ -219,9 +221,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1.1" data-path="./">
+        <li class="chapter " data-level="1.3.1.1" data-path="../../data-scientists-toolbox/fal/">
             
-                <a href="./">
+                <a href="../../data-scientists-toolbox/fal/">
             
                     
                     Fal
@@ -256,9 +258,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../../r-programming/">
+        <li class="chapter " data-level="1.3.2" data-path="../">
             
-                <a href="../../r-programming/">
+                <a href="../">
             
                     
                     R-Programming
@@ -270,9 +272,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1" data-path="../../r-programming/fal/">
+        <li class="chapter " data-level="1.3.2.1" data-path="./">
             
-                <a href="../../r-programming/fal/">
+                <a href="./">
             
                     
                     Fal
@@ -284,9 +286,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1.1" data-path="../../r-programming/fal/practical-r-exercises-in-swirl.html">
+        <li class="chapter active" data-level="1.3.2.1.1" data-path="practical-r-exercises-in-swirl.html">
             
-                <a href="../../r-programming/fal/practical-r-exercises-in-swirl.html">
+                <a href="practical-r-exercises-in-swirl.html">
             
                     
                     Practical R Exercises in swirl
@@ -684,7 +686,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >Fal</a>
+        <a href="../../.." >Practical R Exercises in swirl</a>
     </h1>
 </div>
 
@@ -699,35 +701,108 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="anota&#xE7;&#xF5;es-do-fal">Anota&#xE7;&#xF5;es do Fal</h1>
-<h2 id="data-scientists-toolbox">Data Scientist&apos;s Toolbox</h2>
-<p><a href="https://drive.google.com/drive/folders/1IOjQYH80p8lEvhOXM9fo5VyHoiK_eXpw" target="_blank">Drive com textos anotados</a></p>
-<h3 id="tipos-de-perguntas">Tipos de perguntas</h3>
-<details>
-  <summary>Descritivo</summary>
-    Objetivo: Descrever
-</details>
-<details>
-  <summary>Explorat&#xF3;rio</summary>
-  Objetivo: Encontrar nova rela&#xE7;&#xF5;es 
-</details>
-<details>
-  <summary>Inferencial</summary>
-    Objetivo: Utilizar uma amostra pra descrever uma Popula&#xE7;&#xE3;o
-</details>
-<details>
-  <summary>Previs&#xE3;o</summary>
-  Objetivo: Prever resultados futuros atrav&#xE9;s de correla&#xE7;&#xF5;es
-</details>
-<details>
-  <summary>Causal</summary>
-  Objetivo: Entender o que acontece com uma vari&#xE1;vel quando outra muda
-</details>
-<details>
-  <summary>Mec&#xE2;nico</summary>
-  Objetivo: Entender mudan&#xE7;as sist&#xEA;micas em todas as vari&#xE1;veis quando uma vari&#xE1;vel muda
-</details>
-
+                                <h1 id="practical-r-exercises-in-swirl">Practical R Exercises in swirl</h1>
+<h2 id="introduction-to-swirl">Introduction to <a href="http://www.swirlstats.com" target="_blank">Swirl</a></h2>
+<h3 id="basic-building-blocks">Basic Building Blocks</h3>
+<p><strong>S.W.I.R.L or Statistics With Interactive R Learning</strong> was developed by a 
+student at the John Hopkins department of biomechanics, Nick Carchedi.</p>
+<p><strong>Data Structure: </strong> any object that contains data. Numeric vectors are the simplest type of data structure in R. A number is considered a vector of length one.</p>
+<p><strong>c(), concatenate or combine</strong>, creates a vector.
+You can assign any number of operations to a vector and they will be applied iteratively to each element.
+If z &lt;- c (1, 2, 3), z <em> 2 + 100 is this: z </em> c(2, 2, 2) + c(100, 100, 100). 
+c(1, 2, 3, 4) + c(0, 10) is really c(1, 2, 3, 4) + c(0, 10, 0, 10)
+[1]  1 12  3 14
+This is called <strong>vector recycling</strong>.
+When one vector does not divide by the other, R warns us.</p>
+<p><strong>?</strong>function-name brings out the guide on said function.
+If a fun&#xE7;&#xE3;o is a symbol you have to use backqoutes. --ex. ?<code>:</code>--</p>
+<h3 id="workspace-anf-files">Workspace anf Files</h3>
+<p><strong>getwd()</strong> finds working directory
+<strong>setwd</strong> sets working directory
+<strong>ls()</strong> lists current variables
+<strong>list.files() or dir()</strong> lists all files in current directory
+<strong>file.create()</strong> creates a file
+<strong>file.exists()</strong> checks existence of file
+<strong>file.info()</strong> checks info on file
+You can use the $ operator --- e.g., file.info(&quot;mytest.R&quot;)$mode --- to grab specific items.
+<strong>file.rename</strong> renames files
+<strong>file.remove</strong> deletes files
+<strong>file.copy</strong> copies files
+<strong>file.path</strong> shows relative file path
+You can use file.path to construct file and directory paths that are independent of the operating system your R code is running on.</p>
+<p>Create a directory in the current working directory called &quot;testdir2&quot; and a subdirectory for it called &quot;testdir3&quot;, all in one command by using dir.create() and file.path().</p>
+<p><em>dir.create(file.path(&quot;testdir2&quot;,&quot;testdir3&quot;), recursive=TRUE )</em></p>
+<h3 id="sequences-and-numbers">Sequences and Numbers</h3>
+<p><strong>number1:number2</strong> is used to create a sequence of numbers from number1 to number2.
+Numbers are added on, one by one from number1 to number2 even is number1 is irrational.
+If number1 &lt; number2 then the numbers go down increments of one.</p>
+<p><strong>seq(first, last, by=increment (or) length=size)</strong> does the same thing.</p>
+<p><strong>rep(a, b)</strong> repeats a, b times.
+&quot;a&quot; can be a vector sequence that is repeated <em>rep(a, times=b)</em>, or where each item in the vector is repeated b times <em>rep(a, each=b)</em>.</p>
+<h3 id="vectors">Vectors</h3>
+<p><strong>Atomic Vectors</strong></p>
+<ul>
+<li>Single Data type<ul>
+<li>numeric</li>
+<li>logical</li>
+<li>TRUE (1), FALSE (0), NA (Not available)</li>
+<li>They appear through logical conditions which use logical operators.</li>
+<li><em>logical operators:</em> &gt;, &lt;, &lt;=, &gt;=, ==, !=</li>
+<li>A | B = A ou B; A&amp;B = A e B; !A =  n&#xE3;o A </li>
+<li>character</li>
+<li>integer</li>
+<li>complex</li>
+</ul>
+</li>
+</ul>
+<p><strong>Lists</strong></p>
+<ul>
+<li>Multiplie data types</li>
+</ul>
+<p><strong>paste()</strong> collapses a sequence of characters in a vector.
+<strong>paste()</strong> prints and joins character vectors.</p>
+<p><em>Always remeber the affects of vector recycling</em> </p>
+<pre><code>&gt; paste(1:3, c(&quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;), sep=&quot;&quot;)
+[1] &quot;1X&quot; &quot;2Y&quot; &quot;3Z&quot;
+</code></pre><h3 id="missing-values">Missing Values</h3>
+<p><strong>NA</strong> are missing values. They will not suffer the effects of math operations.</p>
+<p><strong>NaN</strong> means <em>not a number</em>. IT is the result of operations such as deviding zero by zero (0/0) or subtracting infinity from infinity (Inf - Inf).</p>
+<p><strong>rnorm(h)</strong> draws h random numbers from a normal distribution<br><strong>sample(b, a)</strong> draws a random sample size a from data b 
+<strong>is.na(f)</strong> returns TRUE if NA condition in relation to the collection f</p>
+<p>Since TRUE are ones and FALSE are zeros, the sum shows TRUE&apos;s frequency.</p>
+<h3 id="subsetting-vectors">Subsetting Vectors</h3>
+<p>Index vectors come in four flavours:</p>
+<ol>
+<li>Logical Vectors</li>
+<li>Vectors of Positive Integers</li>
+<li>Vectors of Negative Integers</li>
+<li>Vectors of Character Strings</li>
+</ol>
+<p><strong>x[1:10]</strong> brings about the first 10 elements in x for it brings up the numbers by the indices 1 through 10.
+R uses one-based indexing so indices start with 1.
+If you ask R something that is not in the boundaries of x, there will be no error. It will bring forth either NA or a numeric 0.</p>
+<p><strong>x[c(-2, -10)]</strong> brings us everything except element with index 2 and 10. Same with <strong>x[-c(2, 10)]</strong> and <strong>x[-2 &amp; -10]</strong> etc.</p>
+<p><strong>x[is.na(x)]</strong> brings about a subset of all NAs in x</p>
+<p><strong>x[!is.na(x)]</strong> brings all the elements that are not NA in x</p>
+<p>Logical operations bring out logical vectors. Placing logical vectors in keys after a avariable makes a selection in the variable to create a subset based on the logical operation inside the keys.</p>
+<p><strong>Named Elements</strong></p>
+<p><strong>c(nome = element)</strong> create an element with name &quot;nome&quot;.</p>
+<p><strong>names(x)</strong> finds names in vector.</p>
+<p><strong>names(x) &lt;-</strong> places names in vectors.</p>
+<p><strong>identical()</strong> chehcks if two variables are the same</p>
+<p>We can call on vectors by name --ex. x[c(&quot;bar&quot;, &quot;foo&quot;)]--</p>
+<h3 id="matrices-and-data-frames">Matrices and Data Frames</h3>
+<p>Matrices and Data frames represent rectangular data types: they store tabular data.
+Matrices contain only one class of data while Data Frames do not have that limit.</p>
+<p><strong>dim()</strong> brings up the dimension of th vector. We can also use it to apply a dimension.
+<strong>attributes()</strong> brings up vector attributes.</p>
+<p><strong>class()</strong> brings up class of variable</p>
+<p><strong>matrix()</strong> creates a matrix.</p>
+<p><strong>cbind()</strong> binds coloumn to matrix/data table</p>
+<p>Coersion is when all elements in a vector transform into the same class. This happens when you try to place differently classed elements in a matrix, for example.</p>
+<p><strong>length()</strong> shows the length of the vector.</p>
+<p><strong>data.frame()</strong> creates a data frame.</p>
+<p><strong>colnames(x) &lt;-</strong> creates coloumn names for the data table x.</p>
 
                                 
                                 </section>
@@ -755,10 +830,14 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Data Scientist's Toolbox">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Fal">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../../../programacao-da-maratona/" class="navigation navigation-next " aria-label="Next page: Programacao da Maratona">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -767,7 +846,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Fal","level":"1.3.1.1","depth":3,"next":{"title":"Certificado Fal","level":"1.3.1.1.1","depth":4,"url":"https://github.com/Falnesio/Time-Tito/blob/master/coursera/data-scientists-toolbox/certificado-fal-data-scientist-toolbox.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/coursera/data-scientists-toolbox/certificado-fal-data-scientist-toolbox.pdf","articles":[]},"previous":{"title":"Data Scientist's Toolbox","level":"1.3.1","depth":2,"path":"coursera/data-scientists-toolbox/README.md","ref":"coursera/data-scientists-toolbox/README.md","articles":[{"title":"Fal","level":"1.3.1.1","depth":3,"path":"coursera/data-scientists-toolbox/fal/README.md","ref":"coursera/data-scientists-toolbox/fal/README.md","articles":[{"title":"Certificado Fal","level":"1.3.1.1.1","depth":4,"url":"https://github.com/Falnesio/Time-Tito/blob/master/coursera/data-scientists-toolbox/certificado-fal-data-scientist-toolbox.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/coursera/data-scientists-toolbox/certificado-fal-data-scientist-toolbox.pdf","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/data-scientists-toolbox/fal/README.md","mtime":"2019-01-17T03:44:20.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-13T05:47:08.858Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Practical R Exercises in swirl","level":"1.3.2.1.1","depth":4,"next":{"title":"Programacao da Maratona","level":"1.4","depth":1,"path":"programacao-da-maratona/README.md","ref":"programacao-da-maratona/README.md","articles":[{"title":"Semana 1 fase 2 Repositorio Python","level":"1.4.1","depth":2,"path":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","ref":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","articles":[{"title":"Fal: Códigos","level":"1.4.1.1","depth":3,"url":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","ref":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","articles":[]}]},{"title":"Semana 1 Python Pelo Solyd","level":"1.4.2","depth":2,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","articles":[{"title":"Fal","level":"1.4.2.1","depth":3,"ref":"","articles":[]},{"title":"Certificado Fal","level":"1.4.2.2","depth":3,"url":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","articles":[]},{"title":"Aula 01 Introducao ao python e preparando o ambiente","level":"1.4.2.3","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","articles":[]},{"title":"Aula 02 Entrada saida variaveis e operacoes matematicas","level":"1.4.2.4","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","articles":[]},{"title":"Aula 03 Operadores logicos e estruturas de decisao","level":"1.4.2.5","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","articles":[]},{"title":"Aula 04 Strings e listas","level":"1.4.2.6","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","articles":[]},{"title":"Aula 05 Estruturas de laco for e while","level":"1.4.2.7","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","articles":[]},{"title":"Aula 06 Estruturas de dados - list, dict, tuple e set","level":"1.4.2.8","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","articles":[]},{"title":"Aula 07 Metodos e funcoes","level":"1.4.2.9","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","articles":[]},{"title":"Aula 08 Passagem de argumentos","level":"1.4.2.10","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","articles":[]},{"title":"Aula 09 Python Orientado a Objeto","level":"1.4.2.11","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","articles":[]},{"title":"Aula 10 Entrada e saida de arquivos","level":"1.4.2.12","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","articles":[]},{"title":"Aula 11 Tratamento de erros","level":"1.4.2.13","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","articles":[]},{"title":"Aula 12 Requisicoes web","level":"1.4.2.14","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","articles":[]},{"title":"Aula 13 API Lista de Filmes","level":"1.4.2.15","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","articles":[]},{"title":"Aula 14 Expressões regulares, procurando por e-mails","level":"1.4.2.16","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","articles":[]}]}]},"previous":{"title":"Fal","level":"1.3.2.1","depth":3,"path":"coursera/r-programming/fal/README.md","ref":"coursera/r-programming/fal/README.md","articles":[{"title":"Practical R Exercises in swirl","level":"1.3.2.1.1","depth":4,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","mtime":"2019-02-12T23:26:32.323Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-13T05:47:08.858Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
