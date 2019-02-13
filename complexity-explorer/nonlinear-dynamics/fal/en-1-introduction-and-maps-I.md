@@ -66,6 +66,10 @@ A sequence of values of the **state variables** of the system.
 
 > ex.  
 > The progression that iterates \($$x_{0}, x_{1}, x_{2}, ...$$\) in the logistic map
+>
+> > **state variables are also the names of functions in equations like the cos in**
+> >
+> >  $$x_{n+1} = cos(x_{n})$$
 
 $$x_{0}$$ is called the initial position of the state variable\(s\).  
 It can reach an asymptote called a fixed point after passing through other states which are called the **transientes**.
@@ -86,14 +90,14 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:              
+**Periodic Orbit / Limit Cycle type of Attractor:                
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:            
+**Biforcations:              
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:            
+**Chaotic Attractor / Strange Attractors:              
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
