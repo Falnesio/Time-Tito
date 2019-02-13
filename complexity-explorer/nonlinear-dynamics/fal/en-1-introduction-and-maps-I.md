@@ -90,15 +90,15 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:                          
+**Periodic Orbit / Limit Cycle type of Attractor:                            
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:                        
+**Biforcations:                          
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:                        
+**Chaotic Attractor / Strange Attractors:                          
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 ## Maps II
@@ -115,7 +115,25 @@ The function defines the upside-down parabola. The increase in **r** raises the 
 
 #### Reading the **Logistic Map**
 
-When entering an initial value to the function, we start at the x axis on said value and project it up towards the parabola to obtain the second iteration. This next value may be projected on the inclined line and then once more onto the parabola to continue the mapping of the tragectory in this fashion. 
+When entering an initial value to the function, we start at the x axis on said value and project it up towards the parabola to obtain the second iteration. This next value may be projected on the inclined line and then once more onto the parabola to continue the mapping of the tragectory in this fashion.
+
+
+
+### [2.2 Constructing the bifurcation diagram](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7989)
+
+The bifurcation plot $$(r, x_{n})$$ is useful to measure changes in periods in relation to r values. In this plot, the transiente is removed. We only are able to see periodic or fixed point behavior for each incremental r value. ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logistic_Map_Bifurcation_Diagram%2C_Matplotlib.svg/800px-Logistic_Map_Bifurcation_Diagram%2C_Matplotlib.svg.png)![](https://upload.wikimedia.org/wikipedia/commons/f/fb/Diagram_bifurkacji_anim_small.gif)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
