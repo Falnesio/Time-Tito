@@ -25,6 +25,7 @@ If a função is a symbol you have to use backqoutes. --ex. ?`:`--
 **getwd()** finds working directory
 **setwd** sets working directory
 **ls()** lists current variables
+**rm(list=ls())** clear variables
 **list.files() or dir()** lists all files in current directory
 **file.create()** creates a file
 **file.exists()** checks existence of file
