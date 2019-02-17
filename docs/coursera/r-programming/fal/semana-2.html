@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="practical-r-exercises-in-swirl.html" />
+    <link rel="next" href="practical-r-exercises-in-swirl-2.html" />
     
     
     <link rel="prev" href="./" />
@@ -297,18 +297,24 @@
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.3.2.1.2" data-path="practical-r-exercises-in-swirl.html">
+        <li class="chapter " data-level="1.3.2.1.1.1" data-path="practical-r-exercises-in-swirl-2.html">
             
-                <a href="practical-r-exercises-in-swirl.html">
+                <a href="practical-r-exercises-in-swirl-2.html">
             
                     
-                    Practical R Exercises in swirl
+                    Practical R Exercises in swirl 2
             
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1021,6 +1027,66 @@ C&#xF3;digos com linhas muito grandes geram confus&#xE3;o e necessitam que quem 
 <li>Limita o tamanho das fun&#xE7;&#xF5;es
 Uma fun&#xE7;&#xE3;o deveria fazer apenas uma coisa e tal coisa tem que ser claro. Quando se tem v&#xE1;rias fun&#xE7;&#xF5;es com objetivos claros, quando algo errado acontece saber&#xE1; exatamente onde e o porqu&#xEA;.</li>
 </ol>
+<h4 id="dates-and-times">Dates and Times</h4>
+<p>Existe uma classe para datas (<code>Date</code>) e tempo (<code>POSIXct</code> e <code>POSIXlt</code>) em R. Datas est&#xE3;o no formato ano-mes-dia e s&#xE3;o guardadas internamente como um n&#xFA;mero, sendo 0 1970-01-01, incrementando 1 para cada dia ap&#xF3;s tal data. Tempo &#xE9; guardado como um n&#xFA;mero, sendo 0 a data anterior, incrementando 1 para cada segundo ap&#xF3;s tal data. Datas e tempos anteriores s&#xE3;o n&#xFA;meros negativos.</p>
+<p><strong>POSIXct</strong> guarda o tempo comoum n&#xFA;mero inteiro.</p>
+<p><strong>POSIXlt</strong> guarda o tempo como uma lista de valores.</p>
+<p><strong>Sys.time()</strong> mostra o tempo presente</p>
+<p>Tendo datas no formato apropriado, torna mais f&#xE1;cil adicionar datas, compara datas (vr qual pe maior) etc. As datas levam em conta irregularidades como anos bissextos e diferentes longitudes. As fun&#xE7;&#xF5;es de gr&#xE1;fico geralmente reconhecem a classe de data e tempo.</p>
+<p>Aplicando o presente a x, e depois POSIXlt a x, podemos explorar a estrutura de POSIXlt.</p>
+<pre><code>&gt; x &lt;- Sys.time()
+&gt; x
+[1] &quot;2019-02-14 19:04:02 -02&quot;
+&gt; p &lt;- as.POSIXlt(x)
+&gt; p
+[1] &quot;2019-02-14 19:04:02 -02&quot;
+&gt; unclass(p)
+$sec
+[1] 2.883164
+
+$min
+[1] 4
+
+$hour
+[1] 19
+
+$mday
+[1] 14
+
+$mon
+[1] 1
+
+$year
+[1] 119
+
+$wday
+[1] 4
+
+$yday
+[1] 44
+
+$isdst
+[1] 1
+
+$zone
+[1] &quot;-02&quot;
+
+$gmtoff
+[1] -7200
+
+attr(,&quot;tzone&quot;)
+[1] &quot;&quot;    &quot;-03&quot; &quot;-02&quot;
+</code></pre><p><strong>strptime()</strong> converte um vector de caracteres em POSIXlt. &#xC9; necess&#xE1;rio mostrar a forma&#xE7;&#xE3;o, declarando o que cada objeto dentro do vetor de caracteres representa. No caso %B, %d, %Y, %H e %M representam respectivamente mes, dia, ano, hora e minuto.</p>
+<pre><code>data &lt;- c(&quot;January 10, 2012 10:40&quot;, &quot;December 9, 2011 9:10&quot;)
+x &lt;- strptime(data, &quot;%B %d, %Y %H:%M&quot;)
+</code></pre><p>&#xC9; poss&#xED;vel transformar um vetor de caracteres em data da seguinte forma:</p>
+<pre><code>x &lt;- as.Date(&quot;1970-01-01&quot;)
+</code></pre><p>Caso imprima x, os caracteres apareccer&#xE3;o, pore&#x1E3F; esse n&#xE3;o &#xE9; o valor real guardado.</p>
+<p>Digitando <code>unclass(x)</code> obteremos o valor real.</p>
+<p>Existem algumas fun&#xE7;&#xF5;es gen&#xE9;ricas que funcionam para delimitar per&#xED;odos tamb&#xE9;m.</p>
+<p><strong>weekdays()</strong> dar um dia da semana</p>
+<p><strong>months()</strong> dar o nome de um mes</p>
+<p><strong>quarters()</strong> dar o nome de semestres (&quot;Q1&quot;, &quot;Q2&quot;, &quot;Q3&quot;, &quot;Q4&quot;)</p>
 
                                 
                                 </section>
@@ -1053,7 +1119,7 @@ Uma fun&#xE7;&#xE3;o deveria fazer apenas uma coisa e tal coisa tem que ser clar
                 </a>
                 
                 
-                <a href="practical-r-exercises-in-swirl.html" class="navigation navigation-next " aria-label="Next page: Practical R Exercises in swirl">
+                <a href="practical-r-exercises-in-swirl-2.html" class="navigation navigation-next " aria-label="Next page: Practical R Exercises in swirl 2">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1064,7 +1130,7 @@ Uma fun&#xE7;&#xE3;o deveria fazer apenas uma coisa e tal coisa tem que ser clar
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Semana 2","level":"1.3.2.1.1","depth":4,"next":{"title":"Practical R Exercises in swirl","level":"1.3.2.1.2","depth":4,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","articles":[]},"previous":{"title":"Fal","level":"1.3.2.1","depth":3,"path":"coursera/r-programming/fal/README.md","ref":"coursera/r-programming/fal/README.md","articles":[{"title":"Semana 2","level":"1.3.2.1.1","depth":4,"path":"coursera/r-programming/fal/semana-2.md","ref":"coursera/r-programming/fal/semana-2.md","articles":[]},{"title":"Practical R Exercises in swirl","level":"1.3.2.1.2","depth":4,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/semana-2.md","mtime":"2019-02-14T01:34:51.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T01:37:11.664Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Semana 2","level":"1.3.2.1.1","depth":4,"next":{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.1.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","articles":[]},"previous":{"title":"Fal","level":"1.3.2.1","depth":3,"path":"coursera/r-programming/fal/README.md","ref":"coursera/r-programming/fal/README.md","articles":[{"title":"Semana 2","level":"1.3.2.1.1","depth":4,"path":"coursera/r-programming/fal/semana-2.md","ref":"coursera/r-programming/fal/semana-2.md","articles":[{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.1.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/semana-2.md","mtime":"2019-02-16T00:05:51.759Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-17T01:45:47.042Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

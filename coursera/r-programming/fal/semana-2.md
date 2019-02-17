@@ -410,3 +410,83 @@ Esses últimos dois princípios influencia o programador a escrever códigos mai
 4. Limita o tamanho das funções
 Uma função deveria fazer apenas uma coisa e tal coisa tem que ser claro. Quando se tem várias funções com objetivos claros, quando algo errado acontece saberá exatamente onde e o porquê.
 
+#### Dates and Times
+
+Existe uma classe para datas (`Date`) e tempo (`POSIXct` e `POSIXlt`) em R. Datas estão no formato ano-mes-dia e são guardadas internamente como um número, sendo 0 1970-01-01, incrementando 1 para cada dia após tal data. Tempo é guardado como um número, sendo 0 a data anterior, incrementando 1 para cada segundo após tal data. Datas e tempos anteriores são números negativos.
+
+**POSIXct** guarda o tempo comoum número inteiro.
+
+**POSIXlt** guarda o tempo como uma lista de valores.
+
+**Sys.time()** mostra o tempo presente
+
+Tendo datas no formato apropriado, torna mais fácil adicionar datas, compara datas (vr qual pe maior) etc. As datas levam em conta irregularidades como anos bissextos e diferentes longitudes. As funções de gráfico geralmente reconhecem a classe de data e tempo.
+
+Aplicando o presente a x, e depois POSIXlt a x, podemos explorar a estrutura de POSIXlt.
+```
+> x <- Sys.time()
+> x
+[1] "2019-02-14 19:04:02 -02"
+> p <- as.POSIXlt(x)
+> p
+[1] "2019-02-14 19:04:02 -02"
+> unclass(p)
+$sec
+[1] 2.883164
+
+$min
+[1] 4
+
+$hour
+[1] 19
+
+$mday
+[1] 14
+
+$mon
+[1] 1
+
+$year
+[1] 119
+
+$wday
+[1] 4
+
+$yday
+[1] 44
+
+$isdst
+[1] 1
+
+$zone
+[1] "-02"
+
+$gmtoff
+[1] -7200
+
+attr(,"tzone")
+[1] ""    "-03" "-02"
+```
+
+**strptime()** converte um vector de caracteres em POSIXlt. É necessário mostrar a formação, declarando o que cada objeto dentro do vetor de caracteres representa. No caso %B, %d, %Y, %H e %M representam respectivamente mes, dia, ano, hora e minuto.
+```
+data <- c("January 10, 2012 10:40", "December 9, 2011 9:10")
+x <- strptime(data, "%B %d, %Y %H:%M")
+```
+
+É possível transformar um vetor de caracteres em data da seguinte forma:
+```
+x <- as.Date("1970-01-01")
+```
+Caso imprima x, os caracteres apareccerão, poreḿ esse não é o valor real guardado.
+
+Digitando `unclass(x)` obteremos o valor real.
+
+Existem algumas funções genéricas que funcionam para delimitar períodos também.
+
+**weekdays()** dar um dia da semana
+
+**months()** dar o nome de um mes
+
+**quarters()** dar o nome de semestres ("Q1", "Q2", "Q3", "Q4")
+

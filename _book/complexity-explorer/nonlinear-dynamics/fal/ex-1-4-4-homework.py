@@ -25,8 +25,8 @@ for lista in mapas:
     plt.plot(range(n), lista, 'o')
     plt.show()
 '''
-n = 100
-r = 2.999999
+n = 1000000
+r = 2.99999
 i = 0
 x = 0.2
 print(r)

@@ -15,20 +15,28 @@ dynamics are these?  Does this make sense?
 
 from pylab import *
 
-r = float(input("Insert r value: "))
-x = float(input("Insert starting x value: "))
-n = float(input("Insert number of iterations: "))
+r = 3.6#float(input("Insert r value: "))
+x = 0.2#float(input("Insert starting x value: "))
+n = 100000#float(input("Insert number of iterations: "))
 i = 0
 lista_x = []
 lista_y = []
 
+def func(x):
+    return r * x * (1 - x)
+
+def doublefunc(x):
+    return func(func(x))
+
 while i < n:
     xn2 = x
-    x = r*(r*x*(1-x))*(1-(r*x*(1-x)))*x
+    x = doublefunc(x)
+    print(xn2, x)
     i += 1
     lista_x.append(xn2)
     lista_y.append(x)
     print(i)
 
-scatter(lista_x,lista_y, s=100 ,marker='o')
+
+scatter(lista_x,lista_y, s=10 )
 show()

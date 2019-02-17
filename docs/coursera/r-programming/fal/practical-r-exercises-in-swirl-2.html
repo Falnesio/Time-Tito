@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Practical R Exercises in swirl · GitBook</title>
+        <title>Practical R Exercises in swirl 2 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -297,18 +297,24 @@
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter active" data-level="1.3.2.1.2" data-path="practical-r-exercises-in-swirl.html">
+        <li class="chapter active" data-level="1.3.2.1.1.1" data-path="practical-r-exercises-in-swirl-2.html">
             
-                <a href="practical-r-exercises-in-swirl.html">
+                <a href="practical-r-exercises-in-swirl-2.html">
             
                     
-                    Practical R Exercises in swirl
+                    Practical R Exercises in swirl 2
             
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -699,7 +705,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >Practical R Exercises in swirl</a>
+        <a href="../../.." >Practical R Exercises in swirl 2</a>
     </h1>
 </div>
 
@@ -714,109 +720,56 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="practical-r-exercises-in-swirl">Practical R Exercises in swirl</h1>
+                                <h1 id="practical-r-exercises-in-swirl-2">Practical R Exercises in swirl 2</h1>
 <h2 id="introduction-to-swirl">Introduction to <a href="http://www.swirlstats.com" target="_blank">Swirl</a></h2>
-<h3 id="basic-building-blocks">Basic Building Blocks</h3>
-<p><strong>S.W.I.R.L or Statistics With Interactive R Learning</strong> was developed by a 
-student at the John Hopkins department of biomechanics, Nick Carchedi.</p>
-<p><strong>Data Structure: </strong> any object that contains data. Numeric vectors are the simplest type of data structure in R. A number is considered a vector of length one.</p>
-<p><strong>c(), concatenate or combine</strong>, creates a vector.
-You can assign any number of operations to a vector and they will be applied iteratively to each element.
-If z &lt;- c (1, 2, 3), z <em> 2 + 100 is this: z </em> c(2, 2, 2) + c(100, 100, 100). 
-c(1, 2, 3, 4) + c(0, 10) is really c(1, 2, 3, 4) + c(0, 10, 0, 10)
-[1]  1 12  3 14
-This is called <strong>vector recycling</strong>.
-When one vector does not divide by the other, R warns us.</p>
-<p><strong>?</strong>function-name brings out the guide on said function.
-If a fun&#xE7;&#xE3;o is a symbol you have to use backqoutes. --ex. ?<code>:</code>--</p>
-<h3 id="workspace-anf-files">Workspace anf Files</h3>
-<p><strong>getwd()</strong> finds working directory
-<strong>setwd</strong> sets working directory
-<strong>ls()</strong> lists current variables
-<strong>rm(list=ls())</strong> clear variables
-<strong>list.files() or dir()</strong> lists all files in current directory
-<strong>file.create()</strong> creates a file
-<strong>file.exists()</strong> checks existence of file
-<strong>file.info()</strong> checks info on file
-You can use the $ operator --- e.g., file.info(&quot;mytest.R&quot;)$mode --- to grab specific items.
-<strong>file.rename</strong> renames files
-<strong>file.remove</strong> deletes files
-<strong>file.copy</strong> copies files
-<strong>file.path</strong> shows relative file path
-You can use file.path to construct file and directory paths that are independent of the operating system your R code is running on.</p>
-<p>Create a directory in the current working directory called &quot;testdir2&quot; and a subdirectory for it called &quot;testdir3&quot;, all in one command by using dir.create() and file.path().</p>
-<p><em>dir.create(file.path(&quot;testdir2&quot;,&quot;testdir3&quot;), recursive=TRUE )</em></p>
-<h3 id="sequences-and-numbers">Sequences and Numbers</h3>
-<p><strong>number1:number2</strong> is used to create a sequence of numbers from number1 to number2.
-Numbers are added on, one by one from number1 to number2 even is number1 is irrational.
-If number1 &lt; number2 then the numbers go down increments of one.</p>
-<p><strong>seq(first, last, by=increment (or) length=size)</strong> does the same thing.</p>
-<p><strong>rep(a, b)</strong> repeats a, b times.
-&quot;a&quot; can be a vector sequence that is repeated <em>rep(a, times=b)</em>, or where each item in the vector is repeated b times <em>rep(a, each=b)</em>.</p>
-<h3 id="vectors">Vectors</h3>
-<p><strong>Atomic Vectors</strong></p>
-<ul>
-<li>Single Data type<ul>
-<li>numeric</li>
-<li>logical</li>
-<li>TRUE (1), FALSE (0), NA (Not available)</li>
-<li>They appear through logical conditions which use logical operators.</li>
-<li><em>logical operators:</em> &gt;, &lt;, &lt;=, &gt;=, ==, !=</li>
-<li>A | B = A ou B; A&amp;B = A e B; !A =  n&#xE3;o A </li>
-<li>character</li>
-<li>integer</li>
-<li>complex</li>
-</ul>
-</li>
-</ul>
-<p><strong>Lists</strong></p>
-<ul>
-<li>Multiplie data types</li>
-</ul>
-<p><strong>paste()</strong> collapses a sequence of characters in a vector.
-<strong>paste()</strong> prints and joins character vectors.</p>
-<p><em>Always remeber the affects of vector recycling</em> </p>
-<pre><code>&gt; paste(1:3, c(&quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;), sep=&quot;&quot;)
-[1] &quot;1X&quot; &quot;2Y&quot; &quot;3Z&quot;
-</code></pre><h3 id="missing-values">Missing Values</h3>
-<p><strong>NA</strong> are missing values. They will not suffer the effects of math operations.</p>
-<p><strong>NaN</strong> means <em>not a number</em>. IT is the result of operations such as deviding zero by zero (0/0) or subtracting infinity from infinity (Inf - Inf).</p>
-<p><strong>rnorm(h)</strong> draws h random numbers from a normal distribution<br><strong>sample(b, a)</strong> draws a random sample size a from data b 
-<strong>is.na(f)</strong> returns TRUE if NA condition in relation to the collection f</p>
-<p>Since TRUE are ones and FALSE are zeros, the sum shows TRUE&apos;s frequency.</p>
-<h3 id="subsetting-vectors">Subsetting Vectors</h3>
-<p>Index vectors come in four flavours:</p>
-<ol>
-<li>Logical Vectors</li>
-<li>Vectors of Positive Integers</li>
-<li>Vectors of Negative Integers</li>
-<li>Vectors of Character Strings</li>
-</ol>
-<p><strong>x[1:10]</strong> brings about the first 10 elements in x for it brings up the numbers by the indices 1 through 10.
-R uses one-based indexing so indices start with 1.
-If you ask R something that is not in the boundaries of x, there will be no error. It will bring forth either NA or a numeric 0.</p>
-<p><strong>x[c(-2, -10)]</strong> brings us everything except element with index 2 and 10. Same with <strong>x[-c(2, 10)]</strong> and <strong>x[-2 &amp; -10]</strong> etc.</p>
-<p><strong>x[is.na(x)]</strong> brings about a subset of all NAs in x</p>
-<p><strong>x[!is.na(x)]</strong> brings all the elements that are not NA in x</p>
-<p>Logical operations bring out logical vectors. Placing logical vectors in keys after a avariable makes a selection in the variable to create a subset based on the logical operation inside the keys.</p>
-<p><strong>Named Elements</strong></p>
-<p><strong>c(nome = element)</strong> create an element with name &quot;nome&quot;.</p>
-<p><strong>names(x)</strong> finds names in vector.</p>
-<p><strong>names(x) &lt;-</strong> places names in vectors.</p>
-<p><strong>identical()</strong> chehcks if two variables are the same</p>
-<p>We can call on vectors by name --ex. x[c(&quot;bar&quot;, &quot;foo&quot;)]--</p>
-<h3 id="matrices-and-data-frames">Matrices and Data Frames</h3>
-<p>Matrices and Data frames represent rectangular data types: they store tabular data.
-Matrices contain only one class of data while Data Frames do not have that limit.</p>
-<p><strong>dim()</strong> brings up the dimension of th vector. We can also use it to apply a dimension.
-<strong>attributes()</strong> brings up vector attributes.</p>
-<p><strong>class()</strong> brings up class of variable</p>
-<p><strong>matrix()</strong> creates a matrix.</p>
-<p><strong>cbind()</strong> binds coloumn to matrix/data table</p>
-<p>Coersion is when all elements in a vector transform into the same class. This happens when you try to place differently classed elements in a matrix, for example.</p>
-<p><strong>length()</strong> shows the length of the vector.</p>
-<p><strong>data.frame()</strong> creates a data frame.</p>
-<p><strong>colnames(x) &lt;-</strong> creates coloumn names for the data table x.</p>
+<h3 id="logic">Logic</h3>
+<p>Statements can either be TRUE or FALSE. We may use parenthesis to determine the order of comparisons, such as <code>(TRUE == FALSE) == FALSE</code> which is TRUE. Other logical operators include &gt;, &lt;, &lt;=, &gt;=, and != (different than). Exclamation is a not operator, that means in conjuntion with a logical object, the object will become it&apos;s opposite.</p>
+<p>Things on the left of an operator are left operand, similarly things on the right are right operands.</p>
+<p>AND operator are <code>&amp;</code> and <code>&amp;&amp;</code>. The first can evaluate vectors, the second only evaluates the first member of a vector. 
+Therefore <code>TRUE &amp; c(TRUE, FALSE, FALSE)</code> is actually <code>TRUE &amp; TRUE</code>, <code>TRUE &amp; FALSE</code>, <code>TRUE &amp; FALSE</code> and equivalent to 
+<code>c(TRUE, TRUE, TRUE) &amp; c(TRUE, FALSE, FALSE)</code>.</p>
+<p>OR operators <code>|</code> and <code>||</code> follow the same rule.</p>
+<p>Order of logical operations dictates that <strong>ALL</strong> AND operators are resolved before OR.</p>
+<p><strong>isTRUE()</strong> checks if statement is TRUE.</p>
+<p><strong>xor()</strong> only if one argument evaluates to TRUE and the other to FALSE, will this function will return TRUE.</p>
+<p><strong>any()</strong> returns TRUE if any element in the vector is TRUE</p>
+<p><strong>all()</strong> returns TRUE if every element is TRUE</p>
+<p><strong>identical()</strong> compares two objects.</p>
+<p><strong>sample(x)</strong> creates a random sampling of x integers from 0 to x.</p>
+<p><strong>which()</strong> takes a logical vector and returns the indices of the TRUE statements.</p>
+<h3 id="functions">Functions</h3>
+<p><strong>sd()</strong> brings up the standard deviation.</p>
+<p><strong>Anonymous functions</strong> are functions that are not named.</p>
+<p>Functions may be called before being properly defined. Example being:</p>
+<pre><code>evaluate &lt;- function(func, dat){
+  func(dat) 
+}
+
+evaluate(function(x){x+1}, 6)
+</code></pre><p>Creating arguments on the fly to add to function:</p>
+<pre><code>mad_libs &lt;- function(...){
+  # Do your argument unpacking here!
+  args &lt;- list(...)
+  place &lt;- args[[&quot;place&quot;]]
+  adjective &lt;- args[[&quot;adjective&quot;]]
+  noun &lt;- args[[&quot;noun&quot;]]
+  # Don&apos;t modify any code below this comment.
+  # Notice the variables you&apos;ll need to create in order for the code below to
+  # be functional!
+  paste(&quot;News from&quot;, place, &quot;today where&quot;, adjective, &quot;students took to the streets in protest of the new&quot;, noun, &quot;being installed on campus.&quot;)
+}
+</code></pre><p>From one of the exercises, <strong>how to make a binary operator:</strong></p>
+<pre><code># User-defined binary operators have the following syntax:
+#      %[whatever]% 
+# where [whatever] represents any valid variable name.
+# 
+# Let&apos;s say I wanted to define a binary operator that multiplied two numbers and
+# then added one to the product. An implementation of that operator is below:
+#
+# &quot;%mult_add_one%&quot; &lt;- function(left, right){ # Notice the quotation marks!
+#   left * right + 1
+# }
+</code></pre><h3 id="dates-and-functions">Dates and Functions</h3>
 
                                 
                                 </section>
@@ -860,7 +813,7 @@ Matrices contain only one class of data while Data Frames do not have that limit
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Practical R Exercises in swirl","level":"1.3.2.1.2","depth":4,"next":{"title":"Programacao da Maratona","level":"1.4","depth":1,"path":"programacao-da-maratona/README.md","ref":"programacao-da-maratona/README.md","articles":[{"title":"Semana 1 fase 2 Repositorio Python","level":"1.4.1","depth":2,"path":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","ref":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","articles":[{"title":"Fal: Códigos","level":"1.4.1.1","depth":3,"url":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","ref":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","articles":[]}]},{"title":"Semana 1 Python Pelo Solyd","level":"1.4.2","depth":2,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","articles":[{"title":"Fal","level":"1.4.2.1","depth":3,"ref":"","articles":[]},{"title":"Certificado Fal","level":"1.4.2.2","depth":3,"url":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","articles":[]},{"title":"Aula 01 Introducao ao python e preparando o ambiente","level":"1.4.2.3","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","articles":[]},{"title":"Aula 02 Entrada saida variaveis e operacoes matematicas","level":"1.4.2.4","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","articles":[]},{"title":"Aula 03 Operadores logicos e estruturas de decisao","level":"1.4.2.5","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","articles":[]},{"title":"Aula 04 Strings e listas","level":"1.4.2.6","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","articles":[]},{"title":"Aula 05 Estruturas de laco for e while","level":"1.4.2.7","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","articles":[]},{"title":"Aula 06 Estruturas de dados - list, dict, tuple e set","level":"1.4.2.8","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","articles":[]},{"title":"Aula 07 Metodos e funcoes","level":"1.4.2.9","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","articles":[]},{"title":"Aula 08 Passagem de argumentos","level":"1.4.2.10","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","articles":[]},{"title":"Aula 09 Python Orientado a Objeto","level":"1.4.2.11","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","articles":[]},{"title":"Aula 10 Entrada e saida de arquivos","level":"1.4.2.12","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","articles":[]},{"title":"Aula 11 Tratamento de erros","level":"1.4.2.13","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","articles":[]},{"title":"Aula 12 Requisicoes web","level":"1.4.2.14","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","articles":[]},{"title":"Aula 13 API Lista de Filmes","level":"1.4.2.15","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","articles":[]},{"title":"Aula 14 Expressões regulares, procurando por e-mails","level":"1.4.2.16","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","articles":[]}]}]},"previous":{"title":"Semana 2","level":"1.3.2.1.1","depth":4,"path":"coursera/r-programming/fal/semana-2.md","ref":"coursera/r-programming/fal/semana-2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl.md","mtime":"2019-02-13T17:12:17.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T01:37:11.664Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.1.1","depth":5,"next":{"title":"Programacao da Maratona","level":"1.4","depth":1,"path":"programacao-da-maratona/README.md","ref":"programacao-da-maratona/README.md","articles":[{"title":"Semana 1 fase 2 Repositorio Python","level":"1.4.1","depth":2,"path":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","ref":"programacao-da-maratona/semana-1-fase-2-repositorio-python/README.md","articles":[{"title":"Fal: Códigos","level":"1.4.1.1","depth":3,"url":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","ref":"https://github.com/Falnesio/Time-Tito/tree/master/programacao-da-maratona/semana-1-fase-2-repositorio-python/anotacoes-falnesio","articles":[]}]},{"title":"Semana 1 Python Pelo Solyd","level":"1.4.2","depth":2,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/README.md","articles":[{"title":"Fal","level":"1.4.2.1","depth":3,"ref":"","articles":[]},{"title":"Certificado Fal","level":"1.4.2.2","depth":3,"url":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","ref":"https://github.com/Falnesio/Time-Tito/blob/master/programacao-da-maratona/semana-1-python-pelo-solyd/certificado-fal-solyd-python-basico.pdf","articles":[]},{"title":"Aula 01 Introducao ao python e preparando o ambiente","level":"1.4.2.3","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-01-introducao-ao-python-e-preparando-o-ambiente-python-basico-solyd.md","articles":[]},{"title":"Aula 02 Entrada saida variaveis e operacoes matematicas","level":"1.4.2.4","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-02-entrada-saida-variaveis-e-operacoes-matematicas-python-basico-solyd.md","articles":[]},{"title":"Aula 03 Operadores logicos e estruturas de decisao","level":"1.4.2.5","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-03-operadores-logicos-e-estruturas-de-decisao-python-basico-solyd.md","articles":[]},{"title":"Aula 04 Strings e listas","level":"1.4.2.6","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-04-strings-e-listas-python-basico-solyd.md","articles":[]},{"title":"Aula 05 Estruturas de laco for e while","level":"1.4.2.7","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-05-estruturas-de-laco-for-e-while-python-basico-solyd.md","articles":[]},{"title":"Aula 06 Estruturas de dados - list, dict, tuple e set","level":"1.4.2.8","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-06-estruturas-de-dados-list-dict-tuple-set-python-basico-solyd.md","articles":[]},{"title":"Aula 07 Metodos e funcoes","level":"1.4.2.9","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-07-metodos-e-funcoes-python-basico-solyd.md","articles":[]},{"title":"Aula 08 Passagem de argumentos","level":"1.4.2.10","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-08-passagem-de-argumentos-python-basico-solyd.md","articles":[]},{"title":"Aula 09 Python Orientado a Objeto","level":"1.4.2.11","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-09-python-orientado-a-objeto-python-basico-solyd.md","articles":[]},{"title":"Aula 10 Entrada e saida de arquivos","level":"1.4.2.12","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-10-entrada-e-saida-de-arquivos-python-basico-solyd.md","articles":[]},{"title":"Aula 11 Tratamento de erros","level":"1.4.2.13","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-11-tratamento-de-erros-python-basico-solyd.md","articles":[]},{"title":"Aula 12 Requisicoes web","level":"1.4.2.14","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-12-requisicoes-web-python-basico-solyd.md","articles":[]},{"title":"Aula 13 API Lista de Filmes","level":"1.4.2.15","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-13-api-lista-de-filmes-python-basico-solyd.md","articles":[]},{"title":"Aula 14 Expressões regulares, procurando por e-mails","level":"1.4.2.16","depth":3,"path":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","ref":"programacao-da-maratona/semana-1-python-pelo-solyd/fal/anotacoes-fal-aula-14-expressoes-regulares-procurando-por-emails-python-basico-solyd.md","articles":[]}]}]},"previous":{"title":"Semana 2","level":"1.3.2.1.1","depth":4,"path":"coursera/r-programming/fal/semana-2.md","ref":"coursera/r-programming/fal/semana-2.md","articles":[{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.1.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md","mtime":"2019-02-15T17:24:36.621Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-17T01:45:47.042Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
