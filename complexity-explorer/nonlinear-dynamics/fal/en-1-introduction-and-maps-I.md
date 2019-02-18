@@ -90,15 +90,15 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:                                            
+**Periodic Orbit / Limit Cycle type of Attractor:                                              
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:                                          
+**Biforcations:                                            
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:                                          
+**Chaotic Attractor / Strange Attractors:                                            
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 ## Maps II
@@ -133,7 +133,7 @@ The bifurcation map is a fractal object. Each piece seems to represent the same 
 
 This part of the course talks about the universality of chaos. In the bifurcation map, the bifurcations aren't evenly space, they get smaller as r increases. The height and width of the forks descrease at a constant ratio. The ratio from $$Δ_{1}/Δ_{2}≈Δ_{2}/Δ_{3}  $$.
 
-$$\lim\_{n\to\infty} Δ\\_{n}/Δ\\_{n+1}≈4.66$$
+$$\lim\_{n\to\infty}   Δ\_{n}/Δ\_{n+1} ≈ 4.66$$$$$$
 
 ![](/complexity-explorer/nonlinear-dynamics/fal/Screenshot_2.4_0-33.png)
 
