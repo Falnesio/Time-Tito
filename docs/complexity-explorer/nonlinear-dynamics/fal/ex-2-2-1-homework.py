@@ -17,13 +17,13 @@ import numpy as np
 
 
 # Setup values
-r = [2.8, 3.6]
-steps = 10000
+r = [3.597428, 3.59743356]
+steps = 1000
 x_initial = 0.2
-transiente = 980
+transiente = 50000
 
 def func(x, r):
-    n = 1000
+    n = 100000
     new_list = []
     for i in range(n):
         x = r * x * (1 - x)
@@ -33,9 +33,12 @@ def func(x, r):
 
 x_list = []
 rvalues = np.linspace(start=r[0], stop=r[1], num=steps)
+p = 0
 
 for i in rvalues:
     x_list.append(func(x_initial, i))
+    print(p/steps * 100, "%")
+    p += 1
 
 plt.plot(rvalues, x_list, 'o', markersize=0.5)
 plt.show()
