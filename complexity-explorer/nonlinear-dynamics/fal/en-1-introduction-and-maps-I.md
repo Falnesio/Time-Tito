@@ -90,15 +90,15 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:                                                
+**Periodic Orbit / Limit Cycle type of Attractor:                                                  
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:                                              
+**Biforcations:                                                
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:                                              
+**Chaotic Attractor / Strange Attractors:                                                
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 ## Maps II
@@ -139,25 +139,12 @@ $$\lim_{n\to\infty}   Δ_{n}/Δ_{n+1} ≈ 4.66$$ is the **Feigenbaum number**.
 
 Mitchell Feigenbaum is responsible for the proof of that ratio, thus the number earning his name. The further we increase n, the closer we get to the number. There is a similar result but with a different ratio for the heights.
 
-This ratio holds true for **any** and** only **1-D functions with a quadratic maximum. This means this is true for the sine map or any other map that looks liek a parabola near its maximum. 
+This ratio holds true for **any** and** only 1-D maps with a quadratic maximum**. This means this is true for the sine map or any other map that looks like a parabola near its maximum. "_This means that orbiting moons, pendulums, and the human heart all act the same in the throwd of chaos"_. There is speculation that this may hold true for higher dimensions, the proofs don't extend to them.
 
 _Steve Strogatz says, the Feigenbaum number is a new physical constant, as fundamental to 1-D maps, as π is to circles_.
 
+The Smale's Horse-shoe  
+-----------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+A map is discrete, not like a flow which is continuous. You can think of a flow being the act of shaping and reshaping dough with your hands, and a map being a picture taken for every time that is a ball.
 
