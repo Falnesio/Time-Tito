@@ -90,15 +90,15 @@ A point which may remain stable if unperturbed. Initial conditions at the point 
 
 What happens to the attractors in the dynamics of the logistic map as the parameter r changes:
 
-**Periodic Orbit / Limit Cycle type of Attractor:                                                  
+**Periodic Orbit / Limit Cycle type of Attractor:                                                    
 **When r&gt;= 3, we sometimes see two or more predominante states, which are the periods.
 
-**Biforcations:                                                
+**Biforcations:                                                  
 **There are changes in the amount of periods as we change the parameter **r**. The change happens in the topology of the attractor, it is a qualitative change. The fixed point does not move, it vanishes.
 
 When we slowly raise the r value and the period doubles, we have a period doubling bifurcation sequence.
 
-**Chaotic Attractor / Strange Attractors:                                                
+**Chaotic Attractor / Strange Attractors:                                                  
 **Periods that seem to have a pattern but don't. Different inicial conditions show different state variable values on the periods.
 
 ## Maps II
@@ -143,8 +143,10 @@ This ratio holds true for **any** and** only 1-D maps with a quadratic maximum**
 
 _Steve Strogatz says, the Feigenbaum number is a new physical constant, as fundamental to 1-D maps, as π is to circles_.
 
-The Smale's Horse-shoe  
------------------------------------------
+#### The Smale's Horseshoe map
+
+The Smale's Horseshoe is a 2-D map. It does not operate on the unit interval like the logistic map, but on the unit squared. It starts out at a square and streches maintaining area. It then curves onto itself, cutting out the bend. This makes point that were far away come close together and points that were close spread appart. This action is repeated. The stretching and folding that creates this is a paradigm in chaos, the cause of sensitive dependence on initial conditions.  
+![](https://publicism.info/science/chaos/chaos.files/image008.jpg)A 3-D version of this is the kneading of bread dough. It is the most eficient means of mixing.
 
 A map is discrete, not like a flow which is continuous. You can think of a flow being the act of shaping and reshaping dough with your hands, and a map being a picture taken for every time that is a ball.
 
