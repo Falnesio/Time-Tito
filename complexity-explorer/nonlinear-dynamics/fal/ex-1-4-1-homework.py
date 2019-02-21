@@ -1,9 +1,9 @@
 from pylab import *
 
 r = float(input("Insert r value: "))
-x1 = 0.2
-x2 = 0.200001
-n = 500000
+x1 = 0.3
+x2 = 0.300001
+n = 500
 i = 0
 x1_menos_x2 = []
 lista_i = []

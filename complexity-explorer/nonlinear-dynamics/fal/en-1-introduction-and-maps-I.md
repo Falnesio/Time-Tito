@@ -150,3 +150,30 @@ The Smale's Horseshoe is a 2-D map. It does not operate on the unit interval lik
 
 A map is discrete, not like a flow which is continuous. You can think of a flow being the act of shaping and reshaping dough with your hands, and a map being a picture taken for every time that is a ball.
 
+### [2.5 Field trip: The standard map (with Jim Meiss)](https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches/segments/7998)
+
+Conversation with Prof. Jim Meiss of the Department of Applied Mathmatics at the University of Colorado.
+He is interested in the **standard map**. Imagine we have rocking pendulum that traces an arc **x**. If it is hit at random times by a hammer, the affects differ depending to how close it is to the hammer, being null when the ball is straight down.
+The angular momentum of this pendulum is **y**. We can describe this dynamic system with a map. **k** is the hit.
+
+$$ x' = x + y - ksin(x)$$
+$$ y' = y - ksin(x) $$ 
+
+We can see from y' that is the kick is 0, the angular momentum is constant. If the kick is non-zero we have complicated dynamics which sometimes is dynamic, regular or chaotic.
+We have some intermixture of some orbits being chaotic and some orbits being regular, all for the same fixed fixed parameter value. There is not only one fixed attractor (strange or otherwise).
+Different initial values for different k values have different behaviors. These behaviors are in resonance with the chaotic behavior near them.
+For larger values of k, the system has more regions where initial values result in chaotic behavior, with small regions of inicial values that don't.
+We do not know if there is a vlue for k in which everything is chaotic.
+[Here](https://epubs.siam.org/doi/book/10.1137/1.9781611974645) is the link to his book "Mathematical Modeling and Computation Differential Dynamical Systems, Revised Edition".
+
+A **Phase Space** or **State Space** is a very powerful representation of tragectories in a dynamical system, where the axis are the state variables. 
+A **Separatrix** is a curve or surface in a phase space that separates two different regions.
+Integrable means that a system is not chaotic, that the equations cannot be solved in closed form.
+**Dissipation** is a more general word for *friction*. In systems that are **conservative** or **Hamiltonian**, energy is conserved, they are non-dissipitive systems.
+Dissipation is a necessary condition for the existence of attractors, this isn't true for chaos.
+
+
+
+
+
+

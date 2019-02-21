@@ -17,13 +17,13 @@ import numpy as np
 
 
 # Setup values
-r = [3.597428, 3.59743356]
-steps = 1000
+r = [3.84, 3.8571]
+steps = 10000
 x_initial = 0.2
-transiente = 50000
+transiente = 990
 
 def func(x, r):
-    n = 100000
+    n = 1000
     new_list = []
     for i in range(n):
         x = r * x * (1 - x)
