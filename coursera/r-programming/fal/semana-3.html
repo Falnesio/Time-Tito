@@ -385,8 +385,8 @@ $(document).ready(function () {
 <p><strong>lapply()</strong>: Cicla por uma lista e aplica a função a cada elemento</p>
 <p><strong>sapply()</strong>: Mesmo que lapply, porém tenta simplificar o resultado, por exemplo ter a saída de um vetor ao invés de uma lista (quando possível).</p>
 <p><strong>apply()</strong>: Aplica a função nas margens de um <strong>array</strong> (<strong>arranjo</strong>). Colapsa arrays.</p>
-<p><strong>tapply()</strong>: Aplica a função nos subconjuntos de um vetor. Aplica fatores,</p>
-<p><strong>mapply()</strong>: Versão multivariada de <em>lapply()</em></p>
+<p><strong>tapply()</strong>: Aplica a função nos subconjuntos de um vetor. Aplica fatores.</p>
+<p><strong>mapply()</strong>: Versão multivariada de <em>lapply()</em>. Aplica mais argumentos a mais vetores. Faz funções que não aceitam vetores, aceitarem.</p>
 <p>A função auxiliar <strong>split()</strong> é útil, particulamente em conjunto com lapply, pois divide objetos em sub-peças.</p>
 <div id="lapply" class="section level5">
 <h5>lapply()</h5>
@@ -632,7 +632,7 @@ function (x, MARGIN, FUN, ...)</code></pre>
 </div>
 <div id="mapply" class="section level5">
 <h5>mapply()</h5>
-<p>É uma versão multivariada de <strong>apply()</strong> queaplica uma função num conjunto de argumentos de form paralela.</p>
+<p>É uma versão multivariada de <strong>apply()</strong> que aplica uma função num conjunto de argumentos de form paralela.</p>
 <pre><code>&gt; str(mapply)
 function (FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE, 
     USE.NAMES = TRUE) </code></pre>
@@ -776,6 +776,53 @@ $`9`
    Ozone  Solar.R     Wind 
       NA 167.4333  10.1800 
 </code></pre>
+<p><strong>sapply()</strong> faria a mesma coisa porém mudando o formato pra uma matriz.</p>
+<pre><code>&gt; sapply(a,function(x){colMeans(x[,c(&quot;Ozone&quot;, &quot;Solar.R&quot;, &quot;Wind&quot;)])})
+               5         6          7        8        9
+Ozone         NA        NA         NA       NA       NA
+Solar.R       NA 190.16667 216.483871       NA 167.4333
+Wind    11.62258  10.26667   8.941935 8.793548  10.1800</code></pre>
+<p>É possível colocar um argumento para remover valores <em>NA</em>, <strong>na.rm = TRUE</strong>, que remove os valores <em>NA</em> antes de calcular as médias.</p>
+<pre><code>&gt; sapply(a,function(x){colMeans(x[,c(&quot;Ozone&quot;, &quot;Solar.R&quot;, &quot;Wind&quot;)], na.rm =TRUE)})
+                5         6          7          8         9
+Ozone    23.61538  29.44444  59.115385  59.961538  31.44828
+Solar.R 181.29630 190.16667 216.483871 171.857143 167.43333
+Wind     11.62258  10.26667   8.941935   8.793548  10.18000</code></pre>
+<p>Suponha que nos dados os valores comtêm mais de um fator, podendo ser, por exemplo, faixa etária e sexo. E gostaríamos de ver as combinações dos niveis dentre os fatores. Vamos simular isso. <strong>gl(n,f)</strong> gera n quantidade de f fatores e <strong>interaction()</strong> combina tais fatores. Ao colocar f1 aplicado a zed, obtemos y e com f2 a zed obtemos y2. usar f1 e f2 seria usar a intercessão de f1 com f2.</p>
+<pre><code># sexo
+&gt; f1 &lt;- gl(2, 5)
+&gt; f1
+ [1] 1 1 1 1 1 2 2 2 2 2
+Levels: 1 2
+# faixa etária
+&gt; f2 &lt;- gl(5, 2)
+&gt; f2
+ [1] 1 1 2 2 3 3 4 4 5 5
+Levels: 1 2 3 4 5
+&gt; interaction(f1, f2)
+ [1] 1.1 1.1 1.2 1.2 1.3 2.3 2.4 2.4 2.5 2.5
+Levels: 1.1 2.1 1.2 2.2 1.3 2.3 1.4 2.4 1.5 2.5
+&gt; str(split(zed, list(f1, f2)))
+List of 10
+ $ 1.1: num [1:6] -0.7904 -0.0924 0.5181 0.3012 2.8497 ...
+ $ 2.1: num(0) 
+ $ 1.2: num [1:6] -1.18 0.03 0.302 0.95 1.817 ...
+ $ 2.2: num(0) 
+ $ 1.3: num [1:3] -1.03 0.3 1.16
+ $ 2.3: num [1:3] 0.4407 0.0694 0.5269
+ $ 1.4: num(0) 
+ $ 2.4: num [1:6] 0.811 -0.1561 0.1086 0.0879 1.6234 ...
+ $ 1.5: num(0) 
+ $ 2.5: num [1:6] -0.753 -0.429 0.877 0.83 0.3 ...</code></pre>
+<p>O argumento <strong>drop = TRUE</strong> retira níveis vazios</p>
+<pre><code>&gt; str(split(zed, list(f1, f2), drop = TRUE))
+List of 6
+ $ 1.1: num [1:6] -0.7904 -0.0924 0.5181 0.3012 2.8497 ...
+ $ 1.2: num [1:6] -1.18 0.03 0.302 0.95 1.817 ...
+ $ 1.3: num [1:3] -1.03 0.3 1.16
+ $ 2.3: num [1:3] 0.4407 0.0694 0.5269
+ $ 2.4: num [1:6] 0.811 -0.1561 0.1086 0.0879 1.6234 ...
+ $ 2.5: num [1:6] -0.753 -0.429 0.877 0.83 0.3 ...</code></pre>
 <blockquote>
 <p>zed</p>
 </blockquote>
@@ -789,6 +836,15 @@ $`9`
 [25]  1.15944328  0.52686111  1.62342647  1.47161321
 [29]  0.30009436  2.07067409</code></pre>
 </div>
+</div>
+<div id="debugging-tools---diagnosing-the-problem" class="section level4">
+<h4>Debugging Tools - Diagnosing the Problem</h4>
+<p>Essas ferramentas são boas para descobrir o que deu errado com um problema depois do erro ter acontecido. Existem três tipos principais de indicações de erro.</p>
+<p><strong>message</strong>: Ou mensagem, ma notificação/diagnóstico genérica de que algo deu errado, produzido pela função <em>message</em>; a execução da função continua.</p>
+<p><strong>warning</strong>: Ou aviso, uma indicação de que algo deu errado, mas não é necessariamente fatal; a execução da função continua; é gerada pela função <em>warning</em>.</p>
+<p><strong>error</strong>: uOu erro, uma indicação de que um problema fatal ocorreu; a execução para; é produzido pela função <strong>stop</strong>.</p>
+<p><strong>condition</strong>: Ou condição, é um conceito genérico indicando que algo inesperado poderá ocorrer; programadores podem criar suas próprias condições.</p>
+<p><span class="math display">\[1963/3926 = 1/2\]</span></p>
 </div>
 </div>
 </div>

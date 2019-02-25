@@ -548,3 +548,233 @@ List of 6
 
 #### Debugging Tools - Diagnosing the Problem
 
+Um **bug** literalmente é um inseto. Antigamente os computadores eram enormes e tinha vez que algum inseto entrava e atrapalhava o seu funcionamento. O prefixo inglês *de* significa tirar, ou retornar a um estado sem; no caso de **Debug**, significa tirar um bug, ou insento do computador. Atualmente computadores comerciais são menores, porém o linguajar continuou para quando existe algum problema no funcionamento de um programa, o *bug* sendo a fonte do problema.
+
+Vamos falar abaixo sobre ferramentas que são boas para descobrir o que deu errado com um problema depois do erro ter acontecido. 
+
+Existem três tipos principais de indicações de erro:
+
+**message**: Ou mensagem, ma notificação/diagnóstico genérica de que algo deu errado, produzido pela função *message*; a execução da função continua. Acontece no meio da execução.
+
+**warning**: Ou aviso, uma indicação de que algo deu errado, mas não é necessariamente fatal; a execução da função continua; é gerada pela função *warning*. Aparece no final da execução.
+
+**error**: uOu erro, uma indicação de que um problema fatal ocorreu; a execução para; é produzido pela função **stop**.
+
+**condition**: Ou condição, é um conceito genérico de alto nível indicando que algo inesperado poderá ocorrer; todas essas funções anteriores são condições; programadores podem criar suas próprias condições.
+
+-----------------
+
+Exemplo, tomamos um log de um número negativo
+```
+> log(-1)
+[1] NaN
+Warning message:
+In log(-1) : NaNs produced
+```
+Vemos que depois da execução temos um warning indicando que quando tentamos tirar o log de -1, NaNs são produzidos, lembrando que NaN significa "Não um Número".
+
+Tem vez que isso é OK, pois pode ocorrer de num cálculo realmente aparecer um número negativo. Você não vai querer que a execução pare devido isso, mas é bom saber que algo assim foi tentado, por isso o *warning*.
+
+Tem vez que numa função, queremos fazer determinada coisa porém a última coisa na função é uma variável que não queremos que seja imprimida, porém, além de devolver determinada variável, R imprime sempre a última coisa de uma função. Para isso não ocorrer usamos a função **invisible(x)** que impede x de ser impresso, porém continua devolvendo x.
+
+Uma função que contem isso é **load()** que retorna um vetor de caracteres contendo os nomes dos objetos que são carregados, porém não os imprime, devido a função retornar invisívelmente.
+
+Em relação ao exemplo abaixo, toda função **print()** retorna a **string** (linha de texto) que ela imprime. Então quando usa print(x), ela retorna a *string* x, mas não vemos isso pois o valor de retorno é invisível utilizando a função *invisible()*.
+
+O retorno de printmessage() abaixo é seu argumemnto, 1.
+```
+> printmessage <- function(x){
+     if(x > 0){
+         print("x é maior do que zero")
+     } else{
+         print("x é menor ou igual a zero")
+     }
+     invisible(x)
+}
+> printmessage(1)
+[1] "x é maior do que zero"
+> retorno <- printmessage(1)
+[1] "x é maior do que zero"
+> retorno
+[1] 1
+> printmessage(NA)
+Error in if (x > 0) { : missing value where TRUE/FALSE needed
+```
+Ao tentar imprimir algo que não é um número, o programa dar erro e para. Depois mostra aonde ocorreu o erro e mostra o que era necessário ocorrer; nesse caso o programa procurou por um argumento verdadeiro ou falso e não obteve nemhum dos dois.
+
+Podemos resolver esse problema criando uma condição para NA. Lembrando que colocamos o *else if*, para que o que era um segundo *if* não rodar (e não aparecer o erro anterior). 
+```
+> printmessage <- function(x){
+     if(is.na(x)){
+         print("x is a missing value!")
+     }
+     else if(x > 0){
+         print("x é maior do que zero")
+     } else{
+         print("x é menor ou igual a zero")
+     }
+     invisible(x)
+}
+> printmessage(NA)
+[1] "x is a missing value!"
+```
+Assim ao rodar o seguinte algoritmo, ele completa toda a execução.
+```
+> meu_log <- log(-1)
+Warning message:
+In log(-1) : NaNs produced
+> printmessage(meu_log)
+[1] "x is a missing value!"
+```
+
+Algumas perguntas que você deveria se perguntar para localizar, além de tudo, se o problema está no programa ou no usuário:
+ * Qual era sua entrada? Como chamou a função?
+ * O que estava esperando? Saída, mensagens ou outros resultados?
+ * O que obteve?
+ * Como que o que obteve difere do que esperava?
+ * Suas expectativas fazem sentido?
+ * Consegue reproduzir tal problema exatamente?
+   * Alguns problemas ocorrem para entrada específicas. Por exemplo, se estiver usando um gerador de números aleatórios, é bom estabelecer um **seed** (semente). Uma semente é um número aplicado a um gerador de números aleatórios, e tal gerador sempre vai gerar um mesmo resultado para cada determinada seed. Isso facilita na reprodução do problema. A dificuldade de reprodução é determinada pelos elementos fora do seu controle.
+
+##### Debugging Tools - Basic Tools
+
+Existem cinco ferramentas básicas (e algumas extras) que R fornece para ajudar no conserto do programa. Existem pessoas que passam anos sem saber da existência delas, programando bem, mas, apesar disso, é sempre bom terem elas em mãos.
+
+**traceback()**: imprime o **call stack** da função depois que o erro occore. O *call stack* seria a sequência de objetos rodados no algoritmo. Essa função não retorna algo caso não haja erro.
+
+**debug()**: **flags**, ou seja marca uma função, para o modo *debug*, que nos permite passar por uma função uma linha por vez, sempre que ela for chamada.
+
+**browser()**: suspend a execução de uma função, em qualquer parte da função, toda vez que for chamada e coloca ela em modo debug.
+
+**trace()**: permite inserir um codigo de **debugging** (gerúndio de debug) numa função em locais específicos (como a função *browser*).
+
+**recover()**: ou recuperar, permite modificar o comportamento do erro para que possa visualizar o *call stack*. 
+
+Outra coisa que poderá fazer é colocar um monte de **print()** e **cat()** dentro das funções.
+
+##### Debugging Tools - Using the Tools
+
+###### traceback()
+Utiliza-se traceback para encontrar onde ocorreu o erro no algoritmo. O *traceback()* tem que ser chamado imediatamente após o erro ocorrer. É muito útil enviar o *traceback()* para alguém que esteja ajudando com o debug do código.
+```
+> mean(u)
+Error in mean(u) : object 'u' not found
+> traceback()
+1: mean(u)
+```
+###### debug()
+O **Browser**, ou visualizador, mostra o ambiente do debug, que é o próprio código da função sendo debugged (verbo passado de debug). 
+
+O *debug* pode ser usado em qualquer função, independente se ela já existe ou você criou. Primeiro inserimos no debug a função que queremos visualizar o erro, quando ocorrer. Ao utilizar a função com debug, ela imprime seu código e depois podemos visualizar linha por linha o seu funcionamento. É possível colocar funções num *debug()* dentro da função em *debug()*, fazendo ela ser debugged quando for chamada dentro do Browser.
+```
+> debug(lm)
+> lm(mean(x) - u)
+debugging in: lm(mean(x) - u)
+debug: {
+    ret.x <- x
+    ret.y <- y
+    cl <- match.call()
+    mf <- match.call(expand.dots = FALSE)
+    m <- match(c("formula", "data", "subset", "weights", "na.action", 
+        "offset"), names(mf), 0L)
+    mf <- mf[c(1L, m)]
+    mf$drop.unused.levels <- TRUE
+    mf[[1L]] <- quote(stats::model.frame)
+    mf <- eval(mf, parent.frame())
+    if (method == "model.frame") 
+        return(mf)
+    else if (method != "qr") 
+        warning(gettextf("method = '%s' is not supported. Using 'qr'", 
+            method), domain = NA)
+    mt <- attr(mf, "terms")
+    y <- model.response(mf, "numeric")
+    w <- as.vector(model.weights(mf))
+    if (!is.null(w) && !is.numeric(w)) 
+        stop("'weights' must be a numeric vector")
+    offset <- as.vector(model.offset(mf))
+    if (!is.null(offset)) {
+        if (length(offset) != NROW(y)) 
+            stop(gettextf("number of offsets is %d, should equal %d (number of observations)", 
+                length(offset), NROW(y)), domain = NA)
+    }
+    if (is.empty.model(mt)) {
+        x <- NULL
+        z <- list(coefficients = if (is.matrix(y)) matrix(NA_real_, 
+            0, ncol(y)) else numeric(), residuals = y, fitted.values = 0 * 
+            y, weights = w, rank = 0L, df.residual = if (!is.null(w)) sum(w != 
+            0) else if (is.matrix(y)) nrow(y) else length(y))
+        if (!is.null(offset)) {
+            z$fitted.values <- offset
+            z$residuals <- y - offset
+        }
+    }
+    else {
+        x <- model.matrix(mt, mf, contrasts)
+        z <- if (is.null(w)) 
+            lm.fit(x, y, offset = offset, singular.ok = singular.ok, 
+                ...)
+        else lm.wfit(x, y, w, offset = offset, singular.ok = singular.ok, 
+            ...)
+    }
+    class(z) <- c(if (is.matrix(y)) "mlm", "lm")
+    z$na.action <- attr(mf, "na.action")
+    z$offset <- offset
+    z$contrasts <- attr(x, "contrasts")
+    z$xlevels <- .getXlevels(mt, mf)
+    z$call <- cl
+    z$terms <- mt
+    if (model) 
+        z$model <- mf
+    if (ret.x) 
+        z$x <- x
+    if (ret.y) 
+        z$y <- y
+    if (!qr) 
+        z$qr <- NULL
+    z
+}
+Browse[2]>  
+Browse[2]> 
+debug: ret.x <- x
+Browse[2]> 
+debug: ret.y <- y
+Browse[2]> 
+debug: cl <- match.call()
+Browse[2]> 
+debug: mf <- match.call(expand.dots = FALSE)
+Browse[2]> 
+debug: m <- match(c("formula", "data", "subset", "weights", "na.action", 
+    "offset"), names(mf), 0L)
+Browse[2]> 
+debug: mf <- mf[c(1L, m)]
+Browse[2]> 
+debug: mf$drop.unused.levels <- TRUE
+Browse[2]> 
+debug: mf[[1L]] <- quote(stats::model.frame)
+Browse[2]> 
+debug: mf <- eval(mf, parent.frame())
+Browse[2]> 
+Error in stats::model.frame(formula = mean(x) - u, drop.unused.levels = TRUE) : 
+  object 'u' not found
+```
+
+###### recover()
+É possível alterar o comportamento do error com `options(error = recover)`, alterando a opção global para a sessão de utilização de R atual.
+
+Quando ocorrer um erro, ao invés do erro ser impresso e voltar-mos para o console, aparece um menu que é o *function call stack*, ou ordem de chamada dentro da função, que é (a call stack) a mesma coisa que obteria chamando um *traceback()* depois de um erro.
+```
+> read.csv("arquivoquenãoexiste")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'arquivoquenãoexiste': No such file or directory
+
+Enter a frame number, or 0 to exit   
+
+1: read.csv("arquivoquenãoexiste")
+2: read.table(file = file, header = header, sep = sep, quote = quote, dec =
+3: file(file, "rt")
+
+Selection:
+```
+No selection poderá selecionar, nesse caso, 1, 2 ou 3 e browse (visualizar) o cógido.
