@@ -22,6 +22,10 @@
 				- [Practical R Exercises in swirl](coursera/r-programming/fal/practical-r-exercises-in-swirl.md)
 			- [Semana 2](coursera/r-programming/fal/semana-2.md)
 				- [Practical R Exercises in swirl 2](coursera/r-programming/fal/practical-r-exercises-in-swirl-2.md)
+			- [Semana 3](coursera/r-programming/fal/semana-3.md)
+				- [Practical R Exercises in swirl 2](coursera/r-programming/fal/practical-r-exercises-in-swirl-3.md)
+			- [Semana 4](coursera/r-programming/fal/semana-4.md)
+				- [Practical R Exercises in swirl 2](coursera/r-programming/fal/practical-r-exercises-in-swirl-4.md)
 
 - [Programacao da Maratona](programacao-da-maratona/README.md)
 
