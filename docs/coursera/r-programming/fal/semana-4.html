@@ -892,21 +892,22 @@ List of 5
   ..$ Day    : int [1:30] 1 2 3 4 5 6 7 8 9 10 ...
 </code></pre><h4 id="simulation---generating-random-numbers">Simulation - Generating Random Numbers</h4>
 <p>Simula&#xE7;&#xF5;es s&#xE3;o muito importante para estat&#xED;stica e v&#xE1;rias outras aplica&#xE7;&#xF5;es em R.</p>
-<p><strong>rnorm()</strong>: gera um n&#xFA;mero aleat&#xF3;rio que varia para a m&#xE9;dia e desvio padr&#xE3;o indicado.</p>
-<p><strong>dnorm()</strong>: avalia a densidade de propabilidade normal (para a m&#xE9;dia/desvio padr&#xE3;o indicado) para um ponto (ou vetor de pontos).</p>
-<p><strong>pnorm()</strong>: avalia a fun&#xE7;&#xE3;o distribui&#xE7;&#xE3;o acumulada para uma distribui&#xE7;&#xE3;o normal.</p>
-<p><strong>rpois()</strong>: gera um Poisson aleat&#xF3;rio que varia com a taxa indicada.</p>
-<p>Fun&#xE7;&#xF5;es de distribui&#xE7;&#xE3;o de probabilidades geralmente tem quatro fun&#xE7;&#xF5;es associadas. Tais fun&#xE7;&#xF5;es s&#xE3;o prefixadas com um</p>
+<p><strong>r*</strong>norm()*: gera um n&#xFA;mero aleat&#xF3;rio que varia para a m&#xE9;dia e desvio padr&#xE3;o indicado.</p>
+<p><strong>d*</strong>norm()*: avalia a densidade de propabilidade normal (para a m&#xE9;dia/desvio padr&#xE3;o indicado) para um ponto (ou vetor de pontos).</p>
+<p><strong>p*</strong>norm()*: avalia a fun&#xE7;&#xE3;o distribui&#xE7;&#xE3;o acumulada para uma distribui&#xE7;&#xE3;o normal.</p>
+<p><strong>r*</strong>pois()*: gera um Poisson aleat&#xF3;rio que varia com a taxa indicada.</p>
+<p>Fun&#xE7;&#xF5;es de distribui&#xE7;&#xE3;o de probabilidades, como as descritas acima, geralmente tem quatro fun&#xE7;&#xF5;es associadas. Tais fun&#xE7;&#xF5;es s&#xE3;o <strong>prefixadas</strong> com um</p>
 <ul>
 <li><strong>d</strong> para <strong>densidade</strong>;</li>
 <li><strong>r</strong> para <strong>gerar n&#xFA;mero aleat&#xF3;rio</strong> <em>(random)</em>;</li>
 <li><strong>p</strong> para <strong>distribui&#xE7;&#xE3;o acumulada</strong>;</li>
 <li><strong>q</strong> para <strong>fun&#xE7;&#xE3;o quant&#xED;lica</strong>.</li>
 </ul>
-<p>Ent&#xE3;o para uma distribui&#xE7;&#xE3;o gama, ou poisson ter&#xED;amos dgama ou dpois, por exemplo.</p>
+<p>Ent&#xE3;o para uma distribui&#xE7;&#xE3;o <em>gama</em>, ou <em>poisson</em> ter&#xED;amos <strong>d*</strong>gama()<em> ou <strong>d</strong></em>pois()*, por exemplo.</p>
 <pre><code>&gt; ppois(4, 2) ## Distribui&#xE7;&#xE3;o acumulativa
 [1] 0.947347 ## Pr(x &lt;= 2) se a taxa &#xE9; 4
-</code></pre><p>Os comandos sempre pedem uma m&#xE9;dia e um desvio padr&#xE3;o. Caso n&#xE3;o seja especificado, a m&#xE9;dia &#xE9; zero e o desvio padr&#xE3;o &#xE9; 1.</p>
+</code></pre><p>No final da aula temos uma tabela com todas as distribui&#xE7;&#xF5;es que vem junto com R.</p>
+<p>Os comandos sempre pedem uma m&#xE9;dia e um desvio padr&#xE3;o. Caso n&#xE3;o seja especificado, a m&#xE9;dia &#xE9; zero e o desvio padr&#xE3;o &#xE9; 1.</p>
 <pre><code>dnorm(x, mean = 0, sd = 1, log = FALSE)
 # A maior parte das vezes vai querer usar o log da fun&#xE7;&#xE3;o de densidade
 # mas o valor default aqui &#xE9; Falso.
@@ -921,7 +922,34 @@ n aqui significa a quantidade de obsera&#xE7;&#xF5;es que queira gerar.
 
 se pnorm(z) = &#x3A6;(z), qnorm(z) = &#x3A6;&#x207B;&#xB9;(z)
 </code></pre><p>Estabelecer um <strong>seed</strong> ou semente &#xE9; muito importante para reprodutibilidade. Para cada determinada semente estabelecida, uma fun&#xE7;&#xE3;o geradora de n&#xFA;meros aleat&#xF3;rios sempre apresentar&#xE1; a mesma sequ&#xEA;ncia em seus resultados. Estabelecemos uma semente com <code>set.seed(n)</code> n sendo um n&#xFA;mero inteiro que servir&#xE1; de semente. </p>
-<h4 id="simulation---simulating-a-linear-model">Simulation - Simulating a Linear Model</h4>
+<p>&#xC9; importante notar tamb&#xE9;m que a sequ&#xEA;ncia de fun&#xE7;&#xF5;es utilizadas tamb&#xE9;m afeta os valores que saem, por&#xE9;m usar a mesma sequ&#xEA;ncia para uma mesma semente gera os mesmos valores.</p>
+<pre><code>&gt; # testando sequ&#xEA;ncia de fun&#xE7;&#xF5;es
+&gt; set.seed(1)  
+&gt; rnorm(3)
+[1] -0.6264538  0.1836433 -0.8356286
+&gt; rnorm(3)
+[1]  1.5952808  0.3295078 -0.8204684
+&gt; rnorm(4)
+[1]  0.4874291  0.7383247  0.5757814 -0.3053884
+
+&gt; # testando a mesma sequ&#xEA;ncia de fun&#xE7;&#xF5;es
+&gt; set.seed(1)
+&gt; rnorm(3)
+[1] -0.6264538  0.1836433 -0.8356286
+&gt; rnorm(3)
+[1]  1.5952808  0.3295078 -0.8204684
+&gt; rnorm(4)
+[1]  0.4874291  0.7383247  0.5757814 -0.3053884
+
+# testando sequ&#xEA;ncia de fun&#xE7;&#xF5;es diferente
+&gt; set.seed(1)
+&gt; rnorm(3)
+[1] -0.6264538  0.1836433 -0.8356286
+&gt; rnorm(4)
+[1]  1.5952808  0.3295078 -0.8204684  0.4874291
+&gt; rnorm(3)
+[1]  0.7383247  0.5757814 -0.3053884
+</code></pre><h4 id="simulation---simulating-a-linear-model">Simulation - Simulating a Linear Model</h4>
 <p>Como podemos simular dados de um modelo, como um modelo linear?
 Vamos usar com exemplo o modelo proposto abaixo.</p>
 <p><script type="math/tex; ">y = β_{0}+β_{1}x+ε</script></p>
@@ -949,7 +977,245 @@ e $&#x3B2;<em>{0}=0.5$ e $&#x3B2;</em>{1}=0.3$. Precisamos da funn&#xE7;&#xE3;o 
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    0.00    1.00    1.00    1.55    2.00    6.00 
 &gt; plot(x, y)
-</code></pre>
+</code></pre><h4 id="simulation---random-sampling">Simulation - Random Sampling</h4>
+<p><strong>sample()</strong> tira uma amostra de um conjunto de objetos escalares. Ela toma uma popula&#xE7;&#xE3;o <strong>x</strong>, e tira aleatoriamente uma amostra de tamanho <strong>size</strong>.</p>
+<pre><code>&gt; str(sample)
+function (x, size, replace = FALSE, prob = NULL)
+</code></pre><p>Caso n&#xE3;o seja colocado um tamaho, <code>sample()</code> devolver&#xE1; uma permuta&#xE7;&#xE3;o da popula&#xE7;&#xE3;o. Para uma <strong>amostragem com reposi&#xE7;&#xE3;o</strong> o argumento <strong>replace</strong> deve ser <strong>TRUE</strong>, alternativamente uma amostragem por acaso &#xFA;nico &#xE9; o default de <em>replace = FALSE</em>.</p>
+<p>Ao estabelecer uma semente, podemos obter a mesma amostragem de uma popula&#xE7;&#xE3;o.</p>
+<pre><code>&gt; set.seed(1)
+&gt; sample(1:10, 4)
+[1] 3 4 5 7
+&gt; sample(1:10, 4)
+[1] 3 9 8 5
+&gt; sample(letters, 5)
+[1] &quot;q&quot; &quot;b&quot; &quot;e&quot; &quot;x&quot; &quot;p&quot;
+&gt; sample(1:10)
+ [1]  4  7 10  6  9  2  8  3  1  5
+&gt; sample(1:10)
+ [1]  2  3  4  1  9  5 10  8  6  7
+&gt; sample(1:10, replace = TRUE)
+ [1] 2 9 7 8 2 8 5 9 7 8
+</code></pre><table>
+<thead>
+<tr>
+<th>Distribui&#xE7;&#xF5;es</th>
+<th>Fun&#xE7;&#xF5;es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amplitude Estudentizada</td>
+<td>ptukey</td>
+<td>qtukey</td>
+<td>dtukey</td>
+<td>rtukey</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>pbeta</td>
+<td>qbeta</td>
+<td>dbeta</td>
+<td>rbeta</td>
+</tr>
+<tr>
+<td>Binomial</td>
+<td>pbinom</td>
+<td>qbinom</td>
+<td>dbinom</td>
+<td>rbinom</td>
+</tr>
+<tr>
+<td>Binomial Negativo</td>
+<td>pnbinom</td>
+<td>qnbinom</td>
+<td>dnbinom</td>
+<td>rnbinom</td>
+</tr>
+<tr>
+<td>Cauchy</td>
+<td>pcauchy</td>
+<td>qcauchy</td>
+<td>dcauchy</td>
+<td>rcauchy</td>
+</tr>
+<tr>
+<td>Chi-Quadrado</td>
+<td>pchisq</td>
+<td>qchisq</td>
+<td>dchisq</td>
+<td>rchisq</td>
+</tr>
+<tr>
+<td>Exponencial</td>
+<td>pexp</td>
+<td>qexp</td>
+<td>dexp</td>
+<td>rexp</td>
+</tr>
+<tr>
+<td>F</td>
+<td>pf</td>
+<td>qf</td>
+<td>df</td>
+<td>rf</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>pgamma</td>
+<td>qgamma</td>
+<td>dgamma</td>
+<td>rgamma</td>
+</tr>
+<tr>
+<td>Geometrica</td>
+<td>pgeom</td>
+<td>qgeom</td>
+<td>dgeom</td>
+<td>rgeom</td>
+</tr>
+<tr>
+<td>Hipergeometrica</td>
+<td>phyper</td>
+<td>qhyper</td>
+<td>dhyper</td>
+<td>rhyper</td>
+</tr>
+<tr>
+<td>Logistica</td>
+<td>plogis</td>
+<td>qlogis</td>
+<td>dlogis</td>
+<td>rlogis</td>
+</tr>
+<tr>
+<td>Log Normal</td>
+<td>plnorm</td>
+<td>qlnorm</td>
+<td>dlnorm</td>
+<td>rlnorm</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>pnorm</td>
+<td>qnorm</td>
+<td>dnorm</td>
+<td>rnorm</td>
+</tr>
+<tr>
+<td>Poisson</td>
+<td>ppois</td>
+<td>qpois</td>
+<td>dpois</td>
+<td>rpois</td>
+</tr>
+<tr>
+<td>t Student</td>
+<td>pt</td>
+<td>qt</td>
+<td>dt</td>
+<td>rt</td>
+</tr>
+<tr>
+<td>Uniforme</td>
+<td>punif</td>
+<td>qunif</td>
+<td>dunif</td>
+<td>runif</td>
+</tr>
+<tr>
+<td>Weibull</td>
+<td>pweibull</td>
+<td>qweibull</td>
+<td>dweibull</td>
+<td>rweibull</td>
+</tr>
+<tr>
+<td>Estat&#xED;stica Soma dos Postos de Wilcoxon</td>
+<td>pwilcox</td>
+<td>qwilcox</td>
+<td>dwilcox</td>
+<td>rwilcox</td>
+</tr>
+<tr>
+<td>Estat&#xED;stica dos Postos Sinalizados de Wilcoxon</td>
+<td>psignrank</td>
+<td>qsignrank</td>
+<td>dsignrank</td>
+<td>rsignrank</td>
+</tr>
+<tr>
+<td><a href="http://www.stat.umn.edu/geyer/old/5101/rlook.html" target="_blank">Tabela como tradu&#xE7;&#xE3;o livre dessa Fonte</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="r-profiler-part-1">R Profiler (part 1)</h4>
+<p>O perfilador &#xE9; bom para quando trabalha com dados ou algoritmos grandes. O perfilador &#xE9; uma forma sistem&#xE1;tica de examinar o tempo gasto em partes diferentes de um programa. &#xC9; bom para fazer tudo funcionar no tempo certo e otimizar o software. Tem vez queu um programa funciona bem uma vez por&#xE9;m n&#xE3;o quando iterado 1000 vezes.</p>
+<p>Primeiro vem a pergunta mais importante <strong>O meu c&#xF3;digo est&#xE1; muito lento?</strong>.</p>
+<p>A otimiza&#xE7;&#xE3;o do seu programa n&#xE3;o deve ser feita na cria&#xE7;&#xE3;o do programa, n&#xE3;o &#xE9; algo que deveria ter em mente quando escrevendo o c&#xF3;digo. A coisa mais importante nesse passo &#xE9; examinar como fazer o c&#xF3;digo rodar o melhor poss&#xED;vel para obter os resultados que quer e ser leg&#xED;vel para outras pessoas. </p>
+<blockquote>
+<p>&quot;97% das vezes, otimiza&#xE7;&#xE3;o prematura &#xE9; a fonte de todo mal&quot; ~Donald Knuth</p>
+</blockquote>
+<p>Depois de terminar a cria&#xE7;&#xE3;o do programa, precisamos de obter dados para analisar o programa e detectar fontes de inefici&#xEA;ncia: perfilando.</p>
+<h5 id="usando-systemtime">Usando system.time()</h5>
+<p>A primeira ferramenta que destacaremos n&#xE3;o &#xE9; o perfilador e sim o <strong>system.time()</strong>. Ela toma uma express&#xE3;o, independente do tamanho, como entrada e devolve a quantidade de tempo (em <strong>segundos</strong>) que durou para avaliar dada express&#xE3;o. Se ocorrer algum <strong>erro</strong>, ela devolve o tempo que leva at&#xE9; o erro ocorrer.</p>
+<p>A <strong>classe</strong> do objeto retornado &#xE9; <strong>proc_time</strong>. Tem duas no&#xE7;&#xF5;es importantes de tempo que devemos levar em considera&#xE7;&#xE3;o ao executar uma express&#xE3;o:</p>
+<ul>
+<li><strong>user time</strong>: ou <em>tempo do usu&#xE1;rio</em>, &#xE9; o tempo de processo do(s) CPU(s) para a express&#xE3;o, ou seja o tempo &quot;sentido&quot; pela m&#xE1;quina;</li>
+<li><strong>elapsed time</strong>: ou <em>tempo decorrido</em>, &quot;tempo do rel&#xF3;gio da parede&quot;&quot;, &#xE9; o tempo n&#xF3;s sentimos passar.</li>
+</ul>
+<p>Geralmente o <em>user time</em> e o <em>elapsed time</em> s&#xE3;o relativamente pr&#xF3;ximos. </p>
+<ul>
+<li><em>elapsed time</em> pode vir a ser <strong>maior</strong> do que <em>user time</em> quando o CPU passa muito tempo sem fazer algo, apenas esperando.</li>
+<li><em>elapsed time</em> pode vir a ser <strong>menor</strong> do que <em>user time</em> se o computador estiver usando mais de um CPU para o processamento. R em si n&#xE3;o faz isso (na &#xE9;poca da grava&#xE7;&#xE3;o da aula), mas muitas bibliotecas como algumas de regress&#xE3;o fazem uso de mais de um CPU<ul>
+<li>Tais bibliotecas s&#xE3;o chamadass de <strong>multi-threaded BLAS libraries</strong> ou bibliotecas com m&#xFA;ltiplas linhas de encadeamento de execu&#xE7;&#xE3;o SALB (Subprogramas de Algebra Linear B&#xE1;sica) que incluem vecLib/Accelerate (Mac), ATLAS (geral), ACML (AMD) e MKL (Intel);</li>
+<li>Tamb&#xE9;m existe o pacote <strong>parallel</strong> para computa&#xE7;&#xE3;o paralela com m&#xFA;ltiplos CPUs ou m&#xFA;ltiplas m&#xE1;quinas.
+```<blockquote>
+<h2 id="elapsed-time--user-time">elapsed time &gt; user time</h2>
+<h2 id="a-maior-parte-do-tempo-&#xE9;-gasto-esperando-a-rede-conectar-por-isso-que-o-tempo-do-sistema-0004-de-rodar-apenas-a-fun&#xE7;&#xE3;o-readlines-&#xE9;-pequena">A maior parte do tempo &#xE9; gasto esperando a rede conectar por isso que o tempo do sistema (0.004) de rodar apenas a fun&#xE7;&#xE3;o readLines &#xE9; pequena.</h2>
+<p>system.time(readLines(&quot;<a href="http://www.jhsph.edu" target="_blank">http://www.jhsph.edu</a>&quot;))
+user  system elapsed 
+0.049   0.004   3.453 </p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="elapsed-time--usere-time">elapsed time &lt; usere time</h2>
+<h2 id="uma-fun&#xE7;&#xE3;o-para-criar-uma-matriz-hilbert">Uma fun&#xE7;&#xE3;o para criar uma matriz hilbert</h2>
+<p>hilbert &lt;- function(n){
+        i &lt;- 1:n
+        1 / outer(i - 1, i, &quot;+&quot;)
+}
+x &lt;- hilbert(1000)
+system.time(svd(x)) # svd toma vantagem de multi-threading
+   user  system elapsed 
+  3.907   0.012   3.969 # meu pc no Manjaro n&#xE3;o &#xE9; t&#xE3;o bom pois n&#xE3;o tem o MKL do intel hahahaha</p>
+<pre><code>Quando tiver que usar **system.time** em express&#xF5;es maiores temos:
+</code></pre><p>system.time({
+    n &lt;- 1000
+    r &lt;- numeric(n)
+    for(i in 1:n){
+       x &lt;- rnorm(n)
+       r[i] &lt;- mean(x)
+    }
+})
+   user  system elapsed 
+  0.096   0.000   0.097 </p>
+<pre><code>O problema de `system.time()` para otimiza&#xE7;&#xE3;o &#xE9; que pressup&#xF5;e-se que saiba aonde procurar. O que pode at&#xE9; ser verdade para programa pequenos, onde poder&#xE1; vir a ter uma boa no&#xE7;&#xE3;o de onde o programa precisa de ser otimizado. Como fazemos para sabermos onde iniciar a nossa procura no c&#xF3;digo por locais menos otimizados nos casos menos simples?
+
+TESTE: Meu Linux Manjaro antes de instalar MKL
+</code></pre><p>set.seed(1)
+m &lt;- 10000
+n &lt;- 2000
+A &lt;- matrix(runif (m*n),m,n)
+system.time(S &lt;- svd (A,nu=0,nv=0))
+   user  system elapsed 
+ 62.964   0.073  63.761 
+```</p>
+</blockquote>
+
                                 
                                 </section>
                             
@@ -992,7 +1258,7 @@ e $&#x3B2;<em>{0}=0.5$ e $&#x3B2;</em>{1}=0.3$. Precisamos da funn&#xE7;&#xE3;o 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Semana 4","level":"1.3.2.1.4","depth":4,"next":{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.4.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-4.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-4.md","articles":[]},"previous":{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.3.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-3.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/semana-4.md","mtime":"2019-02-27T05:42:01.874Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-27T05:48:33.335Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Semana 4","level":"1.3.2.1.4","depth":4,"next":{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.4.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-4.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-4.md","articles":[]},"previous":{"title":"Practical R Exercises in swirl 2","level":"1.3.2.1.3.1","depth":5,"path":"coursera/r-programming/fal/practical-r-exercises-in-swirl-3.md","ref":"coursera/r-programming/fal/practical-r-exercises-in-swirl-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","mathjax","embed-pdf","edit-link","github","insert-logo","disqus","image-div"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"time-tito"},"collapsible-menu":{},"github":{"url":"https://github.com/Falnesio/Time-Tito/tree/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Editar no Gihub","base":"https://github.com/Falnesio/Time-Tito/tree/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"insert-logo":{"style":"background: none;","url":"https://raw.githubusercontent.com/Falnesio/Time-Tito/master/titus-250-255.png"},"image-div":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coursera/r-programming/fal/semana-4.md","mtime":"2019-02-28T04:32:02.214Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-28T04:32:44.022Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

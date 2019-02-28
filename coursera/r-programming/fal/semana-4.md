@@ -114,7 +114,7 @@ Então para uma distribuição *gama*, ou *poisson* teríamos **d***gama()* ou *
 > ppois(4, 2) ## Distribuição acumulativa
 [1] 0.947347 ## Pr(x <= 2) se a taxa é 4
 ```
-No final da página temos uma tabela com todas as distribuições que vem junto com R.
+No final da aula temos uma tabela com todas as distribuições que vem junto com R.
 
 Os comandos sempre pedem uma média e um desvio padrão. Caso não seja especificado, a média é zero e o desvio padrão é 1.
 ```
@@ -228,9 +228,6 @@ Ao estabelecer uma semente, podemos obter a mesma amostragem de uma população.
 > sample(1:10, replace = TRUE)
  [1] 2 9 7 8 2 8 5 9 7 8
 ```
-
-
-
 |Distribuições   |  Funções  |
 |---|---|---|---|---|
 | Amplitude Estudentizada  | ptukey  | qtukey  | dtukey  | rtukey  |
@@ -254,3 +251,87 @@ Ao estabelecer uma semente, podemos obter a mesma amostragem de uma população.
 | Estatística Soma dos Postos de Wilcoxon  | pwilcox  | qwilcox  | dwilcox  | rwilcox  |
 | Estatística dos Postos Sinalizados de Wilcoxon  | psignrank  | qsignrank  | dsignrank  | rsignrank  |	  	 	 	 	
 |[Tabela como tradução livre dessa Fonte](http://www.stat.umn.edu/geyer/old/5101/rlook.html)|
+
+#### R Profiler (part 1)
+
+O perfilador é bom para quando trabalha com dados ou algoritmos grandes. O perfilador é uma forma sistemática de examinar o tempo gasto em partes diferentes de um programa. É bom para fazer tudo funcionar no tempo certo e otimizar o software. Tem vez queu um programa funciona bem uma vez porém não quando iterado 1000 vezes.
+
+Primeiro vem a pergunta mais importante **O meu código está muito lento?**.
+
+A otimização do seu programa não deve ser feita na criação do programa, não é algo que deveria ter em mente quando escrevendo o código. A coisa mais importante nesse passo é examinar como fazer o código rodar o melhor possível para obter os resultados que quer e ser legível para outras pessoas. 
+
+> "97% das vezes, otimização prematura é a fonte de todo mal" ~Donald Knuth
+
+Depois de terminar a criação do programa, precisamos de obter dados para analisar o programa e detectar fontes de ineficiência: perfilando.
+
+##### Usando system.time()
+
+A primeira ferramenta que destacaremos não é o perfilador e sim o **system.time()**. Ela toma uma expressão, independente do tamanho, como entrada e devolve a quantidade de tempo (em **segundos**) que durou para avaliar dada expressão. Se ocorrer algum **erro**, ela devolve o tempo que leva até o erro ocorrer.
+
+A **classe** do objeto retornado é **proc_time**. Tem duas noções importantes de tempo que devemos levar em consideração ao executar uma expressão:
+ * **user time**: ou *tempo do usuário*, é o tempo de processo do(s) CPU(s) para a expressão, ou seja o tempo "sentido" pela máquina;
+ * **elapsed time**: ou *tempo decorrido*, "tempo do relógio da parede"", é o tempo nós sentimos passar.
+ 
+Geralmente o *user time* e o *elapsed time* são relativamente próximos. 
+ * *elapsed time* pode vir a ser **maior** do que *user time* quando o CPU passa muito tempo sem fazer algo, apenas esperando.
+ * *elapsed time* pode vir a ser **menor** do que *user time* se o computador estiver usando mais de um CPU para o processamento. R em si não faz isso (na época da gravação da aula), mas muitas bibliotecas como algumas de regressão fazem uso de mais de um CPU
+   * Tais bibliotecas são chamadass de **multi-threaded BLAS libraries** ou bibliotecas com múltiplas linhas de encadeamento de execução SALB (Subprogramas de Algebra Linear Básica) que incluem vecLib/Accelerate (Mac), ATLAS (geral), ACML (AMD) e MKL (Intel);
+   * Também existe o pacote **parallel** para computação paralela com múltiplos CPUs ou múltiplas máquinas.
+```
+> ## elapsed time > user time
+> ## A maior parte do tempo é gasto esperando a rede conectar por isso que o tempo do sistema (0.004) de rodar apenas a função readLines é pequena. 
+> system.time(readLines("http://www.jhsph.edu"))
+   user  system elapsed 
+  0.049   0.004   3.453 
+  
+> ## elapsed time < usere time
+> ## Uma função para criar uma matriz hilbert
+hilbert <- function(n){
+        i <- 1:n
+        1 / outer(i - 1, i, "+")
+}
+> x <- hilbert(1000)
+> system.time(svd(x)) # svd toma vantagem de multi-threading
+   user  system elapsed 
+  3.907   0.012   3.969 # meu pc no Manjaro não é tão bom pois não tem o MKL do intel hahahaha
+```
+Quando tiver que usar **system.time** em expressões maiores temos:
+```
+system.time({
+    n <- 1000
+    r <- numeric(n)
+    for(i in 1:n){
+       x <- rnorm(n)
+       r[i] <- mean(x)
+    }
+})
+   user  system elapsed 
+  0.096   0.000   0.097 
+```
+O problema de `system.time()` para otimização é que pressupõe-se que saiba aonde procurar. O que pode até ser verdade para programa pequenos, onde poderá vir a ter uma boa noção de onde o programa precisa de ser otimizado. Como fazemos para sabermos onde iniciar a nossa procura no código por locais menos otimizados nos casos menos simples?
+
+>TESTE: Meu Linux Manjaro antes de instalar MKL
+```
+> set.seed(1)
+> m <- 10000
+> n <- 2000
+> A <- matrix(runif (m*n),m,n)
+> system.time(S <- svd (A,nu=0,nv=0))
+   user  system elapsed 
+ 62.964   0.073  63.761 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
