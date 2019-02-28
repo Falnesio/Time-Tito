@@ -94,26 +94,27 @@ List of 5
 
 Simulações são muito importante para estatística e várias outras aplicações em R.
 
-**rnorm()**: gera um número aleatório que varia para a média e desvio padrão indicado.
+**r***norm()*: gera um número aleatório que varia para a média e desvio padrão indicado.
 
-**dnorm()**: avalia a densidade de propabilidade normal (para a média/desvio padrão indicado) para um ponto (ou vetor de pontos).
+**d***norm()*: avalia a densidade de propabilidade normal (para a média/desvio padrão indicado) para um ponto (ou vetor de pontos).
 
-**pnorm()**: avalia a função distribuição acumulada para uma distribuição normal.
+**p***norm()*: avalia a função distribuição acumulada para uma distribuição normal.
 
-**rpois()**: gera um Poisson aleatório que varia com a taxa indicada.
+**r***pois()*: gera um Poisson aleatório que varia com a taxa indicada.
 
-Funções de distribuição de probabilidades geralmente tem quatro funções associadas. Tais funções são prefixadas com um
+Funções de distribuição de probabilidades, como as descritas acima, geralmente tem quatro funções associadas. Tais funções são **prefixadas** com um
 
  * **d** para **densidade**;
  * **r** para **gerar número aleatório** *(random)*;
  * **p** para **distribuição acumulada**;
  * **q** para **função quantílica**.
 
-Então para uma distribuição gama, ou poisson teríamos dgama ou dpois, por exemplo.
+Então para uma distribuição *gama*, ou *poisson* teríamos **d***gama()* ou **d***pois()*, por exemplo.
 ```
 > ppois(4, 2) ## Distribuição acumulativa
 [1] 0.947347 ## Pr(x <= 2) se a taxa é 4
 ```
+No final da página temos uma tabela com todas as distribuições que vem junto com R.
 
 Os comandos sempre pedem uma média e um desvio padrão. Caso não seja especificado, a média é zero e o desvio padrão é 1.
 ```
@@ -133,6 +134,36 @@ se pnorm(z) = Φ(z), qnorm(z) = Φ⁻¹(z)
 ```
 
 Estabelecer um **seed** ou semente é muito importante para reprodutibilidade. Para cada determinada semente estabelecida, uma função geradora de números aleatórios sempre apresentará a mesma sequência em seus resultados. Estabelecemos uma semente com `set.seed(n)` n sendo um número inteiro que servirá de semente. 
+
+É importante notar também que a sequência de funções utilizadas também afeta os valores que saem, porém usar a mesma sequência para uma mesma semente gera os mesmos valores.
+```
+> # testando sequência de funções
+> set.seed(1)  
+> rnorm(3)
+[1] -0.6264538  0.1836433 -0.8356286
+> rnorm(3)
+[1]  1.5952808  0.3295078 -0.8204684
+> rnorm(4)
+[1]  0.4874291  0.7383247  0.5757814 -0.3053884
+
+> # testando a mesma sequência de funções
+> set.seed(1)
+> rnorm(3)
+[1] -0.6264538  0.1836433 -0.8356286
+> rnorm(3)
+[1]  1.5952808  0.3295078 -0.8204684
+> rnorm(4)
+[1]  0.4874291  0.7383247  0.5757814 -0.3053884
+
+# testando sequência de funções diferente
+> set.seed(1)
+> rnorm(3)
+[1] -0.6264538  0.1836433 -0.8356286
+> rnorm(4)
+[1]  1.5952808  0.3295078 -0.8204684  0.4874291
+> rnorm(3)
+[1]  0.7383247  0.5757814 -0.3053884
+```
 
 #### Simulation - Simulating a Linear Model
 
@@ -172,6 +203,54 @@ set.seed(1)
 > plot(x, y)
 ```
 
+#### Simulation - Random Sampling
+
+**sample()** tira uma amostra de um conjunto de objetos escalares. Ela toma uma população **x**, e tira aleatoriamente uma amostra de tamanho **size**.
+```
+> str(sample)
+function (x, size, replace = FALSE, prob = NULL)
+```
+Caso não seja colocado um tamaho, `sample()` devolverá uma permutação da população. Para uma **amostragem com reposição** o argumento **replace** deve ser **TRUE**, alternativamente uma amostragem por acaso único é o default de *replace = FALSE*.
+
+Ao estabelecer uma semente, podemos obter a mesma amostragem de uma população.
+```
+> set.seed(1)
+> sample(1:10, 4)
+[1] 3 4 5 7
+> sample(1:10, 4)
+[1] 3 9 8 5
+> sample(letters, 5)
+[1] "q" "b" "e" "x" "p"
+> sample(1:10)
+ [1]  4  7 10  6  9  2  8  3  1  5
+> sample(1:10)
+ [1]  2  3  4  1  9  5 10  8  6  7
+> sample(1:10, replace = TRUE)
+ [1] 2 9 7 8 2 8 5 9 7 8
+```
 
 
 
+|Distribuições   |  Funções  |
+|---|---|---|---|---|
+| Amplitude Estudentizada  | ptukey  | qtukey  | dtukey  | rtukey  |
+| Beta  | pbeta  | qbeta  | dbeta  | rbeta  |
+| Binomial  | pbinom  |  qbinom | dbinom  | rbinom  |
+| Binomial Negativo   | pnbinom  | qnbinom  | dnbinom  | rnbinom  |
+| Cauchy  | pcauchy  | qcauchy  | dcauchy  | rcauchy  |
+| Chi-Quadrado  | pchisq  | qchisq  | dchisq  | rchisq  |
+| Exponencial  | pexp  | qexp  | dexp  | rexp  |
+| F  | pf  | qf  | df  | rf  |
+| Gamma  | pgamma  | qgamma  | dgamma  | rgamma  |
+| Geometrica  | pgeom  | qgeom  | dgeom  | rgeom  |
+| Hipergeometrica  | phyper  | qhyper  | dhyper  | rhyper  |
+| Logistica  | plogis  | qlogis  | dlogis  | rlogis  |
+| Log Normal  | plnorm  | qlnorm  | dlnorm  | rlnorm  |
+| Normal  | pnorm  | qnorm  | dnorm  | rnorm  |
+| Poisson  | ppois  | qpois  | dpois  | rpois  |
+| t Student  | pt  | qt  | dt  | rt  |
+| Uniforme  | punif  | qunif  | dunif  | runif  |
+| Weibull  | pweibull  | qweibull  | dweibull  | rweibull  | 
+| Estatística Soma dos Postos de Wilcoxon  | pwilcox  | qwilcox  | dwilcox  | rwilcox  |
+| Estatística dos Postos Sinalizados de Wilcoxon  | psignrank  | qsignrank  | dsignrank  | rsignrank  |	  	 	 	 	
+|[Tabela como tradução livre dessa Fonte](http://www.stat.umn.edu/geyer/old/5101/rlook.html)|
